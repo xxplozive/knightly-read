@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.user.newsaggregator</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/kartiknath/Documents/code/code/ai_projects/news-aggregator/venv/bin/python</string>
+        <string>/Users/kartiknath/Documents/code/code/ai_projects/news-aggregator/run.py</string>
+    </array>
+    <key>StartInterval</key>
+    <integer>3600</integer>
+    <key>StandardOutPath</key>
+    <string>/Users/kartiknath/Documents/code/code/ai_projects/news-aggregator/logs/launchd.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/kartiknath/Documents/code/code/ai_projects/news-aggregator/logs/launchd-error.log</string>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>WorkingDirectory</key>
+    <string>/Users/kartiknath/Documents/code/code/ai_projects/news-aggregator</string>
+</dict>
+</plist>

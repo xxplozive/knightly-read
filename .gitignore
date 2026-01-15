@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+
+# Output (regenerated on each run)
+output/
+
+# macOS
+.DS_Store
+
+# Secrets
+.env
+*.pem
+*_tokens.json

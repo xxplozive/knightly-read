@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global News</title>
+    <style>
+        :root {
+            --bg-primary: #f6f6ef;
+            --bg-header: #ff6600;
+            --text-primary: #000;
+            --text-secondary: #828282;
+            --border-color: #e0e0e0;
+            --link-visited: #828282;
+        }
+
+        body.dark {
+            --bg-primary: #1a1a1a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #888;
+            --border-color: #333;
+            --link-visited: #666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 10pt;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        .header {
+            background: var(--bg-header);
+            padding: 2px 4px;
+        }
+
+        .header-inner {
+            max-width: 85%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            border: 1px solid white;
+            padding: 1px 5px;
+            font-weight: bold;
+            color: #000;
+            text-decoration: none;
+            background: #fff;
+        }
+
+        .site-name {
+            font-weight: bold;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .region-tabs {
+            display: flex;
+            gap: 12px;
+            margin-left: auto;
+            flex-wrap: wrap;
+        }
+
+        .region-tab {
+            color: var(--text-primary);
+            text-decoration: none;
+            cursor: pointer;
+            padding: 2px 4px;
+        }
+
+        .region-tab:hover {
+            color: #fff;
+        }
+
+        .region-tab.active {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .main {
+            max-width: 85%;
+            margin: 10px auto;
+            background: var(--bg-primary);
+        }
+
+        .news-list {
+            list-style: none;
+        }
+
+        .news-item {
+            padding: 3px 0;
+        }
+
+        .item-row {
+            display: flex;
+            align-items: baseline;
+        }
+
+        .rank {
+            color: var(--text-secondary);
+            min-width: 25px;
+            text-align: right;
+            padding-right: 8px;
+            font-size: 10pt;
+        }
+
+        .title-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 10pt;
+        }
+
+        .title-link:visited {
+            color: var(--link-visited);
+        }
+
+        .title-link:hover {
+            text-decoration: underline;
+        }
+
+        .source {
+            font-size: 8pt;
+            color: var(--text-secondary);
+            margin-left: 5px;
+        }
+
+        .meta {
+            font-size: 8pt;
+            color: var(--text-secondary);
+            padding-left: 33px;
+            padding-bottom: 4px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-secondary);
+            font-size: 8pt;
+            border-top: 2px solid var(--bg-header);
+            margin-top: 20px;
+        }
+
+        .region-content {
+            display: none;
+        }
+
+        .region-content.active {
+            display: block;
+        }
+
+        .region-title {
+            font-size: 11pt;
+            color: var(--text-secondary);
+            padding: 10px 0 5px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 10px;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--text-primary);
+            color: var(--text-primary);
+            cursor: pointer;
+            padding: 2px 8px;
+            font-size: 9pt;
+            margin-left: 10px;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .paywall-badge {
+            display: inline-block;
+            font-size: 7pt;
+            font-weight: bold;
+            padding: 1px 4px;
+            margin-left: 4px;
+            border-radius: 2px;
+            vertical-align: middle;
+        }
+
+        .paywall-badge.paid {
+            background: #f0ad4e;
+            color: #000;
+        }
+
+        .paywall-badge.free {
+            background: #5cb85c;
+            color: #fff;
+        }
+
+        body.dark .paywall-badge.paid {
+            background: #8b6914;
+            color: #fff;
+        }
+
+        body.dark .paywall-badge.free {
+            background: #3d8b3d;
+            color: #fff;
+        }
+
+        .popularity-indicator {
+            display: inline-block;
+            font-size: 7pt;
+            color: var(--text-secondary);
+            margin-left: 6px;
+        }
+
+        .popularity-high {
+            color: #ff6600;
+        }
+
+        .instapaper-controls {
+            margin-left: 10px;
+        }
+
+        .instapaper-btn {
+            background: none;
+            border: 1px solid var(--text-primary);
+            color: var(--text-primary);
+            cursor: pointer;
+            padding: 2px 8px;
+            font-size: 9pt;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .instapaper-btn.authenticated {
+            border-color: #5cb85c;
+            color: #5cb85c;
+        }
+
+        .save-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 9pt;
+            padding: 0 4px;
+            opacity: 0.5;
+            transition: opacity 0.2s;
+            color: var(--text-secondary);
+        }
+
+        .save-btn:hover {
+            opacity: 1;
+        }
+
+        .save-btn.saved {
+            color: #5cb85c;
+            opacity: 1;
+        }
+
+        .save-btn:disabled {
+            cursor: not-allowed;
+            opacity: 0.3;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: var(--bg-primary);
+            padding: 20px;
+            border-radius: 4px;
+            max-width: 300px;
+            width: 90%;
+            border: 1px solid var(--border-color);
+        }
+
+        .modal h3 {
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .modal input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 10pt;
+        }
+
+        .modal button[type="submit"] {
+            width: 100%;
+            padding: 8px;
+            cursor: pointer;
+            background: #ff6600;
+            color: #fff;
+            border: none;
+            font-size: 10pt;
+        }
+
+        .modal button[type="submit"]:hover {
+            background: #e55a00;
+        }
+
+        .modal-cancel {
+            margin-top: 10px;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+
+        .modal-error {
+            color: #d9534f;
+            font-size: 9pt;
+            margin-bottom: 10px;
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .header-inner, .main {
+                max-width: 95%;
+            }
+            .region-tabs {
+                margin-left: 0;
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo">N</a>
+            <a href="/" class="site-name">Global News</a>
+            <nav class="region-tabs">
+                {% for region_id, region in regions.items() %}
+                <a class="region-tab{% if region_id == default_region %} active{% endif %}"
+                   data-region="{{ region_id }}">{{ region.name }}</a>
+                {% endfor %}
+            </nav>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">Dark</button>
+            <div class="instapaper-controls">
+                <button class="instapaper-btn" id="instapaper-status" title="Instapaper">
+                    <span class="icon">&#128214;</span>
+                    <span class="status-text">Login</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        {% for region_id, region in regions.items() %}
+        <div id="region-{{ region_id }}"
+             class="region-content{% if region_id == default_region %} active{% endif %}">
+            <div class="region-title">Top Headlines - {{ region.name }}</div>
+            <ol class="news-list">
+                {% for article in region.articles %}
+                <li class="news-item">
+                    <div class="item-row">
+                        <span class="rank">{{ loop.index }}.</span>
+                        <div>
+                            <a href="{{ article.url }}" class="title-link"
+                               target="_blank" rel="noopener">{{ article.title }}</a>
+                            <span class="source">({{ article.source }})</span>
+                            {% if article.is_paywalled %}
+                            <span class="paywall-badge paid" title="May require subscription">$</span>
+                            {% else %}
+                            <span class="paywall-badge free" title="Free to read">FREE</span>
+                            {% endif %}
+                            {% if article.popularity_score >= 0.5 %}
+                            <span class="popularity-indicator popularity-high" title="Top story from source">&#9733;</span>
+                            {% endif %}
+                            <button class="save-btn"
+                                    data-url="{{ article.url }}"
+                                    data-title="{{ article.title }}"
+                                    title="Save to Instapaper"
+                                    disabled>&#128229;</button>
+                        </div>
+                    </div>
+                    <div class="meta">{{ article.age }}</div>
+                </li>
+                {% endfor %}
+            </ol>
+        </div>
+        {% endfor %}
+    </main>
+
+    <footer class="footer">
+        Last updated: {{ generated_at }}
+    </footer>
+
+    <div class="modal-overlay" id="login-modal">
+        <div class="modal">
+            <h3>Login to Instapaper</h3>
+            <div class="modal-error" id="login-error"></div>
+            <form id="login-form">
+                <input type="email" id="ip-username" placeholder="Email" required>
+                <input type="password" id="ip-password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <button class="modal-cancel" id="login-cancel">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        // Region tab switching
+        document.querySelectorAll('.region-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.region-tab').forEach(t =>
+                    t.classList.remove('active'));
+                tab.classList.add('active');
+
+                document.querySelectorAll('.region-content').forEach(c =>
+                    c.classList.remove('active'));
+                document.getElementById('region-' + tab.dataset.region)
+                    .classList.add('active');
+            });
+        });
+
+        // Dark mode toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        function setTheme(dark) {
+            if (dark) {
+                body.classList.add('dark');
+                themeToggle.textContent = 'Light';
+            } else {
+                body.classList.remove('dark');
+                themeToggle.textContent = 'Dark';
+            }
+            localStorage.setItem('darkMode', dark);
+        }
+
+        // Load saved preference
+        const savedDark = localStorage.getItem('darkMode') === 'true';
+        setTheme(savedDark);
+
+        themeToggle.addEventListener('click', () => {
+            setTheme(!body.classList.contains('dark'));
+        });
+
+        // Instapaper Integration
+        const API_BASE = 'http://127.0.0.1:5000/api';
+        let instapaperAuthenticated = false;
+
+        async function checkInstapaperStatus() {
+            try {
+                const response = await fetch(`${API_BASE}/instapaper/status`);
+                const data = await response.json();
+                instapaperAuthenticated = data.authenticated;
+                updateInstapaperUI(data.authenticated, data.message);
+            } catch (e) {
+                console.log('Instapaper API not available');
+                updateInstapaperUI(false, 'API unavailable');
+            }
+        }
+
+        function updateInstapaperUI(authenticated, message) {
+            const btn = document.getElementById('instapaper-status');
+            const statusText = btn.querySelector('.status-text');
+
+            if (authenticated) {
+                btn.classList.add('authenticated');
+                statusText.textContent = 'Connected';
+                document.querySelectorAll('.save-btn').forEach(b => b.disabled = false);
+            } else {
+                btn.classList.remove('authenticated');
+                statusText.textContent = 'Login';
+                document.querySelectorAll('.save-btn').forEach(b => b.disabled = true);
+            }
+        }
+
+        // Instapaper button click
+        document.getElementById('instapaper-status').addEventListener('click', () => {
+            if (instapaperAuthenticated) {
+                if (confirm('Disconnect from Instapaper?')) {
+                    fetch(`${API_BASE}/instapaper/logout`, { method: 'POST' })
+                        .then(() => checkInstapaperStatus());
+                }
+            } else {
+                document.getElementById('login-modal').classList.add('active');
+            }
+        });
+
+        // Cancel login
+        document.getElementById('login-cancel').addEventListener('click', () => {
+            document.getElementById('login-modal').classList.remove('active');
+            document.getElementById('login-error').style.display = 'none';
+        });
+
+        // Login form submission
+        document.getElementById('login-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('ip-username').value;
+            const password = document.getElementById('ip-password').value;
+            const errorEl = document.getElementById('login-error');
+
+            try {
+                const response = await fetch(`${API_BASE}/instapaper/login`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const data = await response.json();
+                if (data.success) {
+                    document.getElementById('login-modal').classList.remove('active');
+                    errorEl.style.display = 'none';
+                    document.getElementById('ip-password').value = '';
+                    checkInstapaperStatus();
+                } else {
+                    errorEl.textContent = data.message;
+                    errorEl.style.display = 'block';
+                }
+            } catch (err) {
+                errorEl.textContent = 'Connection failed. Is the API server running?';
+                errorEl.style.display = 'block';
+            }
+        });
+
+        // Save buttons
+        document.querySelectorAll('.save-btn').forEach(btn => {
+            btn.addEventListener('click', async () => {
+                if (!instapaperAuthenticated) return;
+
+                const url = btn.dataset.url;
+                const title = btn.dataset.title;
+
+                btn.disabled = true;
+                const originalText = btn.innerHTML;
+                btn.textContent = '...';
+
+                try {
+                    const response = await fetch(`${API_BASE}/instapaper/save`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ url, title })
+                    });
+
+                    const data = await response.json();
+                    if (data.success) {
+                        btn.innerHTML = '&#10003;';
+                        btn.classList.add('saved');
+                    } else {
+                        btn.innerHTML = '&#10007;';
+                        alert(data.message);
+                    }
+                } catch (e) {
+                    btn.innerHTML = '&#10007;';
+                }
+
+                setTimeout(() => {
+                    if (!btn.classList.contains('saved')) {
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                    }
+                }, 2000);
+            });
+        });
+
+        // Initialize Instapaper status check
+        checkInstapaperStatus();
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+settings:
+  headlines_per_region: 25
+  request_timeout: 15
+  user_agent: "NewsAggregator/1.0"
+  rate_limit_delay: 0.5
+  retry:
+    max_attempts: 3
+    base_delay: 1.0
+    multiplier: 2.0
+  deduplication:
+    similarity_threshold: 0.85
+  sort_by: "published"  # Options: "published" (default), "popularity"
+  paywall:
+    enabled: true
+    check_meta_tags: false  # Set to true for thorough check (slower)
+    known_paywalled_domains:
+      - wsj.com
+      - nytimes.com
+      - ft.com
+      - economist.com
+      - washingtonpost.com
+      - bloomberg.com
+      - businessinsider.com
+      - theatlantic.com
+      - newyorker.com
+      - wired.com
+      - thetimes.co.uk
+      - telegraph.co.uk
+      - barrons.com
+
+regions:
+  us:
+    name: "United States"
+    feeds:
+      - url: "https://feeds.npr.org/1001/rss.xml"
+        name: "NPR"
+      - url: "https://abcnews.go.com/abcnews/topstories"
+        name: "ABC News"
+      - url: "https://feeds.washingtonpost.com/rss/world"
+        name: "Washington Post"
+      - url: "https://rss.cbc.ca/lineup/topstories.xml"
+        name: "CBC"
+        timeout: 30
+      - url: "https://feeds.bbci.co.uk/news/world/rss.xml"
+        name: "BBC"
+      - url: "https://www.aljazeera.com/xml/rss/all.xml"
+        name: "Al Jazeera"
+
+  europe:
+    name: "Europe"
+    feeds:
+      - url: "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
+        name: "BBC Europe"
+      - url: "https://www.france24.com/en/rss"
+        name: "France24"
+      - url: "https://www.euronews.com/rss"
+        name: "Euronews"
+      - url: "https://www.aljazeera.com/xml/rss/all.xml"
+        name: "Al Jazeera"
+
+  asia:
+    name: "Asia"
+    feeds:
+      - url: "https://japantoday.com/feed"
+        name: "Japan Today"
+      - url: "https://www.taipeitimes.com/xml/index.rss"
+        name: "Taipei Times"
+      - url: "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
+        name: "BBC Asia"
+      - url: "https://www.aljazeera.com/xml/rss/all.xml"
+        name: "Al Jazeera"
+
+  africa:
+    name: "Africa"
+    feeds:
+      - url: "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf"
+        name: "AllAfrica"
+      - url: "https://feeds.bbci.co.uk/news/world/africa/rss.xml"
+        name: "BBC Africa"
+      - url: "https://www.france24.com/en/rss"
+        name: "France24"
+
+  latin_america:
+    name: "Latin America"
+    feeds:
+      - url: "https://www.batimes.com.ar/feed"
+        name: "Buenos Aires Times"
+      - url: "https://riotimesonline.com/feed/"
+        name: "Rio Times"
+      - url: "https://mexiconewsdaily.com/feed/"
+        name: "Mexico News Daily"
+      - url: "https://feeds.bbci.co.uk/news/world/latin_america/rss.xml"
+        name: "BBC Latin America"
+
+  oceania:
+    name: "Oceania"
+    feeds:
+      - url: "https://www.rnz.co.nz/rss/national.xml"
+        name: "Radio NZ"
+      - url: "https://feeds.bbci.co.uk/news/world/australia/rss.xml"
+        name: "BBC Australia"
+      - url: "https://www.aljazeera.com/xml/rss/all.xml"
+        name: "Al Jazeera"
