@@ -231,50 +231,20 @@
             color: var(--accent);
         }
 
-        .instapaper-controls {
-            margin-left: 10px;
-        }
-
-        .instapaper-btn {
+        .feedback-btn {
             background: none;
             border: 1px solid var(--text-primary);
             color: var(--text-primary);
             cursor: pointer;
             padding: 2px 8px;
             font-size: 9pt;
-            display: flex;
-            align-items: center;
-            gap: 4px;
+            margin-left: 5px;
         }
 
-        .instapaper-btn.authenticated {
-            border-color: #5cb85c;
-            color: #5cb85c;
-        }
-
-        .save-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 9pt;
-            padding: 0 4px;
-            opacity: 0.5;
-            transition: opacity 0.2s;
-            color: var(--text-secondary);
-        }
-
-        .save-btn:hover {
-            opacity: 1;
-        }
-
-        .save-btn.saved {
-            color: #5cb85c;
-            opacity: 1;
-        }
-
-        .save-btn:disabled {
-            cursor: not-allowed;
-            opacity: 0.3;
+        .feedback-btn:hover {
+            background: rgba(139, 69, 88, 0.1);
+            border-color: var(--accent);
+            color: var(--accent);
         }
 
         .modal-overlay {
@@ -298,7 +268,7 @@
             background: var(--bg-primary);
             padding: 20px;
             border-radius: 4px;
-            max-width: 300px;
+            max-width: 350px;
             width: 90%;
             border: 1px solid var(--border-color);
         }
@@ -308,14 +278,24 @@
             color: var(--text-primary);
         }
 
-        .modal input {
+        .modal label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text-secondary);
+            font-size: 9pt;
+        }
+
+        .modal textarea {
             width: 100%;
             padding: 8px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             border: 1px solid var(--border-color);
             background: var(--bg-primary);
             color: var(--text-primary);
             font-size: 10pt;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 80px;
         }
 
         .modal button[type="submit"] {
@@ -340,13 +320,47 @@
             cursor: pointer;
             width: 100%;
             text-align: center;
+            font-size: 9pt;
         }
 
-        .modal-error {
-            color: #d9534f;
-            font-size: 9pt;
-            margin-bottom: 10px;
+        .modal-cancel:hover {
+            color: var(--text-primary);
+        }
+
+        .star-rating {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 15px;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+
+        .star-rating input {
             display: none;
+        }
+
+        .star-rating label {
+            cursor: pointer;
+            font-size: 20pt;
+            color: var(--border-color);
+            transition: color 0.2s;
+            margin-bottom: 0;
+        }
+
+        .star-rating label:hover,
+        .star-rating label:hover ~ label,
+        .star-rating input:checked ~ label {
+            color: #f0ad4e;
+        }
+
+        .thank-you {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .thank-you p {
+            margin-bottom: 15px;
+            color: var(--text-primary);
         }
 
         @media (max-width: 600px) {
@@ -371,12 +385,7 @@
                 {% endfor %}
             </nav>
             <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">Dark</button>
-            <div class="instapaper-controls">
-                <button class="instapaper-btn" id="instapaper-status" title="Instapaper">
-                    <span class="icon">&#128214;</span>
-                    <span class="status-text">Login</span>
-                </button>
-            </div>
+            <button class="feedback-btn" id="feedback-btn">Feedback</button>
         </div>
     </header>
 
@@ -402,11 +411,6 @@
                             {% if article.popularity_score >= 0.5 %}
                             <span class="popularity-indicator popularity-high" title="Top story from source">&#9733;</span>
                             {% endif %}
-                            <button class="save-btn"
-                                    data-url="{{ article.url }}"
-                                    data-title="{{ article.title }}"
-                                    title="Save to Instapaper"
-                                    disabled>&#128229;</button>
                         </div>
                     </div>
                     <div class="meta">{{ article.age }}</div>
@@ -421,32 +425,78 @@
         Last updated: {{ generated_at }}
     </footer>
 
-    <div class="modal-overlay" id="login-modal">
+    <div class="modal-overlay" id="feedback-modal">
         <div class="modal">
-            <h3>Login to Instapaper</h3>
-            <div class="modal-error" id="login-error"></div>
-            <form id="login-form">
-                <input type="email" id="ip-username" placeholder="Email" required>
-                <input type="password" id="ip-password" placeholder="Password" required>
-                <button type="submit">Login</button>
-            </form>
-            <button class="modal-cancel" id="login-cancel">Cancel</button>
+            <div id="feedback-form-container">
+                <h3>Send Feedback</h3>
+                <form id="feedback-form">
+                    <label>How would you rate your experience?</label>
+                    <div class="star-rating">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5" title="5 stars">&#9733;</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4" title="4 stars">&#9733;</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3" title="3 stars">&#9733;</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2" title="2 stars">&#9733;</label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1" title="1 star">&#9733;</label>
+                    </div>
+                    <label for="feedback-comment">Comments (optional)</label>
+                    <textarea id="feedback-comment" placeholder="Tell us what you think..."></textarea>
+                    <button type="submit">Submit Feedback</button>
+                </form>
+                <button class="modal-cancel" id="feedback-cancel">Cancel</button>
+            </div>
+            <div id="feedback-thank-you" class="thank-you" style="display: none;">
+                <p style="font-size: 24pt;">🎉</p>
+                <p><strong>Thank you!</strong></p>
+                <p style="font-size: 9pt; color: var(--text-secondary);">Your feedback helps us improve ✨</p>
+                <button class="modal-cancel" id="feedback-close">Close</button>
+            </div>
         </div>
     </div>
 
     <script>
         // Region tab switching
-        document.querySelectorAll('.region-tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('.region-tab').forEach(t =>
-                    t.classList.remove('active'));
-                tab.classList.add('active');
+        const regionTabs = document.querySelectorAll('.region-tab');
 
-                document.querySelectorAll('.region-content').forEach(c =>
-                    c.classList.remove('active'));
-                document.getElementById('region-' + tab.dataset.region)
-                    .classList.add('active');
-            });
+        function switchToTab(tab) {
+            regionTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            document.querySelectorAll('.region-content').forEach(c =>
+                c.classList.remove('active'));
+            document.getElementById('region-' + tab.dataset.region)
+                .classList.add('active');
+        }
+
+        regionTabs.forEach(tab => {
+            tab.addEventListener('click', () => switchToTab(tab));
+        });
+
+        // Keyboard Tab key to cycle through sections
+        document.addEventListener('keydown', (e) => {
+            // Only handle Tab when not in an input field
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+            if (e.key === 'Tab') {
+                e.preventDefault();
+                const tabs = Array.from(regionTabs);
+                const currentIndex = tabs.findIndex(t => t.classList.contains('active'));
+
+                let nextIndex;
+                if (e.shiftKey) {
+                    // Shift+Tab goes backwards
+                    nextIndex = currentIndex <= 0 ? tabs.length - 1 : currentIndex - 1;
+                } else {
+                    // Tab goes forwards
+                    nextIndex = currentIndex >= tabs.length - 1 ? 0 : currentIndex + 1;
+                }
+
+                switchToTab(tabs[nextIndex]);
+            }
         });
 
         // Dark mode toggle
@@ -472,127 +522,63 @@
             setTheme(!body.classList.contains('dark'));
         });
 
-        // Instapaper Integration
-        const API_BASE = 'http://127.0.0.1:5000/api';
-        let instapaperAuthenticated = false;
+        // Feedback modal
+        const feedbackModal = document.getElementById('feedback-modal');
+        const feedbackForm = document.getElementById('feedback-form');
+        const feedbackFormContainer = document.getElementById('feedback-form-container');
+        const feedbackThankYou = document.getElementById('feedback-thank-you');
 
-        async function checkInstapaperStatus() {
-            try {
-                const response = await fetch(`${API_BASE}/instapaper/status`);
-                const data = await response.json();
-                instapaperAuthenticated = data.authenticated;
-                updateInstapaperUI(data.authenticated, data.message);
-            } catch (e) {
-                console.log('Instapaper API not available');
-                updateInstapaperUI(false, 'API unavailable');
-            }
-        }
+        document.getElementById('feedback-btn').addEventListener('click', () => {
+            feedbackModal.classList.add('active');
+        });
 
-        function updateInstapaperUI(authenticated, message) {
-            const btn = document.getElementById('instapaper-status');
-            const statusText = btn.querySelector('.status-text');
+        document.getElementById('feedback-cancel').addEventListener('click', () => {
+            feedbackModal.classList.remove('active');
+        });
 
-            if (authenticated) {
-                btn.classList.add('authenticated');
-                statusText.textContent = 'Connected';
-                document.querySelectorAll('.save-btn').forEach(b => b.disabled = false);
-            } else {
-                btn.classList.remove('authenticated');
-                statusText.textContent = 'Login';
-                document.querySelectorAll('.save-btn').forEach(b => b.disabled = true);
-            }
-        }
+        document.getElementById('feedback-close').addEventListener('click', () => {
+            feedbackModal.classList.remove('active');
+            // Reset form for next time
+            feedbackFormContainer.style.display = 'block';
+            feedbackThankYou.style.display = 'none';
+            feedbackForm.reset();
+        });
 
-        // Instapaper button click
-        document.getElementById('instapaper-status').addEventListener('click', () => {
-            if (instapaperAuthenticated) {
-                if (confirm('Disconnect from Instapaper?')) {
-                    fetch(`${API_BASE}/instapaper/logout`, { method: 'POST' })
-                        .then(() => checkInstapaperStatus());
-                }
-            } else {
-                document.getElementById('login-modal').classList.add('active');
+        // Close modal on overlay click
+        feedbackModal.addEventListener('click', (e) => {
+            if (e.target === feedbackModal) {
+                feedbackModal.classList.remove('active');
             }
         });
 
-        // Cancel login
-        document.getElementById('login-cancel').addEventListener('click', () => {
-            document.getElementById('login-modal').classList.remove('active');
-            document.getElementById('login-error').style.display = 'none';
-        });
-
-        // Login form submission
-        document.getElementById('login-form').addEventListener('submit', async (e) => {
+        feedbackForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const username = document.getElementById('ip-username').value;
-            const password = document.getElementById('ip-password').value;
-            const errorEl = document.getElementById('login-error');
+            const rating = document.querySelector('input[name="rating"]:checked');
+            const comment = document.getElementById('feedback-comment').value;
 
+            // Build feedback data
+            const stars = rating ? '⭐'.repeat(parseInt(rating.value)) : 'No rating';
+            const data = {
+                rating: rating ? `${stars} (${rating.value}/5)` : 'No rating',
+                comment: comment || '(no comment)',
+                _subject: '*todo knightlyread feedback'
+            };
+
+            // Submit to Formspree
             try {
-                const response = await fetch(`${API_BASE}/instapaper/login`, {
+                await fetch('https://formspree.io/f/maqqnzny', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ username, password })
+                    body: JSON.stringify(data)
                 });
-
-                const data = await response.json();
-                if (data.success) {
-                    document.getElementById('login-modal').classList.remove('active');
-                    errorEl.style.display = 'none';
-                    document.getElementById('ip-password').value = '';
-                    checkInstapaperStatus();
-                } else {
-                    errorEl.textContent = data.message;
-                    errorEl.style.display = 'block';
-                }
             } catch (err) {
-                errorEl.textContent = 'Connection failed. Is the API server running?';
-                errorEl.style.display = 'block';
+                console.error('Feedback submission error:', err);
             }
+
+            // Show thank you message
+            feedbackFormContainer.style.display = 'none';
+            feedbackThankYou.style.display = 'block';
         });
-
-        // Save buttons
-        document.querySelectorAll('.save-btn').forEach(btn => {
-            btn.addEventListener('click', async () => {
-                if (!instapaperAuthenticated) return;
-
-                const url = btn.dataset.url;
-                const title = btn.dataset.title;
-
-                btn.disabled = true;
-                const originalText = btn.innerHTML;
-                btn.textContent = '...';
-
-                try {
-                    const response = await fetch(`${API_BASE}/instapaper/save`, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ url, title })
-                    });
-
-                    const data = await response.json();
-                    if (data.success) {
-                        btn.innerHTML = '&#10003;';
-                        btn.classList.add('saved');
-                    } else {
-                        btn.innerHTML = '&#10007;';
-                        alert(data.message);
-                    }
-                } catch (e) {
-                    btn.innerHTML = '&#10007;';
-                }
-
-                setTimeout(() => {
-                    if (!btn.classList.contains('saved')) {
-                        btn.innerHTML = originalText;
-                        btn.disabled = false;
-                    }
-                }, 2000);
-            });
-        });
-
-        // Initialize Instapaper status check
-        checkInstapaperStatus();
     </script>
 </body>
 </html>
