@@ -3,23 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global News</title>
+    <title>Knightly Read</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Pinyon+Script&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #f6f6ef;
-            --bg-header: #ff6600;
-            --text-primary: #000;
-            --text-secondary: #828282;
-            --border-color: #e0e0e0;
-            --link-visited: #828282;
+            --bg-primary: #faf8f5;
+            --bg-header: #8b4558;
+            --accent: #8b4558;
+            --accent-light: #a85a6d;
+            --text-primary: #2d2d2d;
+            --text-secondary: #6b6b6b;
+            --border-color: #e8e4df;
+            --link-visited: #7a7a7a;
         }
 
         body.dark {
-            --bg-primary: #1a1a1a;
-            --text-primary: #e0e0e0;
-            --text-secondary: #888;
-            --border-color: #333;
-            --link-visited: #666;
+            --bg-primary: #1c1a1b;
+            --bg-header: #6b3545;
+            --accent: #a85a6d;
+            --accent-light: #c47a8d;
+            --text-primary: #e8e4df;
+            --text-secondary: #9a9a9a;
+            --border-color: #3d3a3b;
+            --link-visited: #777;
         }
 
         * {
@@ -36,8 +44,9 @@
         }
 
         .header {
-            background: var(--bg-header);
-            padding: 2px 4px;
+            background: var(--bg-primary);
+            padding: 12px 4px;
+            border-bottom: 2px solid var(--accent);
         }
 
         .header-inner {
@@ -45,23 +54,20 @@
             margin: 0 auto;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             flex-wrap: wrap;
         }
 
-        .logo {
-            border: 1px solid white;
-            padding: 1px 5px;
-            font-weight: bold;
-            color: #000;
+        .site-name {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 22pt;
+            font-weight: normal;
+            color: var(--text-primary);
             text-decoration: none;
-            background: #fff;
         }
 
-        .site-name {
-            font-weight: bold;
-            color: #000;
-            text-decoration: none;
+        .site-name:hover {
+            color: var(--accent);
         }
 
         .region-tabs {
@@ -72,18 +78,22 @@
         }
 
         .region-tab {
-            color: var(--text-primary);
+            color: var(--text-secondary);
             text-decoration: none;
             cursor: pointer;
-            padding: 2px 4px;
+            padding: 4px 8px;
+            border-radius: 3px;
+            transition: all 0.2s;
         }
 
         .region-tab:hover {
-            color: #fff;
+            color: var(--accent);
+            background: rgba(139, 69, 88, 0.1);
         }
 
         .region-tab.active {
             color: #fff;
+            background: var(--accent);
             font-weight: bold;
         }
 
@@ -146,7 +156,7 @@
             padding: 20px;
             color: var(--text-secondary);
             font-size: 8pt;
-            border-top: 2px solid var(--bg-header);
+            border-top: 2px solid var(--accent);
             margin-top: 20px;
         }
 
@@ -218,7 +228,7 @@
         }
 
         .popularity-high {
-            color: #ff6600;
+            color: var(--accent);
         }
 
         .instapaper-controls {
@@ -312,14 +322,14 @@
             width: 100%;
             padding: 8px;
             cursor: pointer;
-            background: #ff6600;
+            background: var(--accent);
             color: #fff;
             border: none;
             font-size: 10pt;
         }
 
         .modal button[type="submit"]:hover {
-            background: #e55a00;
+            background: var(--accent-light);
         }
 
         .modal-cancel {
@@ -353,8 +363,7 @@
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" class="logo">N</a>
-            <a href="/" class="site-name">Global News</a>
+            <a href="/" class="site-name">Knightly Read</a>
             <nav class="region-tabs">
                 {% for region_id, region in regions.items() %}
                 <a class="region-tab{% if region_id == default_region %} active{% endif %}"

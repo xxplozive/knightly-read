@@ -1,5 +1,5 @@
 settings:
-  headlines_per_region: 25
+  headlines_per_region: 10
   request_timeout: 15
   user_agent: "NewsAggregator/1.0"
   rate_limit_delay: 0.5
@@ -38,13 +38,16 @@ regions:
         name: "ABC News"
       - url: "https://feeds.washingtonpost.com/rss/world"
         name: "Washington Post"
-      - url: "https://rss.cbc.ca/lineup/topstories.xml"
-        name: "CBC"
-        timeout: 30
       - url: "https://feeds.bbci.co.uk/news/world/rss.xml"
         name: "BBC"
-      - url: "https://www.aljazeera.com/xml/rss/all.xml"
-        name: "Al Jazeera"
+      - url: "https://www.newyorker.com/feed/news"
+        name: "New Yorker"
+      - url: "https://www.cnbc.com/id/100727362/device/rss/rss.html"
+        name: "CNBC"
+      - url: "https://moxie.foxnews.com/google-publisher/us.xml"
+        name: "Fox News"
+      - url: "https://feeds.a.dj.com/rss/RSSWorldNews.xml"
+        name: "Wall Street Journal"
 
   europe:
     name: "Europe"
@@ -101,3 +104,27 @@ regions:
         name: "BBC Australia"
       - url: "https://www.aljazeera.com/xml/rss/all.xml"
         name: "Al Jazeera"
+
+  sports:
+    name: "Sports"
+    feeds:
+      - url: "https://www.espn.com/espn/rss/news"
+        name: "ESPN"
+      - url: "https://feeds.bbci.co.uk/sport/rss.xml"
+        name: "BBC Sport"
+      - url: "https://www.cbssports.com/rss/headlines/"
+        name: "CBS Sports"
+      - url: "https://sports.yahoo.com/rss/"
+        name: "Yahoo Sports"
+
+  odd_news:
+    name: "Odd News"
+    feeds:
+      - url: "https://rss.upi.com/news/odd_news.rss"
+        name: "UPI Odd News"
+      - url: "https://feeds.feedburner.com/CrackedRSS"
+        name: "Cracked"
+      - url: "https://www.theonion.com/rss"
+        name: "The Onion"
+      - url: "https://clickhole.com/feed"
+        name: "ClickHole"
