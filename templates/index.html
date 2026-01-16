@@ -442,8 +442,23 @@
     </main>
 
     <footer class="footer">
-        Last updated: {{ generated_at }}
+        Last updated: {{ generated_at }}<br>
+        <span id="goatcounter-visitors"></span> visits
     </footer>
+
+    <script data-goatcounter="https://knightlyread.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+    <script>
+        // Fetch and display visitor count
+        fetch('https://knightlyread.goatcounter.com/counter//.json')
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('goatcounter-visitors').textContent = data.count.toLocaleString();
+            })
+            .catch(() => {
+                document.getElementById('goatcounter-visitors').textContent = '—';
+            });
+    </script>
 
     <div class="modal-overlay" id="feedback-modal">
         <div class="modal">
