@@ -231,6 +231,22 @@
             color: var(--accent);
         }
 
+        .keyboard-hint {
+            font-size: 8pt;
+            color: var(--text-secondary);
+            text-align: center;
+            padding: 6px 0;
+            opacity: 0.7;
+        }
+
+        .keyboard-hint kbd {
+            background: var(--border-color);
+            padding: 1px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            font-size: 8pt;
+        }
+
         .feedback-btn {
             background: none;
             border: 1px solid var(--text-primary);
@@ -389,6 +405,10 @@
         </div>
     </header>
 
+    <div class="keyboard-hint">
+        <kbd>Tab</kbd> other regions · <kbd>D</kbd> dark mode
+    </div>
+
     <main class="main">
         {% for region_id, region in regions.items() %}
         <div id="region-{{ region_id }}"
@@ -476,11 +496,12 @@
             tab.addEventListener('click', () => switchToTab(tab));
         });
 
-        // Keyboard Tab key to cycle through sections
+        // Keyboard shortcuts
         document.addEventListener('keydown', (e) => {
-            // Only handle Tab when not in an input field
+            // Only handle shortcuts when not in an input field
             if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
 
+            // Tab to cycle through sections
             if (e.key === 'Tab') {
                 e.preventDefault();
                 const tabs = Array.from(regionTabs);
@@ -496,6 +517,11 @@
                 }
 
                 switchToTab(tabs[nextIndex]);
+            }
+
+            // D to toggle dark mode
+            if (e.key === 'd' || e.key === 'D') {
+                setTheme(!body.classList.contains('dark'));
             }
         });
 
