@@ -18,6 +18,7 @@ class Article:
     feed_position: int = 0
     popularity_score: float = 0.0
     is_paywalled: bool = False
+    country_flag: str = ''
 
     def calculate_popularity(self, total_items: int = 1) -> None:
         """
@@ -40,7 +41,8 @@ class Article:
             'age': self._format_age(),
             'popularity_score': round(self.popularity_score, 3),
             'feed_position': self.feed_position,
-            'is_paywalled': self.is_paywalled
+            'is_paywalled': self.is_paywalled,
+            'country_flag': self.country_flag
         }
 
     def _format_age(self) -> str:

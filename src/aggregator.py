@@ -6,6 +6,7 @@ from .fetcher import FeedFetcher, RetryConfig
 from .parser import FeedParser, Article
 from .deduplicator import ArticleDeduplicator
 from .paywall import PaywallDetector
+from .country_detector import detect_country
 import logging
 import time
 
@@ -56,18 +57,27 @@ class NewsAggregator:
     def aggregate(self) -> Dict[str, dict]:
         """Aggregate headlines for all regions."""
         results = {}
-        limit = self.config['settings']['headlines_per_region']
+        default_limit = self.config['settings']['headlines_per_region']
         sort_by = self.config['settings'].get('sort_by', 'published')
 
         for region_id, region_data in self.config['regions'].items():
             logger.info(f"Processing region: {region_data['name']}")
             articles = self._process_region(region_data)
 
+            # Apply country detection for global region
+            if region_id == 'global':
+                for article in articles:
+                    _, flag = detect_country(article.title)
+                    article.country_flag = flag
+
             # Sort based on config
             if sort_by == 'popularity':
                 articles.sort(key=lambda a: a.popularity_score, reverse=True)
             else:
                 articles.sort(key=lambda a: a.published, reverse=True)
+
+            # Use headlines_override if specified, otherwise default
+            limit = region_data.get('headlines_override', default_limit)
 
             results[region_id] = {
                 'name': region_data['name'],

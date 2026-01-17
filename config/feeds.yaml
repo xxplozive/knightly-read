@@ -61,43 +61,30 @@ regions:
       - url: "https://feeds.a.dj.com/rss/RSSWorldNews.xml"
         name: "Wall Street Journal"
 
-  europe:
-    name: "Europe"
+  global:
+    name: "Global"
+    headlines_override: 15
     feeds:
+      # Europe
       - url: "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
         name: "BBC Europe"
       - url: "https://www.france24.com/en/rss"
         name: "France24"
       - url: "https://www.euronews.com/rss"
         name: "Euronews"
-      - url: "https://www.aljazeera.com/xml/rss/all.xml"
-        name: "Al Jazeera"
-
-  asia:
-    name: "Asia"
-    feeds:
+      # Asia
       - url: "https://japantoday.com/feed"
         name: "Japan Today"
       - url: "https://www.taipeitimes.com/xml/index.rss"
         name: "Taipei Times"
       - url: "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
         name: "BBC Asia"
-      - url: "https://www.aljazeera.com/xml/rss/all.xml"
-        name: "Al Jazeera"
-
-  africa:
-    name: "Africa"
-    feeds:
+      # Africa
       - url: "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf"
         name: "AllAfrica"
       - url: "https://feeds.bbci.co.uk/news/world/africa/rss.xml"
         name: "BBC Africa"
-      - url: "https://www.france24.com/en/rss"
-        name: "France24"
-
-  latin_america:
-    name: "Latin America"
-    feeds:
+      # Latin America
       - url: "https://www.batimes.com.ar/feed"
         name: "Buenos Aires Times"
       - url: "https://riotimesonline.com/feed/"
@@ -106,10 +93,7 @@ regions:
         name: "Mexico News Daily"
       - url: "https://feeds.bbci.co.uk/news/world/latin_america/rss.xml"
         name: "BBC Latin America"
-
-  oceania:
-    name: "Oceania"
-    feeds:
+      # Oceania
       - url: "https://www.rnz.co.nz/rss/national.xml"
         name: "Radio NZ"
       - url: "https://feeds.bbci.co.uk/news/world/australia/rss.xml"

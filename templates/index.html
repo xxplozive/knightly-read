@@ -231,6 +231,11 @@
             color: var(--accent);
         }
 
+        .country-flag {
+            font-size: 12pt;
+            margin-right: 2px;
+        }
+
         .keyboard-hint {
             font-size: 8pt;
             color: var(--text-secondary);
@@ -420,7 +425,7 @@
                     <div class="item-row">
                         <span class="rank">{{ loop.index }}.</span>
                         <div>
-                            <a href="{{ article.url }}" class="title-link"
+                            {% if article.country_flag %}<span class="country-flag">{{ article.country_flag }}</span> {% endif %}<a href="{{ article.url }}" class="title-link"
                                target="_blank" rel="noopener">{{ article.title }}</a>
                             <span class="source">({{ article.source }})</span>
                             {% if article.is_paywalled %}
