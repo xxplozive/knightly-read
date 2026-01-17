@@ -51,6 +51,10 @@ def main():
         )
         generator.generate(data, default_region='us')
 
+        # Create CNAME file for custom domain
+        cname_path = BASE_DIR / 'output' / 'CNAME'
+        cname_path.write_text('knightlyread.com')
+
         # Generate quiz if enabled and API key available
         quiz_config = aggregator.config['settings'].get('quiz', {})
         if quiz_config.get('enabled', False):
