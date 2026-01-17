@@ -9,6 +9,7 @@ settings:
     multiplier: 2.0
   deduplication:
     similarity_threshold: 0.85
+  max_per_source: 3  # Maximum articles from any single source per region
   sort_by: "published"  # Options: "published" (default), "popularity"
   paywall:
     enabled: true
@@ -73,10 +74,16 @@ regions:
       - url: "https://www.euronews.com/rss"
         name: "Euronews"
       # Asia
-      - url: "https://japantoday.com/feed"
-        name: "Japan Today"
-      - url: "https://www.taipeitimes.com/xml/index.rss"
-        name: "Taipei Times"
+      - url: "https://www.scmp.com/rss/91/feed"
+        name: "South China Morning Post"
+      - url: "https://www.straitstimes.com/news/asia/rss.xml"
+        name: "Straits Times"
+      - url: "https://timesofindia.indiatimes.com/rssfeeds/296589292.cms"
+        name: "Times of India"
+      - url: "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml&category=6511"
+        name: "Channel News Asia"
+      - url: "https://en.yna.co.kr/RSS/news.xml"
+        name: "Yonhap News"
       - url: "https://feeds.bbci.co.uk/news/world/asia/rss.xml"
         name: "BBC Asia"
       # Africa

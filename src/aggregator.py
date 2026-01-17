@@ -59,6 +59,7 @@ class NewsAggregator:
         results = {}
         default_limit = self.config['settings']['headlines_per_region']
         sort_by = self.config['settings'].get('sort_by', 'published')
+        max_per_source = self.config['settings'].get('max_per_source', 0)
 
         for region_id, region_data in self.config['regions'].items():
             logger.info(f"Processing region: {region_data['name']}")
@@ -76,6 +77,10 @@ class NewsAggregator:
             else:
                 articles.sort(key=lambda a: a.published, reverse=True)
 
+            # Apply per-source limit if configured
+            if max_per_source > 0:
+                articles = self._limit_per_source(articles, max_per_source)
+
             # Use headlines_override if specified, otherwise default
             limit = region_data.get('headlines_override', default_limit)
 
@@ -85,6 +90,17 @@ class NewsAggregator:
             }
 
         return results
+
+    def _limit_per_source(self, articles: List[Article], max_per: int) -> List[Article]:
+        """Limit articles per source while preserving sort order."""
+        source_counts = {}
+        limited = []
+        for article in articles:
+            count = source_counts.get(article.source, 0)
+            if count < max_per:
+                limited.append(article)
+                source_counts[article.source] = count + 1
+        return limited
 
     def _process_region(self, region_data: dict) -> List[Article]:
         """Process all feeds for a region."""
