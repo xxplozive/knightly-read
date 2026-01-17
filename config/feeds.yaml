@@ -28,6 +28,13 @@ settings:
       - thetimes.co.uk
       - telegraph.co.uk
       - barrons.com
+  quiz:
+    enabled: true
+    questions_count: 10
+    source_regions:
+      - us
+      - global
+    difficulty: "middle_school"
 
 regions:
   tristate:

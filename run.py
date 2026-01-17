@@ -2,6 +2,8 @@
 """Main entry point for the news aggregator."""
 import logging
 import sys
+import os
+import json
 from pathlib import Path
 from datetime import datetime
 
@@ -48,6 +50,25 @@ def main():
             output_dir=BASE_DIR / 'output'
         )
         generator.generate(data, default_region='us')
+
+        # Generate quiz if enabled and API key available
+        quiz_config = aggregator.config['settings'].get('quiz', {})
+        if quiz_config.get('enabled', False):
+            api_key = os.environ.get('ANTHROPIC_API_KEY')
+            if api_key:
+                from src.quiz_generator import QuizGenerator
+                logger.info("Generating weekly quiz...")
+                quiz_gen = QuizGenerator(api_key)
+                quiz_data = quiz_gen.generate_quiz(data, aggregator.config['settings'])
+                if quiz_data:
+                    output_path = BASE_DIR / 'output' / 'quiz.json'
+                    with open(output_path, 'w') as f:
+                        json.dump(quiz_data, f, indent=2)
+                    logger.info(f"Quiz generated: {output_path}")
+                else:
+                    logger.warning("Quiz generation failed")
+            else:
+                logger.info("Quiz enabled but ANTHROPIC_API_KEY not set, skipping")
 
         elapsed = (datetime.now() - start_time).total_seconds()
         logger.info(f"Aggregation complete in {elapsed:.2f}s")
