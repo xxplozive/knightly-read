@@ -18,7 +18,7 @@ class HTMLGenerator:
         """Generate static HTML files."""
         template = self.env.get_template('index.html')
 
-        generated_at = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')
+        generated_at = datetime.now(timezone.utc).strftime('%b %d, %I:%M %p UTC')
 
         html = template.render(
             regions=data,
