@@ -20,6 +20,8 @@ logs/
 
 # Output (regenerated on each run)
 output/
+# But track quiz.json as fallback
+!output/quiz.json
 
 # macOS
 .DS_Store

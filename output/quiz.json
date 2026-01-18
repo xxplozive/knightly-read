@@ -1,0 +1,130 @@
+{
+  "questions": [
+    {
+      "question": "What space mission is NASA preparing for that involves sending astronauts around the moon?",
+      "type": "multiple_choice",
+      "options": [
+        "Apollo II",
+        "Artemis II",
+        "Discovery II",
+        "Orion II"
+      ],
+      "correct_index": 1,
+      "source_headline": "NASA rolls out Artemis II craft ahead of crewed lunar orbit",
+      "explanation": "NASA is preparing the Artemis II mission, which will send astronauts on a lunar orbit"
+    },
+    {
+      "question": "True or False: More than 9,000 people have died from flu this season.",
+      "type": "true_false",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 0,
+      "source_headline": "WATCH: More than 9,000 deaths from flu, pediatric cases nearly double during flu season",
+      "explanation": "The headline states that more than 9,000 deaths have occurred from flu this season"
+    },
+    {
+      "question": "Which African country's leader has won a seventh term in office?",
+      "type": "multiple_choice",
+      "options": [
+        "Kenya",
+        "Nigeria",
+        "Uganda",
+        "Ghana"
+      ],
+      "correct_index": 2,
+      "source_headline": "Uganda's Museveni wins 7th term, opponent calls results 'fake'",
+      "explanation": "Uganda's President Museveni has won his seventh term in office"
+    },
+    {
+      "question": "What percentage tariff does Trump plan to impose on NATO members regarding Greenland?",
+      "type": "multiple_choice",
+      "options": [
+        "15%",
+        "20%",
+        "25%",
+        "30%"
+      ],
+      "correct_index": 2,
+      "source_headline": "Trump: NATO members to face tariffs increasing to 25% until a Greenland purchase deal is struck",
+      "explanation": "Trump announced tariffs increasing to 25% on NATO members until a Greenland deal is made"
+    },
+    {
+      "question": "True or False: People in Greenland have protested against Trump's plan to take control of their territory.",
+      "type": "true_false",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 0,
+      "source_headline": "Thousands protest in Nuuk against Trump's plan to annex Greenland",
+      "explanation": "Thousands of people protested in Nuuk, Greenland against Trump's annexation plan"
+    },
+    {
+      "question": "Which country claimed third place in the recent AFCON tournament?",
+      "type": "multiple_choice",
+      "options": [
+        "Egypt",
+        "Nigeria",
+        "Senegal",
+        "Ghana"
+      ],
+      "correct_index": 1,
+      "source_headline": "Nigeria beat Egypt on penalties to claim AFCON bronze medal",
+      "explanation": "Nigeria beat Egypt on penalties to win the bronze medal (third place) at AFCON"
+    },
+    {
+      "question": "True or False: Iran's supreme leader has admitted that thousands of people were killed during recent protests.",
+      "type": "true_false",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 0,
+      "source_headline": "Iran supreme leader acknowledges thousands killed during recent protests",
+      "explanation": "Iran's supreme leader has acknowledged that thousands were killed during recent protests"
+    },
+    {
+      "question": "What dangerous internet challenge are police warning people about?",
+      "type": "multiple_choice",
+      "options": [
+        "Window breaking challenge",
+        "Door kicking challenge",
+        "Wall punching challenge",
+        "Glass smashing challenge"
+      ],
+      "correct_index": 1,
+      "source_headline": "Police warn of 'door kicking challenge' that can turn viral prank 'from funny to fatal'",
+      "explanation": "Police are warning about the 'door kicking challenge' that can be dangerous"
+    },
+    {
+      "question": "True or False: The EU and Mercosur have signed a major trade deal.",
+      "type": "true_false",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 0,
+      "source_headline": "EU and Mercosur sign major trade deal in Asuncion",
+      "explanation": "The EU and Mercosur have signed a major trade deal in Asuncion"
+    },
+    {
+      "question": "What natural disaster has isolated communities in New Zealand's Northland region?",
+      "type": "multiple_choice",
+      "options": [
+        "Earthquake",
+        "Volcanic eruption",
+        "Flooding",
+        "Tornado"
+      ],
+      "correct_index": 2,
+      "source_headline": "Flooding in Northland isolates communities, prompts warnings",
+      "explanation": "Flooding in New Zealand's Northland region has isolated communities and prompted warnings"
+    }
+  ],
+  "generated_at": "2026-01-17T20:34:33.446892+00:00",
+  "week_of": "2026-W02",
+  "valid_until": "2026-01-24",
+  "headline_count": 25
+}
