@@ -820,14 +820,22 @@
 
     <footer class="footer">
         Last updated: {{ generated_at }} ·
-        <img src="https://knightlyread.goatcounter.com/counter/.svg"
-             alt="visitor count"
-             style="vertical-align: middle; height: 14px;">
-        visitors
+        <span id="visitor-count"></span> visitors
     </footer>
 
     <script data-goatcounter="https://knightlyread.goatcounter.com/count"
             async src="//gc.zgo.at/count.js"></script>
+    <script>
+        // Fetch visitor count from GoatCounter
+        fetch('https://knightlyread.goatcounter.com/counter/.json')
+            .then(r => r.json())
+            .then(data => {
+                document.getElementById('visitor-count').textContent = data.count_unique || data.count || '—';
+            })
+            .catch(() => {
+                document.getElementById('visitor-count').textContent = '—';
+            });
+    </script>
 
     <div class="modal-overlay" id="feedback-modal">
         <div class="modal">
