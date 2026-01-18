@@ -55,6 +55,38 @@ def main():
         cname_path = BASE_DIR / 'output' / 'CNAME'
         cname_path.write_text('knightlyread.com')
 
+        # Generate logo and favicon from transparent source image
+        logo_source = BASE_DIR / 'knightlyreadtransparent.png'
+        if logo_source.exists():
+            from PIL import Image
+            img = Image.open(logo_source)
+            if img.mode != 'RGBA':
+                img = img.convert('RGBA')
+            width, height = img.size
+
+            # Resize for header logo (40px height)
+            new_height = 40
+            new_width = int(width * new_height / height)
+            logo_dark = img.resize((new_width, new_height), Image.Resampling.LANCZOS)
+            logo_dark.save(BASE_DIR / 'output' / 'logo-dark.png')
+
+            # Create inverted version for dark mode
+            data = list(img.getdata())
+            inv_data = [(255-p[0], 255-p[1], 255-p[2], p[3]) if p[3] > 30 else (255, 255, 255, 0) for p in data]
+            img_light = img.copy()
+            img_light.putdata(inv_data)
+            logo_light = img_light.resize((new_width, new_height), Image.Resampling.LANCZOS)
+            logo_light.save(BASE_DIR / 'output' / 'logo-light.png')
+
+            # Favicon - crop to square then resize
+            crop_size = min(width, height)
+            left = (width - crop_size) // 2
+            top = (height - crop_size) // 2
+            knight_sq = img.crop((left, top, left + crop_size, top + crop_size))
+            knight_sq.resize((32, 32), Image.Resampling.LANCZOS).save(BASE_DIR / 'output' / 'favicon.png')
+            knight_sq.resize((180, 180), Image.Resampling.LANCZOS).save(BASE_DIR / 'output' / 'apple-touch-icon.png')
+            logger.info("Generated logo and favicon images")
+
         # Generate quiz if enabled and API key available
         quiz_config = aggregator.config['settings'].get('quiz', {})
         if quiz_config.get('enabled', False):

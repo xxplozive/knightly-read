@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knightly Read</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Pinyon+Script&display=swap" rel="stylesheet">
@@ -68,6 +70,19 @@
 
         .site-name:hover {
             color: var(--accent);
+        }
+
+        .site-logo {
+            height: 40px;
+            width: auto;
+            vertical-align: middle;
+        }
+
+        .site-title {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 22pt;
+            margin-left: 8px;
+            vertical-align: middle;
         }
 
         .region-tabs {
@@ -610,6 +625,13 @@
             .site-name {
                 font-size: 18px;
             }
+            .site-logo {
+                height: 30px;
+            }
+            .site-title {
+                font-size: 16pt;
+                margin-left: 5px;
+            }
 
             /* Horizontal scrollable tabs */
             .region-tabs {
@@ -745,7 +767,7 @@
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" class="site-name">Knightly Read</a>
+            <a href="/" class="site-name"><img src="logo-dark.png" alt="" class="site-logo" id="site-logo"><span class="site-title">Knightly Read</span></a>
             <nav class="region-tabs">
                 {% for region_id, region in regions.items() %}
                 <a class="region-tab{% if region_id == default_region %} active{% endif %}"
@@ -974,15 +996,18 @@
 
         // Dark mode toggle
         const themeToggle = document.getElementById('theme-toggle');
+        const siteLogo = document.getElementById('site-logo');
         const body = document.body;
 
         function setTheme(dark) {
             if (dark) {
                 body.classList.add('dark');
                 themeToggle.textContent = 'Light';
+                siteLogo.src = 'logo-light.png';
             } else {
                 body.classList.remove('dark');
                 themeToggle.textContent = 'Dark';
+                siteLogo.src = 'logo-dark.png';
             }
             localStorage.setItem('darkMode', dark);
         }
