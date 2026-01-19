@@ -1327,16 +1327,11 @@
             }
 
             try {
-                const weekRef = `scores/${quizData.week_of}`;
-                console.log('Loading leaderboard from:', weekRef);
-
                 const snapshot = await firebaseDb
-                    .ref(weekRef)
+                    .ref(`scores/${quizData.week_of}`)
                     .once('value');
 
                 const rawData = snapshot.val();
-                console.log('Raw Firebase data:', rawData);
-
                 const scores = [];
                 if (rawData) {
                     Object.values(rawData).forEach(entry => {
@@ -1345,12 +1340,10 @@
                         }
                     });
                 }
-                console.log('Parsed scores:', scores);
 
                 // Sort by score descending, then take top 10
                 scores.sort((a, b) => b.score - a.score);
-                scores.splice(10); // Keep only top 10
-                console.log('Sorted top 10:', scores);
+                scores.splice(10);
 
                 if (scores.length === 0) {
                     container.innerHTML = '<div class="lb-row">No scores yet. Be the first!</div>';
