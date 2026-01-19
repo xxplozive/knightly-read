@@ -1329,13 +1329,13 @@
             try {
                 const snapshot = await firebaseDb
                     .ref(`scores/${quizData.week_of}`)
-                    .orderByChild('score')
-                    .limitToLast(10)
                     .once('value');
 
                 const scores = [];
                 snapshot.forEach(child => scores.push(child.val()));
-                scores.reverse(); // Highest first
+                // Sort by score descending, then take top 10
+                scores.sort((a, b) => b.score - a.score);
+                scores.splice(10); // Keep only top 10
 
                 if (scores.length === 0) {
                     container.innerHTML = '<div class="lb-row">No scores yet. Be the first!</div>';
