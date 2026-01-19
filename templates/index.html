@@ -1116,11 +1116,22 @@
 
         // Quiz state
         let quizData = null;
+        let shuffledQuestions = [];
         let currentQuestion = 0;
         let score = 0;
         let questionStartTime = 0;
         let timerInterval = null;
         let nickname = '';
+
+        // Shuffle array (Fisher-Yates)
+        function shuffleArray(array) {
+            const arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
 
         // DOM elements
         const quizModal = document.getElementById('quiz-modal');
@@ -1191,6 +1202,7 @@
             localStorage.setItem('quizNickname', nickname);
             currentQuestion = 0;
             score = 0;
+            shuffledQuestions = shuffleArray(quizData.questions);
             showScreen(quizQuestion);
             showQuestion();
         });
@@ -1209,13 +1221,14 @@
         document.getElementById('quiz-retry').addEventListener('click', () => {
             currentQuestion = 0;
             score = 0;
+            shuffledQuestions = shuffleArray(quizData.questions);
             showScreen(quizQuestion);
             showQuestion();
         });
 
         // Show current question
         function showQuestion() {
-            const q = quizData.questions[currentQuestion];
+            const q = shuffledQuestions[currentQuestion];
             document.getElementById('q-num').textContent = currentQuestion + 1;
             document.getElementById('quiz-prompt').textContent = q.question;
             document.getElementById('quiz-points').style.display = 'none';
@@ -1249,7 +1262,7 @@
         // Handle answer selection
         function handleAnswer(selectedIndex) {
             clearInterval(timerInterval);
-            const q = quizData.questions[currentQuestion];
+            const q = shuffledQuestions[currentQuestion];
             const elapsed = (Date.now() - questionStartTime) / 1000;
             const isCorrect = selectedIndex === q.correct_index;
 
@@ -1285,7 +1298,7 @@
             // Move to next question after delay
             setTimeout(() => {
                 currentQuestion++;
-                if (currentQuestion < quizData.questions.length) {
+                if (currentQuestion < shuffledQuestions.length) {
                     showQuestion();
                 } else {
                     finishQuiz();
