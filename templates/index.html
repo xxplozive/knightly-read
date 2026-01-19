@@ -1306,6 +1306,8 @@
                         score: score,
                         timestamp: Date.now()
                     });
+                    // Small delay to ensure score is saved before loading leaderboard
+                    await new Promise(resolve => setTimeout(resolve, 500));
                 } catch (e) {
                     console.log('Could not save score:', e.message);
                 }
