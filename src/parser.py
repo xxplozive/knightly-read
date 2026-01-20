@@ -19,6 +19,7 @@ class Article:
     popularity_score: float = 0.0
     is_paywalled: bool = False
     country_flag: str = ''
+    sport: str = ''  # For sports section categorization
 
     def calculate_popularity(self, total_items: int = 1) -> None:
         """

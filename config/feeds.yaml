@@ -117,15 +117,55 @@ regions:
 
   sports:
     name: "Sports"
+    headlines_override: 15
+    max_per_sport: 2
     feeds:
-      - url: "https://www.espn.com/espn/rss/news"
-        name: "ESPN"
+      # General Sports
       - url: "https://feeds.bbci.co.uk/sport/rss.xml"
         name: "BBC Sport"
-      - url: "https://www.cbssports.com/rss/headlines/"
-        name: "CBS Sports"
-      - url: "https://sports.yahoo.com/rss/"
-        name: "Yahoo Sports"
+      - url: "https://www.espn.com/espn/rss/news"
+        name: "ESPN"
+      # Football/Soccer
+      - url: "https://www.espn.com/espn/rss/soccer/news"
+        name: "ESPN Soccer"
+        sport: "soccer"
+      - url: "https://feeds.bbci.co.uk/sport/football/rss.xml"
+        name: "BBC Football"
+        sport: "soccer"
+      - url: "https://www.skysports.com/rss/12040"
+        name: "Sky Sports Football"
+        sport: "soccer"
+      # Cricket
+      - url: "https://www.espncricinfo.com/rss/content/story/feeds/0.xml"
+        name: "ESPNcricinfo"
+        sport: "cricket"
+      # Tennis
+      - url: "https://www.espn.com/espn/rss/tennis/news"
+        name: "ESPN Tennis"
+        sport: "tennis"
+      # Formula 1/Motorsport
+      - url: "https://www.autosport.com/rss/feed/f1"
+        name: "Autosport F1"
+        sport: "motorsport"
+      - url: "https://www.motorsport.com/rss/all/news/"
+        name: "Motorsport.com"
+        sport: "motorsport"
+      # Rugby
+      - url: "https://www.rugbyworld.com/feed"
+        name: "Rugby World"
+        sport: "rugby"
+      # Golf
+      - url: "https://www.espn.com/espn/rss/golf/news"
+        name: "ESPN Golf"
+        sport: "golf"
+      # Combat Sports
+      - url: "https://www.espn.com/espn/rss/mma/news"
+        name: "ESPN MMA"
+        sport: "combat"
+      # Basketball (NBA)
+      - url: "https://www.espn.com/espn/rss/nba/news"
+        name: "ESPN NBA"
+        sport: "basketball"
 
   odd_news:
     name: "Odd News"

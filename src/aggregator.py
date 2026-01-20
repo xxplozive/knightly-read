@@ -81,6 +81,11 @@ class NewsAggregator:
             if max_per_source > 0:
                 articles = self._limit_per_source(articles, max_per_source)
 
+            # Apply per-sport limit if configured (for sports section)
+            max_per_sport = region_data.get('max_per_sport', 0)
+            if max_per_sport > 0:
+                articles = self._limit_per_sport(articles, max_per_sport)
+
             # Use headlines_override if specified, otherwise default
             limit = region_data.get('headlines_override', default_limit)
 
@@ -102,6 +107,18 @@ class NewsAggregator:
                 source_counts[article.source] = count + 1
         return limited
 
+    def _limit_per_sport(self, articles: List[Article], max_per: int) -> List[Article]:
+        """Limit articles per sport category while preserving sort order."""
+        sport_counts = {}
+        limited = []
+        for article in articles:
+            sport = article.sport or 'general'
+            count = sport_counts.get(sport, 0)
+            if count < max_per:
+                limited.append(article)
+                sport_counts[sport] = count + 1
+        return limited
+
     def _process_region(self, region_data: dict) -> List[Article]:
         """Process all feeds for a region."""
         all_articles = []
@@ -110,12 +127,18 @@ class NewsAggregator:
             url = feed_config['url']
             name = feed_config['name']
             timeout = feed_config.get('timeout')  # Per-feed timeout override
+            sport = feed_config.get('sport', '')  # Sport category for sports section
 
             logger.debug(f"Fetching {name}: {url}")
             content = self.fetcher.fetch(url, timeout=timeout)
 
             if content:
                 articles = self.parser.parse(content, name)
+
+                # Set sport category if specified
+                if sport:
+                    for article in articles:
+                        article.sport = sport
 
                 # Check for paywalls
                 if self.paywall_detector:
