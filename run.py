@@ -55,8 +55,8 @@ def main():
         cname_path = BASE_DIR / 'output' / 'CNAME'
         cname_path.write_text('knightlyread.com')
 
-        # Generate logo and favicon from transparent source image
-        logo_source = BASE_DIR / 'knightlyreadtransparent.png'
+        # Generate logo and favicon from source image
+        logo_source = BASE_DIR / 'assets' / 'logo-source.png'
         if logo_source.exists():
             from PIL import Image
             img = Image.open(logo_source)

@@ -25,8 +25,13 @@ output/
 
 # macOS
 .DS_Store
+*.plist
 
 # Secrets
 .env
 *.pem
 *_tokens.json
+
+# Debug/temp files
+scores/
+*.json.bak
