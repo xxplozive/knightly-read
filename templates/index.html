@@ -8,28 +8,28 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Pinyon+Script&family=Inter:wght@500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #faf8f5;
-            --bg-header: #8b4558;
-            --accent: #8b4558;
-            --accent-light: #a85a6d;
-            --text-primary: #2d2d2d;
-            --text-secondary: #6b6b6b;
-            --border-color: #e8e4df;
-            --link-visited: #7a7a7a;
+            --bg-primary: #F3F4F4;
+            --bg-header: #1D546D;
+            --accent: #1D546D;
+            --accent-light: #5F9598;
+            --text-primary: #061E29;
+            --text-secondary: #5F9598;
+            --border-color: #d0d3d4;
+            --link-visited: #5F9598;
         }
 
         body.dark {
-            --bg-primary: #1c1a1b;
-            --bg-header: #6b3545;
-            --accent: #a85a6d;
-            --accent-light: #c47a8d;
-            --text-primary: #e8e4df;
-            --text-secondary: #9a9a9a;
-            --border-color: #3d3a3b;
-            --link-visited: #777;
+            --bg-primary: #061E29;
+            --bg-header: #1D546D;
+            --accent: #5F9598;
+            --accent-light: #7fb3b6;
+            --text-primary: #F3F4F4;
+            --text-secondary: #5F9598;
+            --border-color: #1D546D;
+            --link-visited: #7fb3b6;
         }
 
         * {
@@ -193,16 +193,21 @@
 
         .theme-toggle {
             background: none;
-            border: 1px solid var(--text-primary);
-            color: var(--text-primary);
+            border: 1px solid var(--accent);
+            color: var(--accent);
             cursor: pointer;
-            padding: 2px 8px;
+            padding: 4px 12px;
+            font-family: 'Inter', sans-serif;
             font-size: 9pt;
+            font-weight: 500;
             margin-left: 10px;
+            border-radius: 4px;
+            transition: all 0.2s;
         }
 
         .theme-toggle:hover {
-            background: rgba(255,255,255,0.2);
+            background: var(--accent);
+            color: var(--bg-primary);
         }
 
         .paywall-badge {
@@ -269,18 +274,21 @@
 
         .feedback-btn {
             background: none;
-            border: 1px solid var(--text-primary);
-            color: var(--text-primary);
+            border: 1px solid var(--accent);
+            color: var(--accent);
             cursor: pointer;
-            padding: 2px 8px;
+            padding: 4px 12px;
+            font-family: 'Inter', sans-serif;
             font-size: 9pt;
+            font-weight: 500;
             margin-left: 5px;
+            border-radius: 4px;
+            transition: all 0.2s;
         }
 
         .feedback-btn:hover {
-            background: rgba(139, 69, 88, 0.1);
-            border-color: var(--accent);
-            color: var(--accent);
+            background: var(--accent);
+            color: var(--bg-primary);
         }
 
         .header-buttons {
@@ -342,12 +350,16 @@
 
         .modal button[type="submit"] {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
             cursor: pointer;
             background: var(--accent);
             color: #fff;
             border: none;
+            font-family: 'Inter', sans-serif;
             font-size: 10pt;
+            font-weight: 500;
+            border-radius: 4px;
+            transition: all 0.2s;
         }
 
         .modal button[type="submit"]:hover {
@@ -362,6 +374,7 @@
             cursor: pointer;
             width: 100%;
             text-align: center;
+            font-family: 'Inter', sans-serif;
             font-size: 9pt;
         }
 
@@ -412,9 +425,12 @@
             color: #fff;
             cursor: pointer;
             padding: 4px 12px;
+            font-family: 'Inter', sans-serif;
             font-size: 9pt;
+            font-weight: 500;
             margin-left: 5px;
-            border-radius: 3px;
+            border-radius: 4px;
+            transition: all 0.2s;
         }
 
         .quiz-btn:hover {
@@ -475,13 +491,15 @@
             color: var(--text-primary);
             cursor: pointer;
             text-align: left;
+            font-family: 'Inter', sans-serif;
             font-size: 14px;
+            font-weight: 500;
             border-radius: 6px;
             transition: all 0.2s;
         }
 
         .quiz-option:hover {
-            background: rgba(139, 69, 88, 0.1);
+            background: rgba(29, 84, 109, 0.1);
             border-color: var(--accent);
         }
 
