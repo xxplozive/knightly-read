@@ -64,8 +64,8 @@ def main():
                 img = img.convert('RGBA')
             width, height = img.size
 
-            # Resize for header logo (40px height)
-            new_height = 40
+            # Resize for header logo (120px height for 3x retina, displays at 40px)
+            new_height = 120
             new_width = int(width * new_height / height)
             logo_dark = img.resize((new_width, new_height), Image.Resampling.LANCZOS)
             logo_dark.save(BASE_DIR / 'output' / 'logo-dark.png')
