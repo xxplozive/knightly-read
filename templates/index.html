@@ -15,6 +15,7 @@
             --bg-header: #1D546D;
             --accent: #1D546D;
             --accent-light: #5F9598;
+            --accent-pink: #DDAED3;
             --text-primary: #061E29;
             --text-secondary: #5F9598;
             --border-color: #d0d3d4;
@@ -26,10 +27,11 @@
             --bg-header: #1D546D;
             --accent: #5F9598;
             --accent-light: #7fb3b6;
+            --accent-pink: #DDAED3;
             --text-primary: #F3F4F4;
-            --text-secondary: #5F9598;
+            --text-secondary: #7fb3b6;
             --border-color: #1D546D;
-            --link-visited: #7fb3b6;
+            --link-visited: #DDAED3;
         }
 
         * {
@@ -48,7 +50,7 @@
         .header {
             background: var(--bg-primary);
             padding: 12px 4px;
-            border-bottom: 2px solid var(--accent);
+            border-bottom: 3px solid var(--accent-pink);
         }
 
         .header-inner {
@@ -103,12 +105,12 @@
 
         .region-tab:hover {
             color: var(--accent);
-            background: rgba(139, 69, 88, 0.1);
+            background: rgba(29, 84, 109, 0.1);
         }
 
         .region-tab.active {
-            color: #fff;
-            background: var(--accent);
+            color: #061E29;
+            background: var(--accent-pink);
             font-weight: bold;
         }
 
@@ -171,7 +173,7 @@
             padding: 20px;
             color: var(--text-secondary);
             font-size: 8pt;
-            border-top: 2px solid var(--accent);
+            border-top: 3px solid var(--accent-pink);
             margin-top: 20px;
         }
 
@@ -420,9 +422,9 @@
 
         /* Quiz styles */
         .quiz-btn {
-            background: var(--accent);
+            background: var(--accent-pink);
             border: none;
-            color: #fff;
+            color: #061E29;
             cursor: pointer;
             padding: 4px 12px;
             font-family: 'Inter', sans-serif;
@@ -434,7 +436,7 @@
         }
 
         .quiz-btn:hover {
-            background: var(--accent-light);
+            background: #c99ac0;
         }
 
         .quiz-modal {
@@ -524,7 +526,7 @@
             font-size: 28px;
             text-align: center;
             margin: 20px 0;
-            color: var(--accent);
+            color: var(--accent-pink);
         }
 
         .quiz-nickname-input {
