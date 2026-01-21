@@ -196,6 +196,34 @@
             padding: 10px 0 5px 0;
             border-bottom: 1px solid var(--border-color);
             margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .filter-input {
+            padding: 4px 8px;
+            font-size: 9pt;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            width: 150px;
+        }
+
+        .filter-input:focus {
+            outline: none;
+            border-color: var(--accent-pink);
+        }
+
+        .filter-input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .news-item.filtered-out {
+            display: none;
         }
 
         .theme-toggle {
@@ -833,7 +861,10 @@
         {% for region_id, region in regions.items() %}
         <div id="region-{{ region_id }}"
              class="region-content{% if region_id == default_region %} active{% endif %}">
-            <div class="region-title">Top Headlines - {{ region.name }}</div>
+            <div class="region-title">
+                <span>Top Headlines - {{ region.name }}</span>
+                <input type="text" class="filter-input" placeholder="Filter..." data-region="{{ region_id }}">
+            </div>
             <ol class="news-list">
                 {% for article in region.articles %}
                 <li class="news-item">
@@ -862,7 +893,10 @@
 
         <!-- Local news section (dynamically populated) -->
         <div id="region-local" class="region-content">
-            <div class="region-title">Top Headlines - <span id="local-location-title">Your Area</span></div>
+            <div class="region-title">
+                <span>Top Headlines - <span id="local-location-title">Your Area</span></span>
+                <input type="text" class="filter-input" placeholder="Filter..." data-region="local">
+            </div>
             <div id="local-loading" style="padding: 20px; text-align: center;">
                 <div id="local-loading-text" style="color: var(--text-secondary); margin-bottom: 12px;">Detecting your location...</div>
                 <div class="local-progress-container">
@@ -999,6 +1033,23 @@
 
         regionTabs.forEach(tab => {
             tab.addEventListener('click', () => switchToTab(tab));
+        });
+
+        // Filter functionality
+        document.querySelectorAll('.filter-input').forEach(input => {
+            input.addEventListener('input', (e) => {
+                const filterText = e.target.value.toLowerCase().trim();
+                const regionId = e.target.dataset.region;
+                const regionEl = document.getElementById('region-' + regionId);
+                const newsItems = regionEl.querySelectorAll('.news-item');
+
+                newsItems.forEach(item => {
+                    const title = item.querySelector('.title-link')?.textContent.toLowerCase() || '';
+                    const source = item.querySelector('.source')?.textContent.toLowerCase() || '';
+                    const matches = !filterText || title.includes(filterText) || source.includes(filterText);
+                    item.classList.toggle('filtered-out', !matches);
+                });
+            });
         });
 
         // Keyboard shortcuts
