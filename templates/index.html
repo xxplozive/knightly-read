@@ -565,14 +565,14 @@
 
         .leaderboard {
             margin: 20px 0;
-            border: 1px solid var(--border-color);
+            border: 2px solid var(--accent-pink);
             border-radius: 4px;
             overflow: hidden;
         }
 
         .leaderboard-title {
-            background: var(--accent);
-            color: #fff;
+            background: var(--accent-pink);
+            color: #061E29;
             padding: 10px;
             font-weight: bold;
             text-align: center;
@@ -590,7 +590,7 @@
         }
 
         .lb-row.current-user {
-            background: rgba(139, 69, 88, 0.1);
+            background: rgba(221, 174, 211, 0.25);
             font-weight: bold;
         }
 
@@ -605,7 +605,7 @@
 
         .lb-score {
             font-weight: bold;
-            color: var(--accent);
+            color: var(--accent-pink);
         }
 
         .quiz-explanation {
@@ -791,6 +791,9 @@
         <div class="header-inner">
             <a href="/" class="site-name"><img src="logo-dark.png" alt="" class="site-logo" id="site-logo"><span class="site-title">Knightly Read</span></a>
             <nav class="region-tabs">
+                <a class="region-tab" data-region="local" id="local-tab" style="display:none">
+                    <span id="local-tab-name">Local</span>
+                </a>
                 {% for region_id, region in regions.items() %}
                 <a class="region-tab{% if region_id == default_region %} active{% endif %}"
                    data-region="{{ region_id }}">{{ region.name }}</a>
@@ -838,6 +841,15 @@
             </ol>
         </div>
         {% endfor %}
+
+        <!-- Local news section (dynamically populated) -->
+        <div id="region-local" class="region-content">
+            <div class="region-title">Top Headlines - <span id="local-location-title">Your Area</span></div>
+            <div id="local-loading" style="padding: 20px; color: var(--text-secondary); text-align: center;">
+                Detecting your location...
+            </div>
+            <ol class="news-list" id="local-news-list" style="display: none;"></ol>
+        </div>
     </main>
 
     <footer class="footer">
@@ -1411,6 +1423,149 @@
             div.textContent = text;
             return div.innerHTML;
         }
+
+        // ========== LOCAL NEWS FUNCTIONALITY ==========
+
+        const localTab = document.getElementById('local-tab');
+        const localTabName = document.getElementById('local-tab-name');
+        const localLocationTitle = document.getElementById('local-location-title');
+        const localLoading = document.getElementById('local-loading');
+        const localNewsList = document.getElementById('local-news-list');
+
+        // Detect location and load local news
+        async function initLocalNews() {
+            try {
+                // Get location from IP (using ipapi.co which supports HTTPS)
+                const geoResponse = await fetch('https://ipapi.co/json/');
+                const geo = await geoResponse.json();
+
+                if (!geo.city && !geo.region) {
+                    throw new Error('Could not detect location');
+                }
+
+                // Build location string
+                const locationParts = [geo.city, geo.region].filter(Boolean);
+                const locationName = locationParts.join(', ');
+                const locationQuery = locationParts.join(' ');
+                const countryCode = geo.country_code || geo.country || 'US';
+
+                // Update UI
+                const cityName = geo.city || geo.region || 'Your Area';
+                localTabName.textContent = cityName + ' (Local)';
+                localLocationTitle.textContent = locationName;
+                localTab.style.display = 'inline-block';
+
+                // Add click handler to local tab
+                localTab.addEventListener('click', () => switchToTab(localTab));
+
+                // Fetch local news from Google News RSS via CORS proxy
+                await fetchLocalNews(locationQuery, countryCode);
+
+            } catch (err) {
+                console.log('Local news not available:', err.message);
+                // Hide local tab and loading message if geolocation fails
+                localTab.style.display = 'none';
+                localLoading.style.display = 'none';
+            }
+        }
+
+        // Fetch and display local news
+        async function fetchLocalNews(location, countryCode) {
+            try {
+                localLoading.textContent = 'Loading local news...';
+
+                // Build Google News RSS URL
+                const query = encodeURIComponent(location);
+                const hl = countryCode === 'US' ? 'en-US' : 'en';
+                const gl = countryCode || 'US';
+                const googleNewsUrl = `https://news.google.com/rss/search?q=${query}&hl=${hl}&gl=${gl}&ceid=${gl}:en`;
+
+                // Use CORS proxy
+                const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(googleNewsUrl)}`;
+
+                const response = await fetch(proxyUrl);
+                if (!response.ok) throw new Error('Failed to fetch news');
+
+                const xmlText = await response.text();
+                const parser = new DOMParser();
+                const xml = parser.parseFromString(xmlText, 'text/xml');
+
+                const items = xml.querySelectorAll('item');
+                if (items.length === 0) throw new Error('No news found');
+
+                // Parse articles
+                const articles = [];
+                items.forEach((item, index) => {
+                    if (index >= 15) return; // Limit to 15
+
+                    const title = item.querySelector('title')?.textContent || '';
+                    const link = item.querySelector('link')?.textContent || '';
+                    const pubDate = item.querySelector('pubDate')?.textContent || '';
+                    const source = item.querySelector('source')?.textContent || 'Google News';
+
+                    if (title && link) {
+                        articles.push({ title, link, pubDate, source });
+                    }
+                });
+
+                // Render articles
+                renderLocalNews(articles);
+
+            } catch (err) {
+                localLoading.textContent = 'Could not load local news. Try refreshing.';
+                console.log('Local news fetch error:', err.message);
+            }
+        }
+
+        // Render local news articles
+        function renderLocalNews(articles) {
+            if (articles.length === 0) {
+                localLoading.textContent = 'No local news available.';
+                return;
+            }
+
+            localNewsList.innerHTML = articles.map((article, i) => {
+                const age = formatAge(article.pubDate);
+                return `
+                    <li class="news-item">
+                        <div class="item-row">
+                            <span class="rank">${i + 1}.</span>
+                            <div>
+                                <a href="${escapeHtml(article.link)}" class="title-link" target="_blank" rel="noopener">${escapeHtml(article.title)}</a>
+                                <span class="source">(${escapeHtml(article.source)})</span>
+                            </div>
+                        </div>
+                        <div class="meta">${age}</div>
+                    </li>
+                `;
+            }).join('');
+
+            localLoading.style.display = 'none';
+            localNewsList.style.display = 'block';
+        }
+
+        // Format age for local news
+        function formatAge(pubDateStr) {
+            if (!pubDateStr) return '';
+            try {
+                const pubDate = new Date(pubDateStr);
+                const now = new Date();
+                const diffMs = now - pubDate;
+                const diffMins = Math.floor(diffMs / 60000);
+                const diffHours = Math.floor(diffMins / 60);
+                const diffDays = Math.floor(diffHours / 24);
+
+                if (diffDays > 0) return `${diffDays}d ago`;
+                if (diffHours > 0) return `${diffHours}h ago`;
+                if (diffMins > 0) return `${diffMins}m ago`;
+                return 'just now';
+            } catch {
+                return '';
+            }
+        }
+
+        // Initialize local news on page load
+        initLocalNews();
     </script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 settings:
-  headlines_per_region: 10
+  headlines_per_region: 15
   request_timeout: 15
   user_agent: "NewsAggregator/1.0"
   rate_limit_delay: 0.5
@@ -48,6 +48,12 @@ regions:
         name: "PhillyVoice"
       - url: "https://www.ctpost.com/rss/feed/Connecticut-News-307.php"
         name: "CT Post"
+      - url: "https://www.silive.com/arc/outboundfeeds/rss/"
+        name: "Staten Island Advance"
+      - url: "https://www.wnyc.org/feeds/all"
+        name: "WNYC"
+      - url: "https://www.nbcnewyork.com/news/local/?rss=y"
+        name: "NBC New York"
 
   us:
     name: "United States"
@@ -71,7 +77,6 @@ regions:
 
   global:
     name: "Global"
-    headlines_override: 15
     feeds:
       # Europe
       - url: "https://feeds.bbci.co.uk/news/world/europe/rss.xml"
@@ -117,7 +122,6 @@ regions:
 
   sports:
     name: "Sports"
-    headlines_override: 15
     max_per_sport: 2
     feeds:
       # General Sports
@@ -178,3 +182,9 @@ regions:
         name: "The Onion"
       - url: "https://clickhole.com/feed"
         name: "ClickHole"
+      - url: "https://www.atlasobscura.com/feeds/latest"
+        name: "Atlas Obscura"
+      - url: "https://www.boredpanda.com/feed/"
+        name: "Bored Panda"
+      - url: "https://www.odditycentral.com/feed"
+        name: "Oddity Central"
