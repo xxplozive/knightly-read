@@ -633,6 +633,24 @@
             color: #d9534f;
         }
 
+        /* Local news progress bar */
+        .local-progress-container {
+            width: 200px;
+            height: 4px;
+            background: var(--border-color);
+            border-radius: 2px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .local-progress-bar {
+            height: 100%;
+            width: 0%;
+            background: var(--accent-pink);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
         @media (max-width: 600px) {
             /* Compact header */
             .header {
@@ -845,8 +863,11 @@
         <!-- Local news section (dynamically populated) -->
         <div id="region-local" class="region-content">
             <div class="region-title">Top Headlines - <span id="local-location-title">Your Area</span></div>
-            <div id="local-loading" style="padding: 20px; color: var(--text-secondary); text-align: center;">
-                Detecting your location...
+            <div id="local-loading" style="padding: 20px; text-align: center;">
+                <div id="local-loading-text" style="color: var(--text-secondary); margin-bottom: 12px;">Detecting your location...</div>
+                <div class="local-progress-container">
+                    <div class="local-progress-bar" id="local-progress-bar"></div>
+                </div>
             </div>
             <ol class="news-list" id="local-news-list" style="display: none;"></ol>
         </div>
@@ -1430,14 +1451,31 @@
         const localTabName = document.getElementById('local-tab-name');
         const localLocationTitle = document.getElementById('local-location-title');
         const localLoading = document.getElementById('local-loading');
+        const localLoadingText = document.getElementById('local-loading-text');
+        const localProgressBar = document.getElementById('local-progress-bar');
         const localNewsList = document.getElementById('local-news-list');
+
+        // Update progress bar
+        function setLocalProgress(percent, text) {
+            localProgressBar.style.width = percent + '%';
+            if (text) localLoadingText.textContent = text;
+        }
+
+        // Delay helper
+        const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
         // Detect location and load local news
         async function initLocalNews() {
             try {
+                setLocalProgress(10, 'Detecting your location...');
+                await delay(800);
+
                 // Get location from IP (using ipapi.co which supports HTTPS)
                 const geoResponse = await fetch('https://ipapi.co/json/');
                 const geo = await geoResponse.json();
+
+                setLocalProgress(30, 'Location found!');
+                await delay(800);
 
                 if (!geo.city && !geo.region) {
                     throw new Error('Could not detect location');
@@ -1472,7 +1510,8 @@
         // Fetch and display local news
         async function fetchLocalNews(location, countryCode) {
             try {
-                localLoading.textContent = 'Loading local news...';
+                setLocalProgress(50, 'Fetching local news...');
+                await delay(800);
 
                 // Build Google News RSS URL
                 const query = encodeURIComponent(location);
@@ -1486,12 +1525,18 @@
                 const response = await fetch(proxyUrl);
                 if (!response.ok) throw new Error('Failed to fetch news');
 
+                setLocalProgress(75, 'Processing headlines...');
+                await delay(800);
+
                 const xmlText = await response.text();
                 const parser = new DOMParser();
                 const xml = parser.parseFromString(xmlText, 'text/xml');
 
                 const items = xml.querySelectorAll('item');
                 if (items.length === 0) throw new Error('No news found');
+
+                setLocalProgress(90, 'Almost done...');
+                await delay(800);
 
                 // Parse articles
                 const articles = [];
@@ -1509,10 +1554,12 @@
                 });
 
                 // Render articles
+                setLocalProgress(100, 'Done!');
                 renderLocalNews(articles);
 
             } catch (err) {
-                localLoading.textContent = 'Could not load local news. Try refreshing.';
+                localLoadingText.textContent = 'Could not load local news. Try refreshing.';
+                localProgressBar.style.display = 'none';
                 console.log('Local news fetch error:', err.message);
             }
         }
