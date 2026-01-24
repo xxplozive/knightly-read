@@ -226,6 +226,20 @@
             display: none;
         }
 
+        .weather-widget {
+            font-size: 8pt;
+            margin-left: 4px;
+            white-space: nowrap;
+        }
+
+        .weather-icon {
+            font-size: 10pt;
+        }
+
+        .weather-temp {
+            font-weight: normal;
+        }
+
         .theme-toggle {
             background: none;
             border: 1px solid var(--accent);
@@ -839,6 +853,7 @@
             <nav class="region-tabs">
                 <a class="region-tab" data-region="local" id="local-tab" style="display:none">
                     <span id="local-tab-name">Local</span>
+                    <span id="local-weather" class="weather-widget"></span>
                 </a>
                 {% for region_id, region in regions.items() %}
                 <a class="region-tab{% if region_id == default_region %} active{% endif %}"
@@ -1500,6 +1515,7 @@
 
         const localTab = document.getElementById('local-tab');
         const localTabName = document.getElementById('local-tab-name');
+        const localWeather = document.getElementById('local-weather');
         const localLocationTitle = document.getElementById('local-location-title');
         const localLoading = document.getElementById('local-loading');
         const localLoadingText = document.getElementById('local-loading-text');
@@ -1543,6 +1559,11 @@
                 localTabName.textContent = cityName + ' (Local)';
                 localLocationTitle.textContent = locationName;
                 localTab.style.display = 'inline-block';
+
+                // Fetch weather if we have coordinates
+                if (geo.latitude && geo.longitude) {
+                    fetchWeather(geo.latitude, geo.longitude);
+                }
 
                 // Add click handler to local tab
                 localTab.addEventListener('click', () => switchToTab(localTab));
@@ -1659,6 +1680,56 @@
                 return 'just now';
             } catch {
                 return '';
+            }
+        }
+
+        // Weather code to emoji mapping (Open-Meteo WMO codes)
+        function getWeatherIcon(code) {
+            const icons = {
+                0: '☀️',   // Clear sky
+                1: '🌤️',   // Mainly clear
+                2: '⛅',   // Partly cloudy
+                3: '☁️',   // Overcast
+                45: '🌫️',  // Fog
+                48: '🌫️',  // Depositing rime fog
+                51: '🌧️',  // Light drizzle
+                53: '🌧️',  // Moderate drizzle
+                55: '🌧️',  // Dense drizzle
+                61: '🌧️',  // Slight rain
+                63: '🌧️',  // Moderate rain
+                65: '🌧️',  // Heavy rain
+                71: '🌨️',  // Slight snow
+                73: '🌨️',  // Moderate snow
+                75: '🌨️',  // Heavy snow
+                77: '🌨️',  // Snow grains
+                80: '🌦️',  // Slight rain showers
+                81: '🌦️',  // Moderate rain showers
+                82: '🌦️',  // Violent rain showers
+                85: '🌨️',  // Slight snow showers
+                86: '🌨️',  // Heavy snow showers
+                95: '⛈️',  // Thunderstorm
+                96: '⛈️',  // Thunderstorm with hail
+                99: '⛈️',  // Thunderstorm with heavy hail
+            };
+            return icons[code] || '🌡️';
+        }
+
+        // Fetch weather from Open-Meteo (free, no API key needed)
+        async function fetchWeather(lat, lon) {
+            try {
+                const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`;
+                const response = await fetch(url);
+                const data = await response.json();
+
+                if (data.current_weather) {
+                    const tempC = Math.round(data.current_weather.temperature);
+                    const tempF = Math.round(tempC * 9/5 + 32);
+                    const icon = getWeatherIcon(data.current_weather.weathercode);
+
+                    localWeather.innerHTML = `<span class="weather-icon">${icon}</span> <span class="weather-temp">${tempF}°F / ${tempC}°C</span>`;
+                }
+            } catch (err) {
+                console.log('Weather fetch error:', err.message);
             }
         }
 
