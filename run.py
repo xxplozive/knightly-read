@@ -89,22 +89,43 @@ def main():
 
         # Generate quiz if enabled and API key available
         quiz_config = aggregator.config['settings'].get('quiz', {})
+        output_quiz_path = BASE_DIR / 'output' / 'quiz.json'
+        fallback_quiz_path = BASE_DIR / 'output' / 'quiz.json'  # tracked in git as fallback
+
         if quiz_config.get('enabled', False):
-            api_key = os.environ.get('ANTHROPIC_API_KEY')
-            if api_key:
-                from src.quiz_generator import QuizGenerator
-                logger.info("Generating weekly quiz...")
-                quiz_gen = QuizGenerator(api_key)
-                quiz_data = quiz_gen.generate_quiz(data, aggregator.config['settings'])
-                if quiz_data:
-                    output_path = BASE_DIR / 'output' / 'quiz.json'
-                    with open(output_path, 'w') as f:
-                        json.dump(quiz_data, f, indent=2)
-                    logger.info(f"Quiz generated: {output_path}")
+            # Check if existing quiz is still valid
+            quiz_needs_refresh = True
+            if output_quiz_path.exists():
+                try:
+                    with open(output_quiz_path, 'r') as f:
+                        existing_quiz = json.load(f)
+                    valid_until = existing_quiz.get('valid_until', '')
+                    if valid_until:
+                        valid_date = datetime.strptime(valid_until, '%Y-%m-%d').date()
+                        today = datetime.now().date()
+                        if today <= valid_date:
+                            logger.info(f"Quiz still valid until {valid_until}, skipping regeneration")
+                            quiz_needs_refresh = False
+                        else:
+                            logger.info(f"Quiz expired on {valid_until}, will regenerate")
+                except (json.JSONDecodeError, KeyError, ValueError) as e:
+                    logger.warning(f"Could not read existing quiz: {e}")
+
+            if quiz_needs_refresh:
+                api_key = os.environ.get('ANTHROPIC_API_KEY')
+                if api_key:
+                    from src.quiz_generator import QuizGenerator
+                    logger.info("Generating weekly quiz...")
+                    quiz_gen = QuizGenerator(api_key)
+                    quiz_data = quiz_gen.generate_quiz(data, aggregator.config['settings'])
+                    if quiz_data:
+                        with open(output_quiz_path, 'w') as f:
+                            json.dump(quiz_data, f, indent=2)
+                        logger.info(f"Quiz generated: {output_quiz_path}")
+                    else:
+                        logger.warning("Quiz generation failed")
                 else:
-                    logger.warning("Quiz generation failed")
-            else:
-                logger.info("Quiz enabled but ANTHROPIC_API_KEY not set, skipping")
+                    logger.info("Quiz needs refresh but ANTHROPIC_API_KEY not set, using existing")
 
         elapsed = (datetime.now() - start_time).total_seconds()
         logger.info(f"Aggregation complete in {elapsed:.2f}s")
