@@ -483,6 +483,24 @@
             background: #c99ac0;
         }
 
+        .quiz-badge {
+            display: inline-block;
+            background: #d9534f;
+            color: white;
+            font-size: 7pt;
+            font-weight: bold;
+            padding: 1px 4px;
+            border-radius: 3px;
+            margin-left: 4px;
+            vertical-align: top;
+            animation: badge-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes badge-pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
         .quiz-modal {
             max-width: 500px;
         }
@@ -862,7 +880,7 @@
             </nav>
             <div class="header-buttons">
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">Dark</button>
-                <button class="quiz-btn" id="quiz-btn">Quiz</button>
+                <button class="quiz-btn" id="quiz-btn">Quiz <span class="quiz-badge" id="quiz-badge" style="display:none">NEW</span></button>
                 <button class="feedback-btn" id="feedback-btn">Feedback</button>
             </div>
         </div>
@@ -1262,11 +1280,28 @@
         const quizLeaderboardOnly = document.getElementById('quiz-leaderboard-only');
 
         // Load quiz data
+        // Check if new quiz is available and show badge
+        function checkForNewQuiz() {
+            if (!quizData || !quizData.week_of) return;
+
+            const lastCompletedWeek = localStorage.getItem('quizCompletedWeek');
+            const quizBadge = document.getElementById('quiz-badge');
+
+            if (lastCompletedWeek !== quizData.week_of) {
+                // New quiz available - show badge
+                quizBadge.style.display = 'inline-block';
+            } else {
+                // User already completed this week's quiz
+                quizBadge.style.display = 'none';
+            }
+        }
+
         fetch('quiz.json')
             .then(r => r.json())
             .then(data => {
                 quizData = data;
                 console.log('Quiz loaded:', data.questions?.length, 'questions');
+                checkForNewQuiz();
             })
             .catch(err => {
                 console.log('Quiz not available:', err.message);
@@ -1445,6 +1480,12 @@
                 } catch (e) {
                     console.log('Could not save score:', e.message);
                 }
+            }
+
+            // Mark quiz as completed and hide badge
+            if (quizData.week_of) {
+                localStorage.setItem('quizCompletedWeek', quizData.week_of);
+                document.getElementById('quiz-badge').style.display = 'none';
             }
 
             // Load leaderboard
