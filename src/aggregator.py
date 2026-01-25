@@ -65,11 +65,29 @@ class NewsAggregator:
             logger.info(f"Processing region: {region_data['name']}")
             articles = self._process_region(region_data)
 
-            # Apply country detection for global region
-            if region_id == 'global':
+            # Apply country detection for global and odd_news regions
+            if region_id in ('global', 'odd_news'):
                 for article in articles:
                     _, flag = detect_country(article.title)
                     article.country_flag = flag
+
+            # Apply sport emojis for sports region
+            if region_id == 'sports':
+                sport_emojis = {
+                    'soccer': '⚽',
+                    'basketball': '🏀',
+                    'cricket': '🏏',
+                    'tennis': '🎾',
+                    'motorsport': '🏎️',
+                    'rugby': '🏉',
+                    'golf': '⛳',
+                    'combat': '🥊',
+                    'general': '🏆',
+                    '': '🏆'
+                }
+                for article in articles:
+                    sport = article.sport or 'general'
+                    article.country_flag = sport_emojis.get(sport, '🏆')
 
             # Sort based on config
             if sort_by == 'popularity':
