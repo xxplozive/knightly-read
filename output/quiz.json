@@ -1,130 +1,130 @@
 {
   "questions": [
     {
-      "question": "What space mission is NASA preparing for that involves sending astronauts around the moon?",
+      "question": "According to the news, what price did gold surpass recently?",
       "type": "multiple_choice",
       "options": [
-        "Apollo II",
-        "Artemis II",
-        "Discovery II",
-        "Orion II"
+        "$3,000",
+        "$4,000",
+        "$5,000",
+        "$6,000"
       ],
-      "correct_index": 1,
-      "source_headline": "NASA rolls out Artemis II craft ahead of crewed lunar orbit",
-      "explanation": "NASA is preparing the Artemis II mission, which will send astronauts on a lunar orbit"
+      "correct_index": 2,
+      "source_headline": "Another day another high: Gold surges past $5,000 as investors seek shelter from global risks",
+      "explanation": "The headline states that gold surged past $5,000 as investors sought safety from global risks."
     },
     {
-      "question": "True or False: More than 9,000 people have died from flu this season.",
+      "question": "True or False: A winter storm caused power outages and flight cancellations.",
       "type": "true_false",
       "options": [
         "True",
         "False"
       ],
       "correct_index": 0,
-      "source_headline": "WATCH: More than 9,000 deaths from flu, pediatric cases nearly double during flu season",
-      "explanation": "The headline states that more than 9,000 deaths have occurred from flu this season"
+      "source_headline": "Power outages and canceled flights as winter storm brings snow, sleet and ice",
+      "explanation": "The headline confirms that the winter storm caused both power outages and canceled flights."
     },
     {
-      "question": "Which African country's leader has won a seventh term in office?",
+      "question": "Which African country is experiencing severe flooding described as the 'worst in a generation'?",
       "type": "multiple_choice",
       "options": [
         "Kenya",
-        "Nigeria",
-        "Uganda",
-        "Ghana"
-      ],
-      "correct_index": 2,
-      "source_headline": "Uganda's Museveni wins 7th term, opponent calls results 'fake'",
-      "explanation": "Uganda's President Museveni has won his seventh term in office"
-    },
-    {
-      "question": "What percentage tariff does Trump plan to impose on NATO members regarding Greenland?",
-      "type": "multiple_choice",
-      "options": [
-        "15%",
-        "20%",
-        "25%",
-        "30%"
-      ],
-      "correct_index": 2,
-      "source_headline": "Trump: NATO members to face tariffs increasing to 25% until a Greenland purchase deal is struck",
-      "explanation": "Trump announced tariffs increasing to 25% on NATO members until a Greenland deal is made"
-    },
-    {
-      "question": "True or False: People in Greenland have protested against Trump's plan to take control of their territory.",
-      "type": "true_false",
-      "options": [
-        "True",
-        "False"
-      ],
-      "correct_index": 0,
-      "source_headline": "Thousands protest in Nuuk against Trump's plan to annex Greenland",
-      "explanation": "Thousands of people protested in Nuuk, Greenland against Trump's annexation plan"
-    },
-    {
-      "question": "Which country claimed third place in the recent AFCON tournament?",
-      "type": "multiple_choice",
-      "options": [
-        "Egypt",
-        "Nigeria",
-        "Senegal",
-        "Ghana"
+        "Mozambique",
+        "South Africa",
+        "Tanzania"
       ],
       "correct_index": 1,
-      "source_headline": "Nigeria beat Egypt on penalties to claim AFCON bronze medal",
-      "explanation": "Nigeria beat Egypt on penalties to win the bronze medal (third place) at AFCON"
+      "source_headline": "People cling to treetops as 'worst floods in a generation' sweep Mozambique",
+      "explanation": "The headline specifically mentions that Mozambique is experiencing the worst floods in a generation."
     },
     {
-      "question": "True or False: Iran's supreme leader has admitted that thousands of people were killed during recent protests.",
+      "question": "True or False: China was a major topic of discussion at the Davos conference.",
       "type": "true_false",
       "options": [
         "True",
         "False"
-      ],
-      "correct_index": 0,
-      "source_headline": "Iran supreme leader acknowledges thousands killed during recent protests",
-      "explanation": "Iran's supreme leader has acknowledged that thousands were killed during recent protests"
-    },
-    {
-      "question": "What dangerous internet challenge are police warning people about?",
-      "type": "multiple_choice",
-      "options": [
-        "Window breaking challenge",
-        "Door kicking challenge",
-        "Wall punching challenge",
-        "Glass smashing challenge"
       ],
       "correct_index": 1,
-      "source_headline": "Police warn of 'door kicking challenge' that can turn viral prank 'from funny to fatal'",
-      "explanation": "Police are warning about the 'door kicking challenge' that can be dangerous"
+      "source_headline": "China didn't grab many headlines at Davos, but it's the elephant in the room",
+      "explanation": "The headline states that China didn't grab many headlines at Davos, meaning it wasn't a major topic of discussion."
     },
     {
-      "question": "True or False: The EU and Mercosur have signed a major trade deal.",
+      "question": "In which country did a ferry carrying 342 people sink, resulting in at least 8 deaths?",
+      "type": "multiple_choice",
+      "options": [
+        "Indonesia",
+        "Malaysia",
+        "Philippines",
+        "Thailand"
+      ],
+      "correct_index": 2,
+      "source_headline": "Ferry carrying 342 sinks in southern Philippines, at least 8 dead: Mayor",
+      "explanation": "The headline clearly states the ferry accident occurred in the southern Philippines."
+    },
+    {
+      "question": "True or False: Kenya's former deputy president claims there was an assassination attempt against him.",
       "type": "true_false",
       "options": [
         "True",
         "False"
       ],
       "correct_index": 0,
-      "source_headline": "EU and Mercosur sign major trade deal in Asuncion",
-      "explanation": "The EU and Mercosur have signed a major trade deal in Asuncion"
+      "source_headline": "Kenya's ex-deputy president alleges assassination attempt in church attack",
+      "explanation": "The headline states that Kenya's ex-deputy president alleges (claims) there was an assassination attempt during a church attack."
     },
     {
-      "question": "What natural disaster has isolated communities in New Zealand's Northland region?",
+      "question": "Which U.S. Representative was reportedly assaulted at the Sundance film festival?",
       "type": "multiple_choice",
       "options": [
-        "Earthquake",
-        "Volcanic eruption",
-        "Flooding",
-        "Tornado"
+        "Maxwell Frost",
+        "Maxwell Stone",
+        "Michael Frost",
+        "Matthew Frost"
+      ],
+      "correct_index": 0,
+      "source_headline": "Man arrested for assaulting U.S. Rep. Maxwell Frost at Sundance",
+      "explanation": "The headline specifically names U.S. Representative Maxwell Frost as the victim of the assault at Sundance."
+    },
+    {
+      "question": "True or False: Asia-Pacific markets showed consistent positive trading according to recent reports.",
+      "type": "true_false",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 1,
+      "source_headline": "Asia-Pacific markets trade mixed amid geopolitical uncertainties",
+      "explanation": "The headline states that Asia-Pacific markets traded 'mixed,' not consistently positive, due to geopolitical uncertainties."
+    },
+    {
+      "question": "According to reports, how long will it take the Philippines to reach proficiency grade in education?",
+      "type": "multiple_choice",
+      "options": [
+        "At least 5 years",
+        "At least 8 years",
+        "At least 10 years",
+        "At least 15 years"
       ],
       "correct_index": 2,
-      "source_headline": "Flooding in Northland isolates communities, prompts warnings",
-      "explanation": "Flooding in New Zealand's Northland region has isolated communities and prompted warnings"
+      "source_headline": "Philippines will take 'at least 10 years' to make proficiency grade",
+      "explanation": "The headline specifically states that the Philippines will take 'at least 10 years' to make proficiency grade."
+    },
+    {
+      "question": "Which country is India planning to reduce car tariffs to 40% in a trade deal with?",
+      "type": "multiple_choice",
+      "options": [
+        "United States",
+        "European Union",
+        "Japan",
+        "China"
+      ],
+      "correct_index": 1,
+      "source_headline": "India to slash tariffs on cars to 40% in trade deal with EU: Sources",
+      "explanation": "The headline states that India will slash tariffs on cars to 40% in a trade deal with the EU (European Union)."
     }
   ],
-  "generated_at": "2026-01-17T20:34:33.446892+00:00",
-  "week_of": "2026-W02",
-  "valid_until": "2026-01-24",
-  "headline_count": 25
+  "generated_at": "2026-01-26T00:52:35.408778+00:00",
+  "week_of": "2026-W04",
+  "valid_until": "2026-01-31",
+  "headline_count": 30
 }
