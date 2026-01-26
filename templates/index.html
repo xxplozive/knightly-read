@@ -310,6 +310,26 @@
             text-align: center;
             padding: 6px 0;
             opacity: 0.7;
+            position: relative;
+        }
+
+        .hint-close {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 14pt;
+            cursor: pointer;
+            opacity: 0.5;
+            padding: 0 5px;
+            line-height: 1;
+        }
+
+        .hint-close:hover {
+            opacity: 1;
         }
 
         .keyboard-hint kbd {
@@ -318,6 +338,21 @@
             border-radius: 3px;
             font-family: monospace;
             font-size: 8pt;
+        }
+
+        .day-banner {
+            text-align: center;
+            padding: 6px 10px;
+            color: var(--text-secondary);
+            font-size: 9pt;
+        }
+
+        .day-label {
+            font-weight: 500;
+        }
+
+        .day-name {
+            font-style: italic;
         }
 
         .feedback-btn {
@@ -886,8 +921,9 @@
         </div>
     </header>
 
-    <div class="keyboard-hint">
-        <kbd>Tab</kbd> other regions · <kbd>D</kbd> dark mode
+    <div class="keyboard-hint" id="keyboard-hint">
+        <kbd>Tab</kbd> other sections · <kbd>D</kbd> dark mode
+        <button class="hint-close" id="hint-close" title="Close">&times;</button>
     </div>
 
     <main class="main">
@@ -939,6 +975,12 @@
             <ol class="news-list" id="local-news-list" style="display: none;"></ol>
         </div>
     </main>
+
+    <div class="day-banner" id="day-banner" style="display:none">
+        <span id="day-emoji"></span>
+        <span class="day-label" id="day-label"></span>
+        <span class="day-name" id="day-name"></span>
+    </div>
 
     <footer class="footer">
         Updated {{ generated_at }} · <span id="visitor-count"></span> visitors
@@ -1144,6 +1186,16 @@
             }
         }, { passive: true });
 
+        // Keyboard hint close
+        const keyboardHint = document.getElementById('keyboard-hint');
+        if (localStorage.getItem('hideKeyboardHint') === 'true') {
+            keyboardHint.style.display = 'none';
+        }
+        document.getElementById('hint-close').addEventListener('click', () => {
+            keyboardHint.style.display = 'none';
+            localStorage.setItem('hideKeyboardHint', 'true');
+        });
+
         // Dark mode toggle
         const themeToggle = document.getElementById('theme-toggle');
         const siteLogo = document.getElementById('site-logo');
@@ -1306,6 +1358,36 @@
             .catch(err => {
                 console.log('Quiz not available:', err.message);
             });
+
+        // Load and display today's special day
+        async function loadDayOfYear() {
+            try {
+                const response = await fetch('days.json');
+                const days = await response.json();
+
+                const today = new Date();
+                const key = String(today.getMonth() + 1).padStart(2, '0') + '-' +
+                            String(today.getDate()).padStart(2, '0');
+
+                const dayInfo = days[key];
+                if (dayInfo) {
+                    document.getElementById('day-emoji').textContent = dayInfo.emoji || '';
+                    // Determine if it's International or National day
+                    const name = dayInfo.name;
+                    const isInternational = name.startsWith('International') ||
+                                           name.startsWith('World') ||
+                                           name.startsWith('Global') ||
+                                           name.startsWith('Universal');
+                    const label = isInternational ? 'International Day:' : 'National Day:';
+                    document.getElementById('day-label').textContent = label;
+                    document.getElementById('day-name').textContent = name;
+                    document.getElementById('day-banner').style.display = 'block';
+                }
+            } catch (err) {
+                console.log('Days data not available:', err.message);
+            }
+        }
+        loadDayOfYear();
 
         // Show/hide screens
         function showScreen(screen) {

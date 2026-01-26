@@ -55,6 +55,13 @@ def main():
         cname_path = BASE_DIR / 'output' / 'CNAME'
         cname_path.write_text('knightlyread.com')
 
+        # Copy days.json to output for special day banner
+        import shutil
+        days_source = BASE_DIR / 'data' / 'days.json'
+        if days_source.exists():
+            shutil.copy(days_source, BASE_DIR / 'output' / 'days.json')
+            logger.info("Copied days.json to output")
+
         # Generate logo and favicon from source image
         logo_source = BASE_DIR / 'assets' / 'logo-source.png'
         if logo_source.exists():
