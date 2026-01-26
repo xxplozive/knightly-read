@@ -78,8 +78,8 @@ def main():
             logo_dark.save(BASE_DIR / 'output' / 'logo-dark.png')
 
             # Create inverted version for dark mode
-            data = list(img.getdata())
-            inv_data = [(255-p[0], 255-p[1], 255-p[2], p[3]) if p[3] > 30 else (255, 255, 255, 0) for p in data]
+            pixel_data = list(img.getdata())
+            inv_data = [(255-p[0], 255-p[1], 255-p[2], p[3]) if p[3] > 30 else (255, 255, 255, 0) for p in pixel_data]
             img_light = img.copy()
             img_light.putdata(inv_data)
             logo_light = img_light.resize((new_width, new_height), Image.Resampling.LANCZOS)
