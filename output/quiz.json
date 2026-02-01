@@ -1,130 +1,130 @@
 {
   "questions": [
     {
-      "question": "According to the news, what price did gold surpass recently?",
+      "question": "What weather event caused heroes to step up and help people?",
       "type": "multiple_choice",
       "options": [
-        "$3,000",
-        "$4,000",
-        "$5,000",
-        "$6,000"
+        "Rain",
+        "Snow",
+        "Hurricane",
+        "Tornado"
       ],
-      "correct_index": 2,
-      "source_headline": "Another day another high: Gold surges past $5,000 as investors seek shelter from global risks",
-      "explanation": "The headline states that gold surged past $5,000 as investors sought safety from global risks."
+      "correct_index": 1,
+      "source_headline": "WATCH: When the snow came down these heroes stepped up",
+      "explanation": "The headline specifically mentions that heroes stepped up when snow came down."
     },
     {
-      "question": "True or False: A winter storm caused power outages and flight cancellations.",
+      "question": "How many inmates escaped in the Louisiana jailbreak?",
+      "type": "multiple_choice",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correct_index": 2,
+      "source_headline": "Louisiana authorities, federal agents nab all 8 inmates who escaped in jailbreak after massive manhunt",
+      "explanation": "The headline states that all 8 inmates who escaped were caught."
+    },
+    {
+      "question": "True or False: The government shutdown is expected to end sooner than people thought.",
+      "type": "true_false",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 1,
+      "source_headline": "Why the partial government shutdown is expected to drag on longer than anticipated",
+      "explanation": "The headline says it's expected to drag on longer than anticipated, not sooner."
+    },
+    {
+      "question": "Which country's royal family is facing unwelcome public attention due to a trial?",
+      "type": "multiple_choice",
+      "options": [
+        "Sweden",
+        "Denmark",
+        "Norway",
+        "Finland"
+      ],
+      "correct_index": 2,
+      "source_headline": "Rape trial puts Norway's royal family in unwelcome glare of public",
+      "explanation": "The headline specifically mentions Norway's royal family."
+    },
+    {
+      "question": "What year will the Grammy Awards mentioned in the headline take place?",
+      "type": "multiple_choice",
+      "options": [
+        "2024",
+        "2025",
+        "2026",
+        "2027"
+      ],
+      "correct_index": 2,
+      "source_headline": "Grammy Awards 2026: How to watch and who will win",
+      "explanation": "The headline clearly states Grammy Awards 2026."
+    },
+    {
+      "question": "True or False: Bitcoin's price went above $79,000 according to the headline.",
+      "type": "true_false",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 1,
+      "source_headline": "Bitcoin dips below $79,000 as market digests silver sell-off, Trump's Fed chair pick",
+      "explanation": "The headline says Bitcoin dips below $79,000, meaning it went down, not up."
+    },
+    {
+      "question": "How old was the child who was ordered to be released from immigration detention?",
+      "type": "multiple_choice",
+      "options": [
+        "3 years old",
+        "4 years old",
+        "5 years old",
+        "6 years old"
+      ],
+      "correct_index": 2,
+      "source_headline": "5-year-old, father ordered released from immigration detention center",
+      "explanation": "The headline specifically mentions a 5-year-old child."
+    },
+    {
+      "question": "True or False: Burglars were using hidden cameras to spy on homes before robbing them.",
       "type": "true_false",
       "options": [
         "True",
         "False"
       ],
       "correct_index": 0,
-      "source_headline": "Power outages and canceled flights as winter storm brings snow, sleet and ice",
-      "explanation": "The headline confirms that the winter storm caused both power outages and canceled flights."
+      "source_headline": "Burglars caught spying on homes with hidden camouflaged cameras before striking neighborhoods",
+      "explanation": "The headline states that burglars were caught using hidden camouflaged cameras to spy on homes before striking."
     },
     {
-      "question": "Which African country is experiencing severe flooding described as the 'worst in a generation'?",
+      "question": "According to the headline, how much money did Malaysia seize from oil tankers?",
       "type": "multiple_choice",
       "options": [
-        "Kenya",
-        "Mozambique",
-        "South Africa",
-        "Tanzania"
+        "US$100 million",
+        "US$129.9 million",
+        "US$150 million",
+        "US$200 million"
       ],
       "correct_index": 1,
-      "source_headline": "People cling to treetops as 'worst floods in a generation' sweep Mozambique",
-      "explanation": "The headline specifically mentions that Mozambique is experiencing the worst floods in a generation."
+      "source_headline": "Malaysia seizes US$129.9 million in crude from tankers suspected of illegally transferring oil",
+      "explanation": "The headline specifically states Malaysia seized US$129.9 million in crude."
     },
     {
-      "question": "True or False: China was a major topic of discussion at the Davos conference.",
-      "type": "true_false",
-      "options": [
-        "True",
-        "False"
-      ],
-      "correct_index": 1,
-      "source_headline": "China didn't grab many headlines at Davos, but it's the elephant in the room",
-      "explanation": "The headline states that China didn't grab many headlines at Davos, meaning it wasn't a major topic of discussion."
-    },
-    {
-      "question": "In which country did a ferry carrying 342 people sink, resulting in at least 8 deaths?",
-      "type": "multiple_choice",
-      "options": [
-        "Indonesia",
-        "Malaysia",
-        "Philippines",
-        "Thailand"
-      ],
-      "correct_index": 2,
-      "source_headline": "Ferry carrying 342 sinks in southern Philippines, at least 8 dead: Mayor",
-      "explanation": "The headline clearly states the ferry accident occurred in the southern Philippines."
-    },
-    {
-      "question": "True or False: Kenya's former deputy president claims there was an assassination attempt against him.",
+      "question": "True or False: The news mentions that over 1 million people in Malaysia are still living in poverty.",
       "type": "true_false",
       "options": [
         "True",
         "False"
       ],
       "correct_index": 0,
-      "source_headline": "Kenya's ex-deputy president alleges assassination attempt in church attack",
-      "explanation": "The headline states that Kenya's ex-deputy president alleges (claims) there was an assassination attempt during a church attack."
-    },
-    {
-      "question": "Which U.S. Representative was reportedly assaulted at the Sundance film festival?",
-      "type": "multiple_choice",
-      "options": [
-        "Maxwell Frost",
-        "Maxwell Stone",
-        "Michael Frost",
-        "Matthew Frost"
-      ],
-      "correct_index": 0,
-      "source_headline": "Man arrested for assaulting U.S. Rep. Maxwell Frost at Sundance",
-      "explanation": "The headline specifically names U.S. Representative Maxwell Frost as the victim of the assault at Sundance."
-    },
-    {
-      "question": "True or False: Asia-Pacific markets showed consistent positive trading according to recent reports.",
-      "type": "true_false",
-      "options": [
-        "True",
-        "False"
-      ],
-      "correct_index": 1,
-      "source_headline": "Asia-Pacific markets trade mixed amid geopolitical uncertainties",
-      "explanation": "The headline states that Asia-Pacific markets traded 'mixed,' not consistently positive, due to geopolitical uncertainties."
-    },
-    {
-      "question": "According to reports, how long will it take the Philippines to reach proficiency grade in education?",
-      "type": "multiple_choice",
-      "options": [
-        "At least 5 years",
-        "At least 8 years",
-        "At least 10 years",
-        "At least 15 years"
-      ],
-      "correct_index": 2,
-      "source_headline": "Philippines will take 'at least 10 years' to make proficiency grade",
-      "explanation": "The headline specifically states that the Philippines will take 'at least 10 years' to make proficiency grade."
-    },
-    {
-      "question": "Which country is India planning to reduce car tariffs to 40% in a trade deal with?",
-      "type": "multiple_choice",
-      "options": [
-        "United States",
-        "European Union",
-        "Japan",
-        "China"
-      ],
-      "correct_index": 1,
-      "source_headline": "India to slash tariffs on cars to 40% in trade deal with EU: Sources",
-      "explanation": "The headline states that India will slash tariffs on cars to 40% in a trade deal with the EU (European Union)."
+      "source_headline": "Over 1.2 million Malaysians still living in poverty: Minister",
+      "explanation": "The headline states over 1.2 million Malaysians are still living in poverty, which is more than 1 million."
     }
   ],
-  "generated_at": "2026-01-26T00:52:35.408778+00:00",
+  "generated_at": "2026-02-01T01:57:00.540024+00:00",
   "week_of": "2026-W04",
-  "valid_until": "2026-01-31",
+  "valid_until": "2026-02-07",
   "headline_count": 30
 }
