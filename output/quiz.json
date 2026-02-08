@@ -1,130 +1,130 @@
 {
   "questions": [
     {
-      "question": "What weather event caused heroes to step up and help people?",
+      "question": "Who is pleading for their mother's safe return?",
       "type": "multiple_choice",
       "options": [
-        "Rain",
-        "Snow",
-        "Hurricane",
-        "Tornado"
+        "Nancy Guthrie",
+        "Savannah Guthrie",
+        "A news reporter",
+        "A police officer"
       ],
       "correct_index": 1,
-      "source_headline": "WATCH: When the snow came down these heroes stepped up",
-      "explanation": "The headline specifically mentions that heroes stepped up when snow came down."
+      "source_headline": "Savannah Guthrie in new video pleads for mother's return: 'We will pay'",
+      "explanation": "Savannah Guthrie is the person making the plea for her mother's return."
     },
     {
-      "question": "How many inmates escaped in the Louisiana jailbreak?",
+      "question": "In which city did thousands of golden retrievers meet up?",
       "type": "multiple_choice",
       "options": [
-        "6",
-        "7",
-        "8",
-        "9"
-      ],
-      "correct_index": 2,
-      "source_headline": "Louisiana authorities, federal agents nab all 8 inmates who escaped in jailbreak after massive manhunt",
-      "explanation": "The headline states that all 8 inmates who escaped were caught."
-    },
-    {
-      "question": "True or False: The government shutdown is expected to end sooner than people thought.",
-      "type": "true_false",
-      "options": [
-        "True",
-        "False"
+        "Denver, Colorado",
+        "Golden, Colorado",
+        "Boulder, Colorado",
+        "Colorado Springs, Colorado"
       ],
       "correct_index": 1,
-      "source_headline": "Why the partial government shutdown is expected to drag on longer than anticipated",
-      "explanation": "The headline says it's expected to drag on longer than anticipated, not sooner."
+      "source_headline": "WATCH:  Thousands of golden retrievers meet up in Golden, Colorado",
+      "explanation": "The headline specifically mentions Golden, Colorado as the location of the golden retriever meetup."
     },
     {
-      "question": "Which country's royal family is facing unwelcome public attention due to a trial?",
+      "question": "Which country is having an election according to the news?",
       "type": "multiple_choice",
       "options": [
-        "Sweden",
-        "Denmark",
-        "Norway",
-        "Finland"
-      ],
-      "correct_index": 2,
-      "source_headline": "Rape trial puts Norway's royal family in unwelcome glare of public",
-      "explanation": "The headline specifically mentions Norway's royal family."
-    },
-    {
-      "question": "What year will the Grammy Awards mentioned in the headline take place?",
-      "type": "multiple_choice",
-      "options": [
-        "2024",
-        "2025",
-        "2026",
-        "2027"
-      ],
-      "correct_index": 2,
-      "source_headline": "Grammy Awards 2026: How to watch and who will win",
-      "explanation": "The headline clearly states Grammy Awards 2026."
-    },
-    {
-      "question": "True or False: Bitcoin's price went above $79,000 according to the headline.",
-      "type": "true_false",
-      "options": [
-        "True",
-        "False"
+        "China",
+        "Japan",
+        "South Korea",
+        "Australia"
       ],
       "correct_index": 1,
-      "source_headline": "Bitcoin dips below $79,000 as market digests silver sell-off, Trump's Fed chair pick",
-      "explanation": "The headline says Bitcoin dips below $79,000, meaning it went down, not up."
+      "source_headline": "Japan's election: What you need to know",
+      "explanation": "The headline clearly mentions Japan's election."
     },
     {
-      "question": "How old was the child who was ordered to be released from immigration detention?",
+      "question": "What type of flowers were being smuggled in Hong Kong?",
       "type": "multiple_choice",
       "options": [
-        "3 years old",
-        "4 years old",
-        "5 years old",
-        "6 years old"
+        "Roses",
+        "Tulips",
+        "Orchids",
+        "Lilies"
       ],
       "correct_index": 2,
-      "source_headline": "5-year-old, father ordered released from immigration detention center",
-      "explanation": "The headline specifically mentions a 5-year-old child."
+      "source_headline": "23 cases of smuggled orchids recorded as holiday demand swells in Hong Kong",
+      "explanation": "The headline specifically mentions orchids as the flowers being smuggled."
     },
     {
-      "question": "True or False: Burglars were using hidden cameras to spy on homes before robbing them.",
+      "question": "Which university did the Pentagon cut ties with?",
+      "type": "multiple_choice",
+      "options": [
+        "Yale",
+        "Princeton",
+        "Harvard",
+        "Stanford"
+      ],
+      "correct_index": 2,
+      "source_headline": "Pentagon says it's cutting ties with 'woke' Harvard, ending military training",
+      "explanation": "The headline clearly states that the Pentagon is cutting ties with Harvard."
+    },
+    {
+      "question": "Which country in Africa is dealing with a snakebite problem?",
+      "type": "multiple_choice",
+      "options": [
+        "Ghana",
+        "Nigeria",
+        "Kenya",
+        "South Africa"
+      ],
+      "correct_index": 1,
+      "source_headline": "A singer's tragic death highlights Nigeria's snakebite problem",
+      "explanation": "The headline mentions Nigeria as the country with the snakebite problem."
+    },
+    {
+      "question": "True or False: Thailand is holding an election with three main parties competing.",
       "type": "true_false",
       "options": [
         "True",
         "False"
       ],
       "correct_index": 0,
-      "source_headline": "Burglars caught spying on homes with hidden camouflaged cameras before striking neighborhoods",
-      "explanation": "The headline states that burglars were caught using hidden camouflaged cameras to spy on homes before striking."
+      "source_headline": "Thailand votes in early election with 3 main parties vying for power",
+      "explanation": "The headline confirms that Thailand is voting in an election with 3 main parties competing for power."
     },
     {
-      "question": "According to the headline, how much money did Malaysia seize from oil tankers?",
-      "type": "multiple_choice",
+      "question": "True or False: There was a sewage leak in the Mississippi River.",
+      "type": "true_false",
       "options": [
-        "US$100 million",
-        "US$129.9 million",
-        "US$150 million",
-        "US$200 million"
+        "True",
+        "False"
       ],
       "correct_index": 1,
-      "source_headline": "Malaysia seizes US$129.9 million in crude from tankers suspected of illegally transferring oil",
-      "explanation": "The headline specifically states Malaysia seized US$129.9 million in crude."
+      "source_headline": "What we know about the massive sewage leak in the Potomac River",
+      "explanation": "The sewage leak was in the Potomac River, not the Mississippi River."
     },
     {
-      "question": "True or False: The news mentions that over 1 million people in Malaysia are still living in poverty.",
+      "question": "True or False: Samsung is starting to mass produce HBM4 chips.",
       "type": "true_false",
       "options": [
         "True",
         "False"
       ],
       "correct_index": 0,
-      "source_headline": "Over 1.2 million Malaysians still living in poverty: Minister",
-      "explanation": "The headline states over 1.2 million Malaysians are still living in poverty, which is more than 1 million."
+      "source_headline": "Samsung to begin mass production of HBM4 chips later this month: sources",
+      "explanation": "The headline confirms that Samsung will begin mass production of HBM4 chips."
+    },
+    {
+      "question": "True or False: A teacher became famous in Indian cinema.",
+      "type": "true_false",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 0,
+      "source_headline": "From classroom to camera: A teacher who has become a sensation in Indian cinema",
+      "explanation": "The headline describes a teacher who became a sensation (famous) in Indian cinema."
     }
   ],
-  "generated_at": "2026-02-01T01:57:00.540024+00:00",
-  "week_of": "2026-W04",
-  "valid_until": "2026-02-07",
+  "generated_at": "2026-02-08T02:08:14.355345+00:00",
+  "week_of": "2026-W05",
+  "valid_until": "2026-02-14",
   "headline_count": 30
 }
