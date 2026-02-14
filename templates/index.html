@@ -1716,29 +1716,45 @@
 
                 // Try multiple CORS proxies with fallback
                 const corsProxies = [
-                    (url) => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`,
-                    (url) => `https://corsproxy.io/?url=${encodeURIComponent(url)}`,
-                    (url) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+                    { name: 'corsproxy.io', fn: (url) => `https://corsproxy.io/?${encodeURIComponent(url)}` },
+                    { name: 'allorigins', fn: (url) => `https://api.allorigins.win/get?url=${encodeURIComponent(url)}` },
+                    { name: 'codetabs', fn: (url) => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}` },
                 ];
 
-                let response = null;
-                for (const proxyFn of corsProxies) {
+                let xmlText = null;
+                for (const proxy of corsProxies) {
                     try {
-                        const proxyUrl = proxyFn(googleNewsUrl);
-                        response = await fetch(proxyUrl);
-                        if (response.ok) break;
-                        response = null;
+                        const proxyUrl = proxy.fn(googleNewsUrl);
+                        console.log(`Trying proxy: ${proxy.name}`);
+                        const response = await fetch(proxyUrl);
+                        if (!response.ok) continue;
+
+                        let text = await response.text();
+
+                        // allorigins /get endpoint wraps content in JSON
+                        if (proxy.name === 'allorigins') {
+                            try {
+                                const json = JSON.parse(text);
+                                text = json.contents || '';
+                            } catch (e) { continue; }
+                        }
+
+                        if (text && text.includes('<item>')) {
+                            console.log(`Proxy ${proxy.name} succeeded`);
+                            xmlText = text;
+                            break;
+                        }
+                        console.log(`Proxy ${proxy.name} returned no items, trying next`);
                     } catch (e) {
-                        response = null;
+                        console.log(`Proxy ${proxy.name} failed:`, e.message);
                     }
                 }
-                if (!response) throw new Error('Failed to fetch news');
+                if (!xmlText) throw new Error('Failed to fetch news');
 
                 setLocalProgress(75, 'Processing headlines...');
                 await delay(800);
 
-                const xmlText = await response.text();
-                console.log('Local news proxy response (first 500 chars):', xmlText.substring(0, 500));
+                console.log('Local news response (first 500 chars):', xmlText.substring(0, 500));
                 const parser = new DOMParser();
                 const xml = parser.parseFromString(xmlText, 'text/xml');
 
