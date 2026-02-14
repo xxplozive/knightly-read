@@ -7,6 +7,7 @@ from .generator import HTMLGenerator
 from pathlib import Path
 import logging
 import json
+import requests
 
 logger = logging.getLogger(__name__)
 
@@ -132,6 +133,35 @@ def get_data():
         return jsonify(data)
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+
+@app.route('/api/local-news', methods=['GET'])
+def local_news():
+    """Proxy Google News RSS to avoid CORS issues."""
+    location = request.args.get('location', '')
+    country = request.args.get('country', 'US')
+
+    if not location:
+        return jsonify({'error': 'location parameter required'}), 400
+
+    hl = 'en-US' if country == 'US' else 'en'
+    url = (
+        f'https://news.google.com/rss/search'
+        f'?q={requests.utils.quote(location)}'
+        f'&hl={hl}&gl={country}&ceid={country}:en'
+    )
+
+    try:
+        resp = requests.get(url, timeout=10, headers={
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept': 'application/rss+xml, application/xml, text/xml, */*',
+        })
+        resp.raise_for_status()
+        from flask import Response
+        return Response(resp.content, content_type='application/xml')
+    except requests.RequestException as e:
+        logger.error(f"Local news fetch failed: {e}")
+        return jsonify({'error': 'Failed to fetch local news'}), 502
 
 
 @app.route('/')

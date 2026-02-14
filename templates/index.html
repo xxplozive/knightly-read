@@ -1708,16 +1708,11 @@
                 setLocalProgress(50, 'Fetching local news...');
                 await delay(800);
 
-                // Build Google News RSS URL
-                const query = encodeURIComponent(location);
-                const hl = countryCode === 'US' ? 'en-US' : 'en';
+                // Fetch via our own backend proxy to avoid CORS issues
                 const gl = countryCode || 'US';
-                const googleNewsUrl = `https://news.google.com/rss/search?q=${query}&hl=${hl}&gl=${gl}&ceid=${gl}:en`;
+                const localNewsUrl = `/api/local-news?location=${encodeURIComponent(location)}&country=${gl}`;
 
-                // Use CORS proxy
-                const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(googleNewsUrl)}`;
-
-                const response = await fetch(proxyUrl);
+                const response = await fetch(localNewsUrl);
                 if (!response.ok) throw new Error('Failed to fetch news');
 
                 setLocalProgress(75, 'Processing headlines...');
