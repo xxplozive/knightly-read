@@ -1738,10 +1738,16 @@
                 await delay(800);
 
                 const xmlText = await response.text();
+                console.log('Local news proxy response (first 500 chars):', xmlText.substring(0, 500));
                 const parser = new DOMParser();
                 const xml = parser.parseFromString(xmlText, 'text/xml');
 
+                // Check for XML parse errors
+                const parseError = xml.querySelector('parsererror');
+                if (parseError) console.log('XML parse error:', parseError.textContent);
+
                 const items = xml.querySelectorAll('item');
+                console.log('Local news items found:', items.length);
                 if (items.length === 0) throw new Error('No news found');
 
                 setLocalProgress(90, 'Almost done...');
