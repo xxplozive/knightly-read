@@ -62,9 +62,9 @@ regions:
         name: "NPR"
       - url: "https://abcnews.go.com/abcnews/topstories"
         name: "ABC News"
-      - url: "https://feeds.washingtonpost.com/rss/world"
+      - url: "https://feeds.washingtonpost.com/rss/national"
         name: "Washington Post"
-      - url: "https://feeds.bbci.co.uk/news/world/rss.xml"
+      - url: "https://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml"
         name: "BBC"
       - url: "https://www.newyorker.com/feed/news"
         name: "New Yorker"
@@ -72,7 +72,7 @@ regions:
         name: "CNBC"
       - url: "https://moxie.foxnews.com/google-publisher/us.xml"
         name: "Fox News"
-      - url: "https://feeds.a.dj.com/rss/RSSWorldNews.xml"
+      - url: "https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml"
         name: "Wall Street Journal"
 
   global:
