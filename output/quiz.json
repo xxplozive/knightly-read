@@ -1,130 +1,130 @@
 {
   "questions": [
     {
-      "question": "Who is pleading for their mother's safe return?",
+      "question": "According to the news, what famous zoo was featured in a recent exploration story?",
       "type": "multiple_choice",
       "options": [
-        "Nancy Guthrie",
-        "Savannah Guthrie",
-        "A news reporter",
-        "A police officer"
+        "San Diego Zoo",
+        "Bronx Zoo",
+        "National Zoo",
+        "Lincoln Park Zoo"
       ],
-      "correct_index": 1,
-      "source_headline": "Savannah Guthrie in new video pleads for mother's return: 'We will pay'",
-      "explanation": "Savannah Guthrie is the person making the plea for her mother's return."
+      "correct_index": 0,
+      "source_headline": "WATCH:  Exploring the delights at San Diego Zoo",
+      "explanation": "The headline specifically mentions San Diego Zoo as the location being explored"
     },
     {
-      "question": "In which city did thousands of golden retrievers meet up?",
-      "type": "multiple_choice",
-      "options": [
-        "Denver, Colorado",
-        "Golden, Colorado",
-        "Boulder, Colorado",
-        "Colorado Springs, Colorado"
-      ],
-      "correct_index": 1,
-      "source_headline": "WATCH:  Thousands of golden retrievers meet up in Golden, Colorado",
-      "explanation": "The headline specifically mentions Golden, Colorado as the location of the golden retriever meetup."
-    },
-    {
-      "question": "Which country is having an election according to the news?",
-      "type": "multiple_choice",
-      "options": [
-        "China",
-        "Japan",
-        "South Korea",
-        "Australia"
-      ],
-      "correct_index": 1,
-      "source_headline": "Japan's election: What you need to know",
-      "explanation": "The headline clearly mentions Japan's election."
-    },
-    {
-      "question": "What type of flowers were being smuggled in Hong Kong?",
-      "type": "multiple_choice",
-      "options": [
-        "Roses",
-        "Tulips",
-        "Orchids",
-        "Lilies"
-      ],
-      "correct_index": 2,
-      "source_headline": "23 cases of smuggled orchids recorded as holiday demand swells in Hong Kong",
-      "explanation": "The headline specifically mentions orchids as the flowers being smuggled."
-    },
-    {
-      "question": "Which university did the Pentagon cut ties with?",
-      "type": "multiple_choice",
-      "options": [
-        "Yale",
-        "Princeton",
-        "Harvard",
-        "Stanford"
-      ],
-      "correct_index": 2,
-      "source_headline": "Pentagon says it's cutting ties with 'woke' Harvard, ending military training",
-      "explanation": "The headline clearly states that the Pentagon is cutting ties with Harvard."
-    },
-    {
-      "question": "Which country in Africa is dealing with a snakebite problem?",
+      "question": "In which African country did motorbike raids on villages kill at least 30 people?",
       "type": "multiple_choice",
       "options": [
         "Ghana",
         "Nigeria",
         "Kenya",
-        "South Africa"
+        "Mali"
       ],
       "correct_index": 1,
-      "source_headline": "A singer's tragic death highlights Nigeria's snakebite problem",
-      "explanation": "The headline mentions Nigeria as the country with the snakebite problem."
+      "source_headline": "Motorbike raids on villages kill at least 30 in Nigeria",
+      "explanation": "The headline clearly states that the motorbike raids occurred in Nigeria"
     },
     {
-      "question": "True or False: Thailand is holding an election with three main parties competing.",
-      "type": "true_false",
+      "question": "How many people are part of NASA's Crew-12 that arrived at the International Space Station?",
+      "type": "multiple_choice",
       "options": [
-        "True",
-        "False"
-      ],
-      "correct_index": 0,
-      "source_headline": "Thailand votes in early election with 3 main parties vying for power",
-      "explanation": "The headline confirms that Thailand is voting in an election with 3 main parties competing for power."
-    },
-    {
-      "question": "True or False: There was a sewage leak in the Mississippi River.",
-      "type": "true_false",
-      "options": [
-        "True",
-        "False"
+        "Three people",
+        "Four people",
+        "Five people",
+        "Six people"
       ],
       "correct_index": 1,
-      "source_headline": "What we know about the massive sewage leak in the Potomac River",
-      "explanation": "The sewage leak was in the Potomac River, not the Mississippi River."
+      "source_headline": "Four people on NASA'S Crew-12 arrive at the International Space Station",
+      "explanation": "The headline states that four people on NASA's Crew-12 arrived at the space station"
     },
     {
-      "question": "True or False: Samsung is starting to mass produce HBM4 chips.",
+      "question": "True or False: Obama called Trump's racist video post 'deeply troubling'?",
       "type": "true_false",
       "options": [
         "True",
         "False"
       ],
       "correct_index": 0,
-      "source_headline": "Samsung to begin mass production of HBM4 chips later this month: sources",
-      "explanation": "The headline confirms that Samsung will begin mass production of HBM4 chips."
+      "source_headline": "'Deeply troubling': Obama responds to Trump racist video post",
+      "explanation": "The headline shows Obama's direct quote calling the post 'deeply troubling'"
     },
     {
-      "question": "True or False: A teacher became famous in Indian cinema.",
+      "question": "What type of cryptocurrency was demanded in Nancy Guthrie's abduction case?",
+      "type": "multiple_choice",
+      "options": [
+        "Ethereum",
+        "Bitcoin",
+        "Dogecoin",
+        "Litecoin"
+      ],
+      "correct_index": 1,
+      "source_headline": "An abduction, a Bitcoin demand and a TV icon - why Nancy Guthrie's case has gripped the US",
+      "explanation": "The headline specifically mentions Bitcoin as the cryptocurrency demanded"
+    },
+    {
+      "question": "True or False: Over 190,000 doses of cocaine were seized during Valentine's Day week at the southern border?",
       "type": "true_false",
       "options": [
         "True",
         "False"
       ],
       "correct_index": 0,
-      "source_headline": "From classroom to camera: A teacher who has become a sensation in Indian cinema",
-      "explanation": "The headline describes a teacher who became a sensation (famous) in Indian cinema."
+      "source_headline": "Over 190,000 'lethal' doses of cocaine seized in Valentine's Day week bust at southern border",
+      "explanation": "The headline confirms that over 190,000 'lethal' doses were seized during Valentine's Day week"
+    },
+    {
+      "question": "According to the news, what magnitude earthquake hit northern Gyeonggi Province?",
+      "type": "multiple_choice",
+      "options": [
+        "Magnitude 2",
+        "Magnitude 3",
+        "Magnitude 4",
+        "Magnitude 5"
+      ],
+      "correct_index": 1,
+      "source_headline": "Magnitude 3 earthquake hits northern Gyeonggi Province",
+      "explanation": "The headline clearly states it was a magnitude 3 earthquake"
+    },
+    {
+      "question": "True or False: New Zealand is experiencing heavy rain and severe weather conditions?",
+      "type": "true_false",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 0,
+      "source_headline": "New Zealand braces itself for more heavy rain, severe gales after floods kill one person",
+      "explanation": "Multiple headlines mention New Zealand experiencing heavy rain, gales, and severe weather"
+    },
+    {
+      "question": "In which Brazilian city did police wear fancy dress to catch phone thieves during Carnival?",
+      "type": "multiple_choice",
+      "options": [
+        "S\u00e3o Paulo",
+        "Rio",
+        "Salvador",
+        "Bras\u00edlia"
+      ],
+      "correct_index": 1,
+      "source_headline": "Police wear fancy dress in Rio Carnival phone theft sting",
+      "explanation": "The headline mentions Rio Carnival, indicating the city is Rio de Janeiro"
+    },
+    {
+      "question": "True or False: South Korea's women's team reached the short track relay final in the Olympics?",
+      "type": "true_false",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 0,
+      "source_headline": "(Olympics) S. Korea reaches women's short track relay final",
+      "explanation": "The headline confirms that South Korea reached the women's short track relay final"
     }
   ],
-  "generated_at": "2026-02-08T02:08:14.355345+00:00",
-  "week_of": "2026-W05",
-  "valid_until": "2026-02-14",
+  "generated_at": "2026-02-15T01:53:17.241003+00:00",
+  "week_of": "2026-W06",
+  "valid_until": "2026-02-21",
   "headline_count": 30
 }
