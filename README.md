@@ -5,6 +5,7 @@ A news aggregator website with a weekly current events quiz.
 ## Features
 
 - Aggregates headlines from 20+ RSS feeds across multiple regions (US, Global, Tri-State, Sports, Odd News)
+- Local news based on user geolocation (via Cloudflare Worker proxy)
 - Weekly quiz generated from headlines using AI
 - Leaderboard for quiz scores
 - Dark mode support
@@ -18,6 +19,7 @@ A news aggregator website with a weekly current events quiz.
 | **GitHub Pages** | Static site hosting | Yes | Free |
 | **Anthropic API** | Quiz question generation (Claude) | For quiz | ~$0.02/week |
 | **Firebase** | Leaderboard score storage | For leaderboard | Free tier |
+| **Cloudflare Workers** | Local news RSS proxy (avoids CORS) | For local news | Free tier (100k req/day) |
 | **Cloudflare** | Domain & DNS (knightlyread.com) | Optional | ~$10/year for domain |
 | **GoatCounter** | Privacy-friendly analytics | Optional | Free |
 | **Formspree** | Feedback form submission | Optional | Free tier |
@@ -58,7 +60,15 @@ Go to repo Settings → Secrets → Actions and add:
 3. Get your config from Project Settings → Your apps → Web
 4. Update `firebaseConfig` in `templates/index.html`
 
-### 5. Custom Domain (optional)
+### 5. Set Up Cloudflare Worker (for local news)
+
+1. Create a free account at [dash.cloudflare.com](https://dash.cloudflare.com)
+2. Go to **Workers & Pages** → **Create** → **Create Worker**
+3. Name it `local-news-proxy` and click **Deploy**
+4. Click **Edit Code**, paste the contents of `cloudflare-worker/worker.js`, and **Deploy**
+5. Update the worker URL in `templates/index.html` (search for `workers.dev`)
+
+### 6. Custom Domain (optional)
 
 1. Register domain (e.g., Cloudflare)
 2. Add DNS records pointing to GitHub Pages:
@@ -94,6 +104,8 @@ anthropic       # Claude API for quiz generation
 │   └── country_detector.py # Country flag emojis
 ├── templates/
 │   └── index.html        # Jinja2 template with CSS/JS
+├── cloudflare-worker/
+│   └── worker.js         # Cloudflare Worker for local news RSS proxy
 ├── output/               # Generated site (deployed to GitHub Pages)
 ├── run.py                # Entry point
 └── .github/workflows/
