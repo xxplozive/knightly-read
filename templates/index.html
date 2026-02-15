@@ -355,6 +355,58 @@
             font-style: italic;
         }
 
+        .apod-card {
+            max-width: 600px;
+            margin: 16px auto;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .apod-card img, .apod-card iframe {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        .apod-card iframe {
+            height: 340px;
+            border: none;
+        }
+        .apod-body {
+            padding: 12px 16px;
+        }
+        .apod-label {
+            font-size: 8pt;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+        .apod-title {
+            font-size: 13pt;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        .apod-desc {
+            font-size: 10pt;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+        .apod-link {
+            font-size: 9pt;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .apod-link:hover {
+            text-decoration: underline;
+        }
+
         .feedback-btn {
             background: none;
             border: 1px solid var(--accent);
@@ -870,6 +922,20 @@
                 margin-top: 12px;
             }
 
+            .apod-card {
+                max-width: 95%;
+                margin: 12px auto;
+            }
+            .apod-card img {
+                max-height: 280px;
+            }
+            .apod-card iframe {
+                height: 220px;
+            }
+            .apod-title {
+                font-size: 12pt;
+            }
+
             /* Hide keyboard hints on mobile */
             .keyboard-hint {
                 display: none;
@@ -982,10 +1048,67 @@
         <span class="day-name" id="day-name"></span>
     </div>
 
+    <div class="apod-card" id="apod-card" style="display:none">
+        <div id="apod-media"></div>
+        <div class="apod-body">
+            <div class="apod-label">NASA Picture of the Day</div>
+            <div class="apod-title" id="apod-title"></div>
+            <div class="apod-desc" id="apod-desc"></div>
+            <a class="apod-link" id="apod-link" href="#" target="_blank" rel="noopener">View on NASA APOD</a>
+        </div>
+    </div>
+
     <footer class="footer">
         Updated {{ generated_at }} · <span id="visitor-count"></span> visitors
     </footer>
 
+    <script>
+        // NASA Astronomy Picture of the Day
+        (async function loadAPOD() {
+            try {
+                const today = new Date().toISOString().slice(0, 10);
+                const cacheKey = 'apod_cache';
+                const cached = localStorage.getItem(cacheKey);
+
+                let data;
+                if (cached) {
+                    const parsed = JSON.parse(cached);
+                    if (parsed.date === today) {
+                        data = parsed;
+                    }
+                }
+
+                if (!data) {
+                    const resp = await fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY');
+                    if (!resp.ok) return;
+                    data = await resp.json();
+                    localStorage.setItem(cacheKey, JSON.stringify(data));
+                }
+
+                const card = document.getElementById('apod-card');
+                const mediaEl = document.getElementById('apod-media');
+
+                if (data.media_type === 'video') {
+                    mediaEl.innerHTML = `<iframe src="${data.url}" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+                } else {
+                    mediaEl.innerHTML = `<img src="${data.url}" alt="${data.title}" loading="lazy">`;
+                }
+
+                document.getElementById('apod-title').textContent = data.title;
+
+                const desc = data.explanation || '';
+                document.getElementById('apod-desc').textContent =
+                    desc.length > 200 ? desc.slice(0, 200).replace(/\s+\S*$/, '') + '...' : desc;
+
+                const apodPageUrl = `https://apod.nasa.gov/apod/astropix.html`;
+                document.getElementById('apod-link').href = apodPageUrl;
+
+                card.style.display = 'block';
+            } catch (e) {
+                console.log('APOD load error:', e.message);
+            }
+        })();
+    </script>
     <script data-goatcounter="https://knightlyread.goatcounter.com/count"
             async src="//gc.zgo.at/count.js"></script>
     <script>
