@@ -1467,10 +1467,10 @@
             .then(data => {
                 quizData = data;
                 console.log('Quiz loaded:', data.questions?.length, 'questions');
-                if (data.week_of) {
-                    const d = new Date(data.week_of + 'T00:00:00');
+                if (data.generated_at) {
+                    const d = new Date(data.generated_at);
                     const formatted = d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-                    document.getElementById('quiz-date').textContent = `Week of ${formatted}`;
+                    document.getElementById('quiz-date').textContent = `Quiz from ${formatted}`;
                 }
                 checkForNewQuiz();
             })
