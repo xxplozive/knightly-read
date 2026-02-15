@@ -1153,6 +1153,7 @@
             <div id="quiz-start">
                 <div class="quiz-header">
                     <h3>Weekly News Quiz</h3>
+                    <p id="quiz-date" style="color: var(--text-secondary); font-size: 12px;"></p>
                     <p style="color: var(--text-secondary); font-size: 12px;">Test your knowledge of this week's headlines!</p>
                 </div>
                 <input type="text" id="quiz-nickname" class="quiz-nickname-input"
@@ -1466,6 +1467,11 @@
             .then(data => {
                 quizData = data;
                 console.log('Quiz loaded:', data.questions?.length, 'questions');
+                if (data.week_of) {
+                    const d = new Date(data.week_of + 'T00:00:00');
+                    const formatted = d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+                    document.getElementById('quiz-date').textContent = `Week of ${formatted}`;
+                }
                 checkForNewQuiz();
             })
             .catch(err => {
