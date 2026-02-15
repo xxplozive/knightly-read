@@ -4,7 +4,7 @@ A news aggregator website with a weekly current events quiz.
 
 ## Features
 
-- Aggregates headlines from 20+ RSS feeds across multiple regions (US, Global, Tri-State, Sports, Odd News)
+- Aggregates headlines from 20+ RSS feeds across multiple regions (US, Global, Sports, Odd News)
 - Local news based on user geolocation (via Cloudflare Worker proxy)
 - Weekly quiz generated from headlines using AI
 - Leaderboard for quiz scores

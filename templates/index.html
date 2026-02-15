@@ -1784,15 +1784,14 @@
                     throw new Error('Could not detect location');
                 }
 
-                // Build location string
-                const locationParts = [geo.city, geo.region].filter(Boolean);
-                const locationName = locationParts.join(', ');
-                const locationQuery = locationParts.join(' ');
+                // Build location string — use region/state for wider coverage
+                const locationName = [geo.city, geo.region].filter(Boolean).join(', ');
+                const locationQuery = geo.region || geo.city || '';
                 const countryCode = geo.country_code || geo.country || 'US';
 
                 // Update UI
-                const cityName = geo.city || geo.region || 'Your Area';
-                localTabName.textContent = cityName + ' (Local)';
+                const tabLabel = geo.region || geo.city || 'Your Area';
+                localTabName.textContent = tabLabel + ' (Local)';
                 localLocationTitle.textContent = locationName;
                 localTab.style.display = 'inline-block';
 
@@ -1849,7 +1848,7 @@
                 // Parse articles
                 const articles = [];
                 items.forEach((item, index) => {
-                    if (index >= 15) return; // Limit to 15
+                    if (index >= 25) return; // Limit to 25
 
                     const title = item.querySelector('title')?.textContent || '';
                     const link = item.querySelector('link')?.textContent || '';

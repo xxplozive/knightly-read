@@ -37,24 +37,6 @@ settings:
     difficulty: "middle_school"
 
 regions:
-  tristate:
-    name: "Tri-State"
-    feeds:
-      - url: "https://gothamist.com/feed"
-        name: "Gothamist"
-      - url: "https://www.nj.com/arc/outboundfeeds/rss/"
-        name: "NJ.com"
-      - url: "https://www.phillyvoice.com/feed/"
-        name: "PhillyVoice"
-      - url: "https://www.ctpost.com/rss/feed/Connecticut-News-307.php"
-        name: "CT Post"
-      - url: "https://www.silive.com/arc/outboundfeeds/rss/"
-        name: "Staten Island Advance"
-      - url: "https://www.wnyc.org/feeds/all"
-        name: "WNYC"
-      - url: "https://www.nbcnewyork.com/news/local/?rss=y"
-        name: "NBC New York"
-
   us:
     name: "United States"
     feeds:
