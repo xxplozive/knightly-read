@@ -1714,56 +1714,19 @@
                 const gl = countryCode || 'US';
                 const googleNewsUrl = `https://news.google.com/rss/search?q=${query}&hl=${hl}&gl=${gl}&ceid=${gl}:en`;
 
-                // Try multiple CORS proxies with fallback
-                const corsProxies = [
-                    { name: 'corsproxy.io', fn: (url) => `https://corsproxy.io/?${encodeURIComponent(url)}` },
-                    { name: 'allorigins', fn: (url) => `https://api.allorigins.win/get?url=${encodeURIComponent(url)}` },
-                    { name: 'codetabs', fn: (url) => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}` },
-                ];
-
-                let xmlText = null;
-                for (const proxy of corsProxies) {
-                    try {
-                        const proxyUrl = proxy.fn(googleNewsUrl);
-                        console.log(`Trying proxy: ${proxy.name}`);
-                        const response = await fetch(proxyUrl);
-                        if (!response.ok) continue;
-
-                        let text = await response.text();
-
-                        // allorigins /get endpoint wraps content in JSON
-                        if (proxy.name === 'allorigins') {
-                            try {
-                                const json = JSON.parse(text);
-                                text = json.contents || '';
-                            } catch (e) { continue; }
-                        }
-
-                        if (text && text.includes('<item>')) {
-                            console.log(`Proxy ${proxy.name} succeeded`);
-                            xmlText = text;
-                            break;
-                        }
-                        console.log(`Proxy ${proxy.name} returned no items, trying next`);
-                    } catch (e) {
-                        console.log(`Proxy ${proxy.name} failed:`, e.message);
-                    }
-                }
-                if (!xmlText) throw new Error('Failed to fetch news');
+                // Fetch local news via Cloudflare Worker proxy
+                const workerUrl = `https://local-news-proxy.kartiknath.workers.dev/?location=${encodeURIComponent(location)}&country=${gl}`;
+                const response = await fetch(workerUrl);
+                if (!response.ok) throw new Error('Failed to fetch news');
 
                 setLocalProgress(75, 'Processing headlines...');
                 await delay(800);
 
-                console.log('Local news response (first 500 chars):', xmlText.substring(0, 500));
+                const xmlText = await response.text();
                 const parser = new DOMParser();
                 const xml = parser.parseFromString(xmlText, 'text/xml');
 
-                // Check for XML parse errors
-                const parseError = xml.querySelector('parsererror');
-                if (parseError) console.log('XML parse error:', parseError.textContent);
-
                 const items = xml.querySelectorAll('item');
-                console.log('Local news items found:', items.length);
                 if (items.length === 0) throw new Error('No news found');
 
                 setLocalProgress(90, 'Almost done...');
