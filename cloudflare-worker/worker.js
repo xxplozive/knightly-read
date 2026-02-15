@@ -10,13 +10,15 @@ export default {
     const url = new URL(request.url);
     const location = url.searchParams.get('location');
     const country = url.searchParams.get('country') || 'US';
+    const lang = url.searchParams.get('lang') || 'en';
 
     if (!location) {
       return jsonResponse({ error: 'location parameter required' }, 400);
     }
 
-    const hl = country === 'US' ? 'en-US' : 'en';
-    const googleUrl = `https://news.google.com/rss/search?q=${encodeURIComponent(location)}&hl=${hl}&gl=${country}&ceid=${country}:en`;
+    // Build locale: e.g. "en-US", "de", "fr"
+    const hl = country === 'US' ? 'en-US' : lang;
+    const googleUrl = `https://news.google.com/rss/search?q=${encodeURIComponent(location)}&hl=${hl}&gl=${country}&ceid=${country}:${lang}`;
 
     try {
       const resp = await fetch(googleUrl, {

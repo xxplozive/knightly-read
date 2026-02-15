@@ -1804,8 +1804,12 @@
                 // Add click handler to local tab
                 localTab.addEventListener('click', () => switchToTab(localTab));
 
+                // Detect primary language from geo data
+                const languages = (geo.languages || 'en').split(',');
+                const primaryLang = languages[0].trim().split('-')[0]; // e.g. "de" from "de,fr,it"
+
                 // Fetch local news from Google News RSS via CORS proxy
-                await fetchLocalNews(locationQuery, countryCode);
+                await fetchLocalNews(locationQuery, countryCode, primaryLang);
 
             } catch (err) {
                 console.log('Local news not available:', err.message);
@@ -1816,19 +1820,16 @@
         }
 
         // Fetch and display local news
-        async function fetchLocalNews(location, countryCode) {
+        async function fetchLocalNews(location, countryCode, lang) {
             try {
                 setLocalProgress(50, 'Fetching local news...');
                 await delay(800);
 
-                // Build Google News RSS URL
-                const query = encodeURIComponent(location);
-                const hl = countryCode === 'US' ? 'en-US' : 'en';
                 const gl = countryCode || 'US';
-                const googleNewsUrl = `https://news.google.com/rss/search?q=${query}&hl=${hl}&gl=${gl}&ceid=${gl}:en`;
+                const language = lang || 'en';
 
                 // Fetch local news via Cloudflare Worker proxy
-                const workerUrl = `https://local-news-proxy.kartiknath.workers.dev/?location=${encodeURIComponent(location)}&country=${gl}`;
+                const workerUrl = `https://local-news-proxy.kartiknath.workers.dev/?location=${encodeURIComponent(location)}&country=${gl}&lang=${language}`;
                 const response = await fetch(workerUrl);
                 if (!response.ok) throw new Error('Failed to fetch news');
 
