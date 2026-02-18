@@ -232,6 +232,11 @@
             white-space: nowrap;
         }
 
+        .moon-phase {
+            margin-left: 4px;
+            cursor: default;
+        }
+
         .weather-icon {
             font-size: 10pt;
         }
@@ -1955,8 +1960,26 @@
             return icons[code] || '🌡️';
         }
 
+        // Calculate current moon phase from date alone (no API needed)
+        function getMoonPhase() {
+            const knownNewMoon = new Date(Date.UTC(2000, 0, 6, 18, 14, 0));
+            const synodicPeriod = 29.53058867;
+            const daysSince = (Date.now() - knownNewMoon.getTime()) / 86400000;
+            const phase = ((daysSince % synodicPeriod) + synodicPeriod) % synodicPeriod;
+
+            if (phase < 1.85)  return { emoji: '🌑', name: 'New Moon' };
+            if (phase < 7.38)  return { emoji: '🌒', name: 'Waxing Crescent' };
+            if (phase < 9.22)  return { emoji: '🌓', name: 'First Quarter' };
+            if (phase < 14.77) return { emoji: '🌔', name: 'Waxing Gibbous' };
+            if (phase < 16.61) return { emoji: '🌕', name: 'Full Moon' };
+            if (phase < 22.15) return { emoji: '🌖', name: 'Waning Gibbous' };
+            if (phase < 23.99) return { emoji: '🌗', name: 'Last Quarter' };
+            return                     { emoji: '🌘', name: 'Waning Crescent' };
+        }
+
         // Fetch weather from Open-Meteo (free, no API key needed)
         async function fetchWeather(lat, lon) {
+            const moon = getMoonPhase();
             try {
                 const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`;
                 const response = await fetch(url);
@@ -1967,10 +1990,11 @@
                     const tempF = Math.round(tempC * 9/5 + 32);
                     const icon = getWeatherIcon(data.current_weather.weathercode);
 
-                    localWeather.innerHTML = `<span class="weather-icon">${icon}</span> <span class="weather-temp">${tempF}°F / ${tempC}°C</span>`;
+                    localWeather.innerHTML = `<span class="weather-icon">${icon}</span> <span class="weather-temp">${tempF}°F / ${tempC}°C</span> <span class="moon-phase" title="${moon.name}">${moon.emoji}</span>`;
                 }
             } catch (err) {
                 console.log('Weather fetch error:', err.message);
+                localWeather.innerHTML = `<span class="moon-phase" title="${moon.name}">${moon.emoji}</span>`;
             }
         }
 
