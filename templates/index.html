@@ -1223,6 +1223,8 @@
                 c.classList.remove('active'));
             document.getElementById('region-' + tab.dataset.region)
                 .classList.add('active');
+
+            tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
         }
 
         regionTabs.forEach(tab => {
