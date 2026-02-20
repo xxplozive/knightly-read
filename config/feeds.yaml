@@ -8,9 +8,9 @@ settings:
     base_delay: 1.0
     multiplier: 2.0
   deduplication:
-    similarity_threshold: 0.85
+    similarity_threshold: 0.72
   max_per_source: 3  # Maximum articles from any single source per region
-  sort_by: "published"  # Options: "published" (default), "popularity"
+  sort_by: "popularity"  # Options: "published" (default), "popularity"
   paywall:
     enabled: true
     check_meta_tags: false  # Set to true for thorough check (slower)

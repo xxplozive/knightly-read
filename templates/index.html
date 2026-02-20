@@ -1873,15 +1873,41 @@
                     }
                 });
 
-                // Render articles
+                // Render articles (deduplicated)
                 setLocalProgress(100, 'Done!');
-                renderLocalNews(articles);
+                renderLocalNews(deduplicateLocalNews(articles));
 
             } catch (err) {
                 localLoadingText.textContent = 'Could not load local news. Try refreshing.';
                 localProgressBar.style.display = 'none';
                 console.log('Local news fetch error:', err.message);
             }
+        }
+
+        // Jaccard word-overlap dedup for local news (Google News has no server-side dedup)
+        function deduplicateLocalNews(articles, threshold = 0.5) {
+            function tokenize(title) {
+                return new Set(
+                    title.toLowerCase()
+                        .replace(/[^\w\s]/g, '')
+                        .split(/\s+/)
+                        .filter(w => w.length > 3)  // strip short stop words
+                );
+            }
+            function jaccard(a, b) {
+                const setA = tokenize(a);
+                const setB = tokenize(b);
+                let intersection = 0;
+                setA.forEach(w => { if (setB.has(w)) intersection++; });
+                const union = setA.size + setB.size - intersection;
+                return union === 0 ? 0 : intersection / union;
+            }
+            const unique = [];
+            for (const article of articles) {
+                const isDupe = unique.some(u => jaccard(article.title, u.title) >= threshold);
+                if (!isDupe) unique.push(article);
+            }
+            return unique;
         }
 
         // Render local news articles
