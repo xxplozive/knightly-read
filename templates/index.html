@@ -1861,7 +1861,7 @@
                 // Parse articles
                 const articles = [];
                 items.forEach((item, index) => {
-                    if (index >= 25) return; // Limit to 25
+                    if (index >= 15) return; // Limit to 15
 
                     const title = item.querySelector('title')?.textContent || '';
                     const link = item.querySelector('link')?.textContent || '';
