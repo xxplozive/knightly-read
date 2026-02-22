@@ -1,130 +1,130 @@
 {
   "questions": [
     {
-      "question": "According to the news, what famous zoo was featured in a recent exploration story?",
+      "question": "What percentage will Trump's new global tariffs be increased to?",
       "type": "multiple_choice",
       "options": [
-        "San Diego Zoo",
-        "Bronx Zoo",
-        "National Zoo",
-        "Lincoln Park Zoo"
+        "10%",
+        "15%",
+        "20%",
+        "25%"
       ],
-      "correct_index": 0,
-      "source_headline": "WATCH:  Exploring the delights at San Diego Zoo",
-      "explanation": "The headline specifically mentions San Diego Zoo as the location being explored"
+      "correct_index": 1,
+      "source_headline": "Trump to hike global tariffs to 15% from 10%, 'effective immediately'",
+      "explanation": "The headline states Trump will increase global tariffs to 15% from the previous 10%."
     },
     {
-      "question": "In which African country did motorbike raids on villages kill at least 30 people?",
+      "question": "What is the FCC calling for in preparation for America's 250th anniversary?",
+      "type": "multiple_choice",
+      "options": [
+        "More foreign programming",
+        "Patriotic, pro-America programming",
+        "Educational shows only",
+        "Reality TV shows"
+      ],
+      "correct_index": 1,
+      "source_headline": "FCC calls for more 'patriotic, pro-America' programming in runup to 250th anniversary",
+      "explanation": "The FCC specifically wants more patriotic, pro-America programming for the milestone anniversary."
+    },
+    {
+      "question": "True or False: NASA's Artemis II lunar mission is definitely launching in March.",
+      "type": "true_false",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 1,
+      "source_headline": "NASA's Artemis II lunar mission may not launch in March after all",
+      "explanation": "The headline says the mission 'may not launch in March after all,' indicating it's uncertain, not definite."
+    },
+    {
+      "question": "In which state did the FBI investigate criminal damage to an ICE warehouse facility?",
+      "type": "multiple_choice",
+      "options": [
+        "California",
+        "Texas",
+        "Arizona",
+        "Florida"
+      ],
+      "correct_index": 2,
+      "source_headline": "FBI investigates criminal damage to federal ICE warehouse facility in Arizona",
+      "explanation": "The headline specifically mentions the ICE warehouse facility is located in Arizona."
+    },
+    {
+      "question": "How many prisoners are set for release under Venezuela's new amnesty law?",
+      "type": "multiple_choice",
+      "options": [
+        "More than 500",
+        "More than 1,000",
+        "More than 1,500",
+        "More than 2,000"
+      ],
+      "correct_index": 2,
+      "source_headline": "More than 1,500 prisoners set for release under Venezuela's new amnesty law",
+      "explanation": "The headline clearly states that more than 1,500 prisoners will be released under the new law."
+    },
+    {
+      "question": "True or False: Tech giants are investing billions of dollars in Indian AI technology.",
+      "type": "true_false",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 0,
+      "source_headline": "Tech giants commit billions to Indian AI as New Delhi pushes for superpower status",
+      "explanation": "The headline confirms that tech giants are committing billions to Indian AI development."
+    },
+    {
+      "question": "Which country is mentioned in connection with a fishing festival?",
       "type": "multiple_choice",
       "options": [
         "Ghana",
         "Nigeria",
         "Kenya",
-        "Mali"
+        "Egypt"
       ],
       "correct_index": 1,
-      "source_headline": "Motorbike raids on villages kill at least 30 in Nigeria",
-      "explanation": "The headline clearly states that the motorbike raids occurred in Nigeria"
+      "source_headline": "Catch of the day: Pictures from spectacular Nigerian fishing festival",
+      "explanation": "The headline specifically mentions a Nigerian fishing festival."
     },
     {
-      "question": "How many people are part of NASA's Crew-12 that arrived at the International Space Station?",
+      "question": "True or False: Australia's Prime Minister Albanese supports immigration cuts.",
+      "type": "true_false",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 1,
+      "source_headline": "Australia PM Albanese rejects immigration cuts as far-right grows",
+      "explanation": "The headline states that PM Albanese 'rejects' immigration cuts, meaning he does not support them."
+    },
+    {
+      "question": "Which company reclaimed the top spot in the global DRAM market in Q4?",
       "type": "multiple_choice",
       "options": [
-        "Three people",
-        "Four people",
-        "Five people",
-        "Six people"
+        "Apple",
+        "Samsung",
+        "Sony",
+        "LG"
       ],
       "correct_index": 1,
-      "source_headline": "Four people on NASA'S Crew-12 arrive at the International Space Station",
-      "explanation": "The headline states that four people on NASA's Crew-12 arrived at the space station"
+      "source_headline": "Samsung reclaims top spot in global DRAM market in Q4",
+      "explanation": "Samsung is specifically named as reclaiming the top position in the global DRAM market."
     },
     {
-      "question": "True or False: Obama called Trump's racist video post 'deeply troubling'?",
+      "question": "True or False: More than 3,000 people marched in France to honor a far-right activist.",
       "type": "true_false",
       "options": [
         "True",
         "False"
       ],
       "correct_index": 0,
-      "source_headline": "'Deeply troubling': Obama responds to Trump racist video post",
-      "explanation": "The headline shows Obama's direct quote calling the post 'deeply troubling'"
-    },
-    {
-      "question": "What type of cryptocurrency was demanded in Nancy Guthrie's abduction case?",
-      "type": "multiple_choice",
-      "options": [
-        "Ethereum",
-        "Bitcoin",
-        "Dogecoin",
-        "Litecoin"
-      ],
-      "correct_index": 1,
-      "source_headline": "An abduction, a Bitcoin demand and a TV icon - why Nancy Guthrie's case has gripped the US",
-      "explanation": "The headline specifically mentions Bitcoin as the cryptocurrency demanded"
-    },
-    {
-      "question": "True or False: Over 190,000 doses of cocaine were seized during Valentine's Day week at the southern border?",
-      "type": "true_false",
-      "options": [
-        "True",
-        "False"
-      ],
-      "correct_index": 0,
-      "source_headline": "Over 190,000 'lethal' doses of cocaine seized in Valentine's Day week bust at southern border",
-      "explanation": "The headline confirms that over 190,000 'lethal' doses were seized during Valentine's Day week"
-    },
-    {
-      "question": "According to the news, what magnitude earthquake hit northern Gyeonggi Province?",
-      "type": "multiple_choice",
-      "options": [
-        "Magnitude 2",
-        "Magnitude 3",
-        "Magnitude 4",
-        "Magnitude 5"
-      ],
-      "correct_index": 1,
-      "source_headline": "Magnitude 3 earthquake hits northern Gyeonggi Province",
-      "explanation": "The headline clearly states it was a magnitude 3 earthquake"
-    },
-    {
-      "question": "True or False: New Zealand is experiencing heavy rain and severe weather conditions?",
-      "type": "true_false",
-      "options": [
-        "True",
-        "False"
-      ],
-      "correct_index": 0,
-      "source_headline": "New Zealand braces itself for more heavy rain, severe gales after floods kill one person",
-      "explanation": "Multiple headlines mention New Zealand experiencing heavy rain, gales, and severe weather"
-    },
-    {
-      "question": "In which Brazilian city did police wear fancy dress to catch phone thieves during Carnival?",
-      "type": "multiple_choice",
-      "options": [
-        "S\u00e3o Paulo",
-        "Rio",
-        "Salvador",
-        "Bras\u00edlia"
-      ],
-      "correct_index": 1,
-      "source_headline": "Police wear fancy dress in Rio Carnival phone theft sting",
-      "explanation": "The headline mentions Rio Carnival, indicating the city is Rio de Janeiro"
-    },
-    {
-      "question": "True or False: South Korea's women's team reached the short track relay final in the Olympics?",
-      "type": "true_false",
-      "options": [
-        "True",
-        "False"
-      ],
-      "correct_index": 0,
-      "source_headline": "(Olympics) S. Korea reaches women's short track relay final",
-      "explanation": "The headline confirms that South Korea reached the women's short track relay final"
+      "source_headline": "Over 3,000 people march in France in honour of far-right activist",
+      "explanation": "The headline confirms that over 3,000 people participated in the march in France."
     }
   ],
-  "generated_at": "2026-02-15T01:53:17.241003+00:00",
-  "week_of": "2026-W06",
-  "valid_until": "2026-02-21",
+  "generated_at": "2026-02-22T01:48:39.929671+00:00",
+  "week_of": "2026-W07",
+  "valid_until": "2026-02-28",
   "headline_count": 30
 }
