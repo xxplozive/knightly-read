@@ -1,130 +1,128 @@
 {
   "questions": [
     {
-      "question": "What percentage will Trump's new global tariffs be increased to?",
+      "question": "According to news reports, how long did Iran's Supreme Leader Ali Khamenei rule before his death?",
       "type": "multiple_choice",
       "options": [
-        "10%",
-        "15%",
-        "20%",
-        "25%"
+        "26 years",
+        "36 years",
+        "46 years",
+        "56 years"
       ],
       "correct_index": 1,
-      "source_headline": "Trump to hike global tariffs to 15% from 10%, 'effective immediately'",
-      "explanation": "The headline states Trump will increase global tariffs to 15% from the previous 10%."
+      "source_headline": "Iran's Ayatollah Ali Khamenei is killed in Israeli strike, ending 36-year iron rule",
+      "explanation": "The headline states that Khamenei's death ended his 36-year iron rule"
     },
     {
-      "question": "What is the FCC calling for in preparation for America's 250th anniversary?",
-      "type": "multiple_choice",
-      "options": [
-        "More foreign programming",
-        "Patriotic, pro-America programming",
-        "Educational shows only",
-        "Reality TV shows"
-      ],
-      "correct_index": 1,
-      "source_headline": "FCC calls for more 'patriotic, pro-America' programming in runup to 250th anniversary",
-      "explanation": "The FCC specifically wants more patriotic, pro-America programming for the milestone anniversary."
-    },
-    {
-      "question": "True or False: NASA's Artemis II lunar mission is definitely launching in March.",
-      "type": "true_false",
-      "options": [
-        "True",
-        "False"
-      ],
-      "correct_index": 1,
-      "source_headline": "NASA's Artemis II lunar mission may not launch in March after all",
-      "explanation": "The headline says the mission 'may not launch in March after all,' indicating it's uncertain, not definite."
-    },
-    {
-      "question": "In which state did the FBI investigate criminal damage to an ICE warehouse facility?",
-      "type": "multiple_choice",
-      "options": [
-        "California",
-        "Texas",
-        "Arizona",
-        "Florida"
-      ],
-      "correct_index": 2,
-      "source_headline": "FBI investigates criminal damage to federal ICE warehouse facility in Arizona",
-      "explanation": "The headline specifically mentions the ICE warehouse facility is located in Arizona."
-    },
-    {
-      "question": "How many prisoners are set for release under Venezuela's new amnesty law?",
-      "type": "multiple_choice",
-      "options": [
-        "More than 500",
-        "More than 1,000",
-        "More than 1,500",
-        "More than 2,000"
-      ],
-      "correct_index": 2,
-      "source_headline": "More than 1,500 prisoners set for release under Venezuela's new amnesty law",
-      "explanation": "The headline clearly states that more than 1,500 prisoners will be released under the new law."
-    },
-    {
-      "question": "True or False: Tech giants are investing billions of dollars in Indian AI technology.",
+      "question": "True or False: A tram accident in Milan, Italy resulted in deaths and injuries.",
       "type": "true_false",
       "options": [
         "True",
         "False"
       ],
       "correct_index": 0,
-      "source_headline": "Tech giants commit billions to Indian AI as New Delhi pushes for superpower status",
-      "explanation": "The headline confirms that tech giants are committing billions to Indian AI development."
+      "source_headline": "Tram derails in Milan, leaving two dead and dozens injured",
+      "explanation": "The headline confirms a tram derailment in Milan caused two deaths and dozens of injuries"
     },
     {
-      "question": "Which country is mentioned in connection with a fishing festival?",
+      "question": "Which country became the first in South-east Asia to have an AI law take effect?",
       "type": "multiple_choice",
       "options": [
-        "Ghana",
-        "Nigeria",
-        "Kenya",
-        "Egypt"
+        "Thailand",
+        "Vietnam",
+        "Philippines",
+        "Malaysia"
       ],
       "correct_index": 1,
-      "source_headline": "Catch of the day: Pictures from spectacular Nigerian fishing festival",
-      "explanation": "The headline specifically mentions a Nigerian fishing festival."
+      "source_headline": "Vietnam AI law takes effect, first in South-east Asia",
+      "explanation": "The headline specifically states Vietnam's AI law took effect and was first in South-east Asia"
     },
     {
-      "question": "True or False: Australia's Prime Minister Albanese supports immigration cuts.",
-      "type": "true_false",
-      "options": [
-        "True",
-        "False"
-      ],
-      "correct_index": 1,
-      "source_headline": "Australia PM Albanese rejects immigration cuts as far-right grows",
-      "explanation": "The headline states that PM Albanese 'rejects' immigration cuts, meaning he does not support them."
-    },
-    {
-      "question": "Which company reclaimed the top spot in the global DRAM market in Q4?",
-      "type": "multiple_choice",
-      "options": [
-        "Apple",
-        "Samsung",
-        "Sony",
-        "LG"
-      ],
-      "correct_index": 1,
-      "source_headline": "Samsung reclaims top spot in global DRAM market in Q4",
-      "explanation": "Samsung is specifically named as reclaiming the top position in the global DRAM market."
-    },
-    {
-      "question": "True or False: More than 3,000 people marched in France to honor a far-right activist.",
+      "question": "True or False: Wall Street banks are preparing to sell billions of dollars worth of X loans.",
       "type": "true_false",
       "options": [
         "True",
         "False"
       ],
       "correct_index": 0,
-      "source_headline": "Over 3,000 people march in France in honour of far-right activist",
-      "explanation": "The headline confirms that over 3,000 people participated in the march in France."
+      "source_headline": "Wall Street Banks Prepare to Sell Billions of Dollars of X Loans",
+      "explanation": "The headline directly states that Wall Street banks are preparing to sell billions in X loans"
+    },
+    {
+      "question": "How much money is Canada providing to Canada Post to prevent it from going bankrupt?",
+      "type": "multiple_choice",
+      "options": [
+        "$520 million",
+        "$620 million",
+        "$720 million",
+        "$820 million"
+      ],
+      "correct_index": 2,
+      "source_headline": "Canada to Provide $720 Million to Canada Post to Avoid Insolvency at Mail Service",
+      "explanation": "The headline states Canada will provide $720 million to prevent Canada Post's insolvency"
+    },
+    {
+      "question": "True or False: At least 55 people from Ghana have been killed in the Russia-Ukraine war.",
+      "type": "true_false",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 0,
+      "source_headline": "At least 55 Ghanaians killed in Russia-Ukraine war, minister says",
+      "explanation": "The headline reports that a minister confirmed at least 55 Ghanaians were killed in the Russia-Ukraine conflict"
+    },
+    {
+      "question": "In which South American country did a military plane carrying banknotes crash?",
+      "type": "multiple_choice",
+      "options": [
+        "Peru",
+        "Colombia",
+        "Bolivia",
+        "Ecuador"
+      ],
+      "correct_index": 2,
+      "source_headline": "At least 20 killed after military plane carrying banknotes crashes in Bolivia",
+      "explanation": "The headline specifically mentions the plane crash occurred in Bolivia"
+    },
+    {
+      "question": "True or False: Indonesia's government is facing criticism over importing $2.4 billion worth of trucks from India.",
+      "type": "true_false",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 0,
+      "source_headline": "'Killing auto industry': Indonesia government faces pushback on US$2.4 billion Indian trucks import",
+      "explanation": "The headline shows Indonesia is receiving pushback for the large Indian truck import deal"
+    },
+    {
+      "question": "According to reports, how many fighter jets did Israel use in its strike against Iran?",
+      "type": "multiple_choice",
+      "options": [
+        "100 jets",
+        "150 jets",
+        "200 jets",
+        "250 jets"
+      ],
+      "correct_index": 2,
+      "source_headline": "Israel attacks Iran: IDF executes 'largest-ever' strike sortie with 200 fighter jets",
+      "explanation": "The headline states Israel used 200 fighter jets in what's described as their largest-ever strike sortie"
+    },
+    {
+      "question": "True or False: A man confessed to killing a 7-year-old after DNA evidence linked him to a 30-year-old cold case.",
+      "type": "true_false",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 0,
+      "source_headline": "Man confesses to killing 7-year-old while on the lam after DNA links him to 30-year cold case: authorities",
+      "explanation": "The headline confirms a man confessed to the murder after DNA evidence connected him to the decades-old case"
     }
   ],
-  "generated_at": "2026-02-22T01:48:39.929671+00:00",
-  "week_of": "2026-W07",
-  "valid_until": "2026-02-28",
+  "generated_at": "2026-03-01T01:54:40.184329+00:00",
+  "week_of": "2026-W08",
+  "valid_until": "2026-03-07",
   "headline_count": 30
 }
