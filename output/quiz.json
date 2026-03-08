@@ -1,128 +1,128 @@
 {
   "questions": [
     {
-      "question": "According to news reports, how long did Iran's Supreme Leader Ali Khamenei rule before his death?",
+      "question": "Which Canadian province is planning to make daylight saving time permanent?",
       "type": "multiple_choice",
       "options": [
-        "26 years",
-        "36 years",
-        "46 years",
-        "56 years"
+        "Ontario",
+        "British Columbia",
+        "Alberta",
+        "Quebec"
       ],
       "correct_index": 1,
-      "source_headline": "Iran's Ayatollah Ali Khamenei is killed in Israeli strike, ending 36-year iron rule",
-      "explanation": "The headline states that Khamenei's death ended his 36-year iron rule"
+      "source_headline": "British Columbia to make daylight saving time permanent",
+      "explanation": "The headline specifically states that British Columbia is making this change to daylight saving time."
     },
     {
-      "question": "True or False: A tram accident in Milan, Italy resulted in deaths and injuries.",
+      "question": "True or False: Tornadoes recently hit both Michigan and Oklahoma, killing six people including a 12-year-old boy?",
       "type": "true_false",
       "options": [
         "True",
         "False"
       ],
       "correct_index": 0,
-      "source_headline": "Tram derails in Milan, leaving two dead and dozens injured",
-      "explanation": "The headline confirms a tram derailment in Milan caused two deaths and dozens of injuries"
+      "source_headline": "Boy, 12, among six dead as tornadoes hit Michigan and Oklahoma",
+      "explanation": "The headline confirms that tornadoes hit both states and killed six people, including a 12-year-old boy."
     },
     {
-      "question": "Which country became the first in South-east Asia to have an AI law take effect?",
+      "question": "What country is Kuwait cutting oil production due to disruptions in the Strait of Hormuz?",
       "type": "multiple_choice",
       "options": [
-        "Thailand",
-        "Vietnam",
-        "Philippines",
-        "Malaysia"
+        "Saudi Arabia",
+        "Iraq",
+        "Kuwait",
+        "Iran"
+      ],
+      "correct_index": 2,
+      "source_headline": "Kuwait cuts oil production as Strait of Hormuz closure disrupts global energy market",
+      "explanation": "The headline clearly states that Kuwait is the country cutting oil production."
+    },
+    {
+      "question": "True or False: Armed robots are being used in the Ukraine war?",
+      "type": "true_false",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 0,
+      "source_headline": "Armed robots take to the battlefield in Ukraine war",
+      "explanation": "The headline states that armed robots are taking to the battlefield in the Ukraine war."
+    },
+    {
+      "question": "How many people died in the recent Nairobi floods?",
+      "type": "multiple_choice",
+      "options": [
+        "15",
+        "20",
+        "23",
+        "30"
+      ],
+      "correct_index": 2,
+      "source_headline": "Heavy rains and flooding kills at least 23 in Nairobi",
+      "explanation": "The headline reports that at least 23 people were killed in the Nairobi floods."
+    },
+    {
+      "question": "True or False: A French grandmother took a road trip in America and wrote about her experience?",
+      "type": "true_false",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_index": 0,
+      "source_headline": "A French grandmother took an American road trip \u2014 and was struck by what she saw",
+      "explanation": "The headline describes a French grandmother's American road trip experience."
+    },
+    {
+      "question": "Which country's Foreign Minister Wang Yi recently discussed foreign policy direction?",
+      "type": "multiple_choice",
+      "options": [
+        "Japan",
+        "China",
+        "South Korea",
+        "Taiwan"
       ],
       "correct_index": 1,
-      "source_headline": "Vietnam AI law takes effect, first in South-east Asia",
-      "explanation": "The headline specifically states Vietnam's AI law took effect and was first in South-east Asia"
+      "source_headline": "Foreign Minister Wang Yi sets forth China's foreign policy direction amid 'two sessions'",
+      "explanation": "Wang Yi is China's Foreign Minister, as indicated in the headline about China's foreign policy."
     },
     {
-      "question": "True or False: Wall Street banks are preparing to sell billions of dollars worth of X loans.",
+      "question": "True or False: Australia's Foreign Minister said the country could help protect Gulf states from Iran attacks?",
       "type": "true_false",
       "options": [
         "True",
         "False"
       ],
       "correct_index": 0,
-      "source_headline": "Wall Street Banks Prepare to Sell Billions of Dollars of X Loans",
-      "explanation": "The headline directly states that Wall Street banks are preparing to sell billions in X loans"
+      "source_headline": "Australia could help protect Gulf states from Iran attacks: Foreign Minister",
+      "explanation": "The headline quotes Australia's Foreign Minister saying Australia could help protect Gulf states from Iran attacks."
     },
     {
-      "question": "How much money is Canada providing to Canada Post to prevent it from going bankrupt?",
+      "question": "What happened to Paula Doress-Worters, who helped break the silence on postpartum depression?",
       "type": "multiple_choice",
       "options": [
-        "$520 million",
-        "$620 million",
-        "$720 million",
-        "$820 million"
+        "She retired",
+        "She died at age 87",
+        "She won an award",
+        "She wrote a book"
       ],
-      "correct_index": 2,
-      "source_headline": "Canada to Provide $720 Million to Canada Post to Avoid Insolvency at Mail Service",
-      "explanation": "The headline states Canada will provide $720 million to prevent Canada Post's insolvency"
+      "correct_index": 1,
+      "source_headline": "Paula Doress-Worters, who helped break the silence on postpartum depression, dies at 87",
+      "explanation": "The headline states that Paula Doress-Worters died at age 87."
     },
     {
-      "question": "True or False: At least 55 people from Ghana have been killed in the Russia-Ukraine war.",
+      "question": "True or False: The FBI captured a Bangladeshi fugitive in a child sextortion case?",
       "type": "true_false",
       "options": [
         "True",
         "False"
       ],
       "correct_index": 0,
-      "source_headline": "At least 55 Ghanaians killed in Russia-Ukraine war, minister says",
-      "explanation": "The headline reports that a minister confirmed at least 55 Ghanaians were killed in the Russia-Ukraine conflict"
-    },
-    {
-      "question": "In which South American country did a military plane carrying banknotes crash?",
-      "type": "multiple_choice",
-      "options": [
-        "Peru",
-        "Colombia",
-        "Bolivia",
-        "Ecuador"
-      ],
-      "correct_index": 2,
-      "source_headline": "At least 20 killed after military plane carrying banknotes crashes in Bolivia",
-      "explanation": "The headline specifically mentions the plane crash occurred in Bolivia"
-    },
-    {
-      "question": "True or False: Indonesia's government is facing criticism over importing $2.4 billion worth of trucks from India.",
-      "type": "true_false",
-      "options": [
-        "True",
-        "False"
-      ],
-      "correct_index": 0,
-      "source_headline": "'Killing auto industry': Indonesia government faces pushback on US$2.4 billion Indian trucks import",
-      "explanation": "The headline shows Indonesia is receiving pushback for the large Indian truck import deal"
-    },
-    {
-      "question": "According to reports, how many fighter jets did Israel use in its strike against Iran?",
-      "type": "multiple_choice",
-      "options": [
-        "100 jets",
-        "150 jets",
-        "200 jets",
-        "250 jets"
-      ],
-      "correct_index": 2,
-      "source_headline": "Israel attacks Iran: IDF executes 'largest-ever' strike sortie with 200 fighter jets",
-      "explanation": "The headline states Israel used 200 fighter jets in what's described as their largest-ever strike sortie"
-    },
-    {
-      "question": "True or False: A man confessed to killing a 7-year-old after DNA evidence linked him to a 30-year-old cold case.",
-      "type": "true_false",
-      "options": [
-        "True",
-        "False"
-      ],
-      "correct_index": 0,
-      "source_headline": "Man confesses to killing 7-year-old while on the lam after DNA links him to 30-year cold case: authorities",
-      "explanation": "The headline confirms a man confessed to the murder after DNA evidence connected him to the decades-old case"
+      "source_headline": "FBI captures Bangladeshi fugitive extradited in massive online child sextortion case",
+      "explanation": "The headline confirms the FBI captured a Bangladeshi fugitive in a child sextortion case."
     }
   ],
-  "generated_at": "2026-03-01T01:54:40.184329+00:00",
-  "week_of": "2026-W08",
-  "valid_until": "2026-03-07",
+  "generated_at": "2026-03-08T01:46:52.480459+00:00",
+  "week_of": "2026-W09",
+  "valid_until": "2026-03-14",
   "headline_count": 30
 }
