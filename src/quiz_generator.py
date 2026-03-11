@@ -57,11 +57,12 @@ class QuizGenerator:
         prompt = f"""Generate exactly {questions_count} quiz questions for middle school students (ages 11-14) based on these current news headlines.
 
 Requirements:
-- Mix of question types: about 6 multiple choice (4 options: A, B, C, D) and 4 true/false
+- All questions must be multiple choice with exactly 4 options (A, B, C, D)
 - Questions should be easy to understand - use simple vocabulary
 - Each question must be directly answerable from the headline information
 - For global news, you can ask about which country/region the news is from
 - Make questions educational and engaging
+- Wrong answer options should be plausible but clearly incorrect
 
 Headlines:
 {json.dumps(headlines, indent=2)}
@@ -75,14 +76,6 @@ Return ONLY a valid JSON array with exactly {questions_count} questions in this 
     "correct_index": 0,
     "source_headline": "The headline this question is based on",
     "explanation": "Brief explanation of why this is correct"
-  }},
-  {{
-    "question": "True or False: Statement here?",
-    "type": "true_false",
-    "options": ["True", "False"],
-    "correct_index": 0,
-    "source_headline": "The headline this question is based on",
-    "explanation": "Brief explanation"
   }}
 ]
 

@@ -3,122 +3,82 @@
     {
       "question": "Which Canadian province is planning to make daylight saving time permanent?",
       "type": "multiple_choice",
-      "options": [
-        "Ontario",
-        "British Columbia",
-        "Alberta",
-        "Quebec"
-      ],
+      "options": ["Ontario", "British Columbia", "Alberta", "Quebec"],
       "correct_index": 1,
       "source_headline": "British Columbia to make daylight saving time permanent",
       "explanation": "The headline specifically states that British Columbia is making this change to daylight saving time."
     },
     {
-      "question": "True or False: Tornadoes recently hit both Michigan and Oklahoma, killing six people including a 12-year-old boy?",
-      "type": "true_false",
-      "options": [
-        "True",
-        "False"
-      ],
-      "correct_index": 0,
+      "question": "Which two US states were hit by tornadoes that killed six people, including a 12-year-old boy?",
+      "type": "multiple_choice",
+      "options": ["Michigan and Ohio", "Michigan and Oklahoma", "Texas and Oklahoma", "Indiana and Oklahoma"],
+      "correct_index": 1,
       "source_headline": "Boy, 12, among six dead as tornadoes hit Michigan and Oklahoma",
-      "explanation": "The headline confirms that tornadoes hit both states and killed six people, including a 12-year-old boy."
+      "explanation": "The headline states tornadoes hit Michigan and Oklahoma, killing six people including a 12-year-old boy."
     },
     {
-      "question": "What country is Kuwait cutting oil production due to disruptions in the Strait of Hormuz?",
+      "question": "What country is cutting oil production due to disruptions in the Strait of Hormuz?",
       "type": "multiple_choice",
-      "options": [
-        "Saudi Arabia",
-        "Iraq",
-        "Kuwait",
-        "Iran"
-      ],
+      "options": ["Saudi Arabia", "Iraq", "Kuwait", "Iran"],
       "correct_index": 2,
       "source_headline": "Kuwait cuts oil production as Strait of Hormuz closure disrupts global energy market",
       "explanation": "The headline clearly states that Kuwait is the country cutting oil production."
     },
     {
-      "question": "True or False: Armed robots are being used in the Ukraine war?",
-      "type": "true_false",
-      "options": [
-        "True",
-        "False"
-      ],
-      "correct_index": 0,
+      "question": "What new technology has taken to the battlefield in the Ukraine war?",
+      "type": "multiple_choice",
+      "options": ["Drone submarines", "Armed robots", "Autonomous fighter jets", "AI-guided missiles"],
+      "correct_index": 1,
       "source_headline": "Armed robots take to the battlefield in Ukraine war",
       "explanation": "The headline states that armed robots are taking to the battlefield in the Ukraine war."
     },
     {
       "question": "How many people died in the recent Nairobi floods?",
       "type": "multiple_choice",
-      "options": [
-        "15",
-        "20",
-        "23",
-        "30"
-      ],
+      "options": ["15", "20", "23", "30"],
       "correct_index": 2,
       "source_headline": "Heavy rains and flooding kills at least 23 in Nairobi",
       "explanation": "The headline reports that at least 23 people were killed in the Nairobi floods."
     },
     {
-      "question": "True or False: A French grandmother took a road trip in America and wrote about her experience?",
-      "type": "true_false",
-      "options": [
-        "True",
-        "False"
-      ],
-      "correct_index": 0,
+      "question": "What nationality was the grandmother who took a road trip across America?",
+      "type": "multiple_choice",
+      "options": ["Italian", "German", "French", "Spanish"],
+      "correct_index": 2,
       "source_headline": "A French grandmother took an American road trip \u2014 and was struck by what she saw",
       "explanation": "The headline describes a French grandmother's American road trip experience."
     },
     {
       "question": "Which country's Foreign Minister Wang Yi recently discussed foreign policy direction?",
       "type": "multiple_choice",
-      "options": [
-        "Japan",
-        "China",
-        "South Korea",
-        "Taiwan"
-      ],
+      "options": ["Japan", "China", "South Korea", "Taiwan"],
       "correct_index": 1,
       "source_headline": "Foreign Minister Wang Yi sets forth China's foreign policy direction amid 'two sessions'",
       "explanation": "Wang Yi is China's Foreign Minister, as indicated in the headline about China's foreign policy."
     },
     {
-      "question": "True or False: Australia's Foreign Minister said the country could help protect Gulf states from Iran attacks?",
-      "type": "true_false",
-      "options": [
-        "True",
-        "False"
-      ],
-      "correct_index": 0,
+      "question": "According to its Foreign Minister, which country could help protect Gulf states from Iran attacks?",
+      "type": "multiple_choice",
+      "options": ["United Kingdom", "United States", "Australia", "Canada"],
+      "correct_index": 2,
       "source_headline": "Australia could help protect Gulf states from Iran attacks: Foreign Minister",
       "explanation": "The headline quotes Australia's Foreign Minister saying Australia could help protect Gulf states from Iran attacks."
     },
     {
       "question": "What happened to Paula Doress-Worters, who helped break the silence on postpartum depression?",
       "type": "multiple_choice",
-      "options": [
-        "She retired",
-        "She died at age 87",
-        "She won an award",
-        "She wrote a book"
-      ],
+      "options": ["She retired", "She died at age 87", "She won an award", "She wrote a book"],
       "correct_index": 1,
       "source_headline": "Paula Doress-Worters, who helped break the silence on postpartum depression, dies at 87",
       "explanation": "The headline states that Paula Doress-Worters died at age 87."
     },
     {
-      "question": "True or False: The FBI captured a Bangladeshi fugitive in a child sextortion case?",
-      "type": "true_false",
-      "options": [
-        "True",
-        "False"
-      ],
-      "correct_index": 0,
+      "question": "What nationality was the fugitive captured by the FBI in the massive online child sextortion case?",
+      "type": "multiple_choice",
+      "options": ["Pakistani", "Indian", "Bangladeshi", "Sri Lankan"],
+      "correct_index": 2,
       "source_headline": "FBI captures Bangladeshi fugitive extradited in massive online child sextortion case",
-      "explanation": "The headline confirms the FBI captured a Bangladeshi fugitive in a child sextortion case."
+      "explanation": "The headline confirms the FBI captured a Bangladeshi fugitive in the child sextortion case."
     }
   ],
   "generated_at": "2026-03-08T01:46:52.480459+00:00",
