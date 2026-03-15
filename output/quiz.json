@@ -1,88 +1,138 @@
 {
   "questions": [
     {
-      "question": "Which Canadian province is planning to make daylight saving time permanent?",
+      "question": "Which NFL team could be moving to Indiana according to recent news?",
       "type": "multiple_choice",
-      "options": ["Ontario", "British Columbia", "Alberta", "Quebec"],
-      "correct_index": 1,
-      "source_headline": "British Columbia to make daylight saving time permanent",
-      "explanation": "The headline specifically states that British Columbia is making this change to daylight saving time."
+      "options": [
+        "Chicago Bears",
+        "Green Bay Packers",
+        "Detroit Lions",
+        "Minnesota Vikings"
+      ],
+      "correct_index": 0,
+      "source_headline": "Why the Chicago Bears could be moving to Indiana",
+      "explanation": "The headline specifically mentions the Chicago Bears as the team that could be moving to Indiana."
     },
     {
-      "question": "Which two US states were hit by tornadoes that killed six people, including a 12-year-old boy?",
+      "question": "What important waterway is Trump asking other countries to help secure?",
       "type": "multiple_choice",
-      "options": ["Michigan and Ohio", "Michigan and Oklahoma", "Texas and Oklahoma", "Indiana and Oklahoma"],
-      "correct_index": 1,
-      "source_headline": "Boy, 12, among six dead as tornadoes hit Michigan and Oklahoma",
-      "explanation": "The headline states tornadoes hit Michigan and Oklahoma, killing six people including a 12-year-old boy."
-    },
-    {
-      "question": "What country is cutting oil production due to disruptions in the Strait of Hormuz?",
-      "type": "multiple_choice",
-      "options": ["Saudi Arabia", "Iraq", "Kuwait", "Iran"],
+      "options": [
+        "Suez Canal",
+        "Panama Canal",
+        "Strait of Hormuz",
+        "Strait of Gibraltar"
+      ],
       "correct_index": 2,
-      "source_headline": "Kuwait cuts oil production as Strait of Hormuz closure disrupts global energy market",
-      "explanation": "The headline clearly states that Kuwait is the country cutting oil production."
+      "source_headline": "Iran live updates: Trump calls on other countries to assist in Strait of Hormuz",
+      "explanation": "The headline mentions the Strait of Hormuz as the waterway Trump is asking countries to help secure."
     },
     {
-      "question": "What new technology has taken to the battlefield in the Ukraine war?",
+      "question": "At what age did sculptor Thaddeus Mosley find international fame?",
       "type": "multiple_choice",
-      "options": ["Drone submarines", "Armed robots", "Autonomous fighter jets", "AI-guided missiles"],
+      "options": [
+        "In his 70s",
+        "In his 80s",
+        "In his 90s",
+        "In his 60s"
+      ],
+      "correct_index": 2,
+      "source_headline": "Sculptor Thaddeus Mosley, who found international fame in his 90s, is dead",
+      "explanation": "The headline states that Mosley found international fame in his 90s."
+    },
+    {
+      "question": "Which U.S. state is being affected by White South Africans according to the news?",
+      "type": "multiple_choice",
+      "options": [
+        "Louisiana",
+        "Mississippi",
+        "Alabama",
+        "Georgia"
+      ],
       "correct_index": 1,
-      "source_headline": "Armed robots take to the battlefield in Ukraine war",
-      "explanation": "The headline states that armed robots are taking to the battlefield in the Ukraine war."
+      "source_headline": "How White South Africans Are Reshaping the Mississippi Delta",
+      "explanation": "The headline mentions the Mississippi Delta, which is in Mississippi."
     },
     {
-      "question": "How many people died in the recent Nairobi floods?",
+      "question": "What type of government stockpiles had the biggest release in history?",
       "type": "multiple_choice",
-      "options": ["15", "20", "23", "30"],
-      "correct_index": 2,
-      "source_headline": "Heavy rains and flooding kills at least 23 in Nairobi",
-      "explanation": "The headline reports that at least 23 people were killed in the Nairobi floods."
-    },
-    {
-      "question": "What nationality was the grandmother who took a road trip across America?",
-      "type": "multiple_choice",
-      "options": ["Italian", "German", "French", "Spanish"],
-      "correct_index": 2,
-      "source_headline": "A French grandmother took an American road trip \u2014 and was struck by what she saw",
-      "explanation": "The headline describes a French grandmother's American road trip experience."
-    },
-    {
-      "question": "Which country's Foreign Minister Wang Yi recently discussed foreign policy direction?",
-      "type": "multiple_choice",
-      "options": ["Japan", "China", "South Korea", "Taiwan"],
+      "options": [
+        "Gold reserves",
+        "Emergency oil",
+        "Food supplies",
+        "Medical equipment"
+      ],
       "correct_index": 1,
-      "source_headline": "Foreign Minister Wang Yi sets forth China's foreign policy direction amid 'two sessions'",
-      "explanation": "Wang Yi is China's Foreign Minister, as indicated in the headline about China's foreign policy."
+      "source_headline": "The biggest release of emergency oil stockpiles in history was announced. Why crude may keep rising",
+      "explanation": "The headline specifically mentions emergency oil stockpiles having their biggest release in history."
     },
     {
-      "question": "According to its Foreign Minister, which country could help protect Gulf states from Iran attacks?",
+      "question": "How long ago was the unidentified body found on a New York road?",
       "type": "multiple_choice",
-      "options": ["United Kingdom", "United States", "Australia", "Canada"],
-      "correct_index": 2,
-      "source_headline": "Australia could help protect Gulf states from Iran attacks: Foreign Minister",
-      "explanation": "The headline quotes Australia's Foreign Minister saying Australia could help protect Gulf states from Iran attacks."
-    },
-    {
-      "question": "What happened to Paula Doress-Worters, who helped break the silence on postpartum depression?",
-      "type": "multiple_choice",
-      "options": ["She retired", "She died at age 87", "She won an award", "She wrote a book"],
+      "options": [
+        "46 years ago",
+        "56 years ago",
+        "66 years ago",
+        "36 years ago"
+      ],
       "correct_index": 1,
-      "source_headline": "Paula Doress-Worters, who helped break the silence on postpartum depression, dies at 87",
-      "explanation": "The headline states that Paula Doress-Worters died at age 87."
+      "source_headline": "Headless, handless body found on New York road 56 years ago identified through DNA; killer remains unknown",
+      "explanation": "The headline states the body was found 56 years ago."
     },
     {
-      "question": "What nationality was the fugitive captured by the FBI in the massive online child sextortion case?",
+      "question": "Which country is Ukraine worried about easing sanctions on?",
       "type": "multiple_choice",
-      "options": ["Pakistani", "Indian", "Bangladeshi", "Sri Lankan"],
+      "options": [
+        "Iran",
+        "China",
+        "Russia",
+        "North Korea"
+      ],
       "correct_index": 2,
-      "source_headline": "FBI captures Bangladeshi fugitive extradited in massive online child sextortion case",
-      "explanation": "The headline confirms the FBI captured a Bangladeshi fugitive in the child sextortion case."
+      "source_headline": "Ukraine and allies fear easing Russian sanctions will prolong war",
+      "explanation": "The headline mentions Russian sanctions, indicating Russia is the country Ukraine is concerned about."
+    },
+    {
+      "question": "Which country's military is helping with flood relief in the Northern Territory?",
+      "type": "multiple_choice",
+      "options": [
+        "New Zealand",
+        "Australia",
+        "Canada",
+        "United Kingdom"
+      ],
+      "correct_index": 1,
+      "source_headline": "Australian government deploys military to assist flood-hit Northern Territory",
+      "explanation": "The headline mentions the Australian government deploying military assistance."
+    },
+    {
+      "question": "Which country is Cuba reportedly negotiating with according to recent news?",
+      "type": "multiple_choice",
+      "options": [
+        "Canada",
+        "Mexico",
+        "United States",
+        "Brazil"
+      ],
+      "correct_index": 2,
+      "source_headline": "Cuba confirms negotiations with US as country faces effects of oil blockade",
+      "explanation": "The headline mentions Cuba confirming negotiations with the US (United States)."
+    },
+    {
+      "question": "What price per liter is petrol reaching according to the news from New Zealand?",
+      "type": "multiple_choice",
+      "options": [
+        "$2 a liter",
+        "$3 a liter",
+        "$4 a liter",
+        "$5 a liter"
+      ],
+      "correct_index": 1,
+      "source_headline": "Gull stations run out of fuel as petrol hits the $3 a litre mark",
+      "explanation": "The headline states that petrol is hitting the $3 a liter mark."
     }
   ],
-  "generated_at": "2026-03-08T01:46:52.480459+00:00",
-  "week_of": "2026-W09",
-  "valid_until": "2026-03-14",
+  "generated_at": "2026-03-15T01:58:33.165713+00:00",
+  "week_of": "2026-W10",
+  "valid_until": "2026-03-21",
   "headline_count": 30
 }
