@@ -1,138 +1,138 @@
 {
   "questions": [
     {
-      "question": "Which NFL team could be moving to Indiana according to recent news?",
+      "question": "What problem are travelers experiencing at airports according to recent news?",
       "type": "multiple_choice",
       "options": [
-        "Chicago Bears",
-        "Green Bay Packers",
-        "Detroit Lions",
-        "Minnesota Vikings"
+        "Flight delays due to weather",
+        "Long security lines",
+        "Baggage getting lost",
+        "High ticket prices"
+      ],
+      "correct_index": 1,
+      "source_headline": "Airport security lines are long. Here's what to know if you're flying",
+      "explanation": "The headline specifically mentions that airport security lines are long, which is causing problems for travelers."
+    },
+    {
+      "question": "How are some people using artificial intelligence (AI) to help with a personal problem?",
+      "type": "multiple_choice",
+      "options": [
+        "To find lost pets",
+        "To do homework",
+        "To order food",
+        "To play games"
       ],
       "correct_index": 0,
-      "source_headline": "Why the Chicago Bears could be moving to Indiana",
-      "explanation": "The headline specifically mentions the Chicago Bears as the team that could be moving to Indiana."
+      "source_headline": "These people used AI to help find their lost pets",
+      "explanation": "The headline clearly states that people are using AI technology to help locate their missing pets."
     },
     {
-      "question": "What important waterway is Trump asking other countries to help secure?",
+      "question": "Which country is President Trump making threats against regarding power plants?",
       "type": "multiple_choice",
       "options": [
-        "Suez Canal",
-        "Panama Canal",
-        "Strait of Hormuz",
-        "Strait of Gibraltar"
-      ],
-      "correct_index": 2,
-      "source_headline": "Iran live updates: Trump calls on other countries to assist in Strait of Hormuz",
-      "explanation": "The headline mentions the Strait of Hormuz as the waterway Trump is asking countries to help secure."
-    },
-    {
-      "question": "At what age did sculptor Thaddeus Mosley find international fame?",
-      "type": "multiple_choice",
-      "options": [
-        "In his 70s",
-        "In his 80s",
-        "In his 90s",
-        "In his 60s"
-      ],
-      "correct_index": 2,
-      "source_headline": "Sculptor Thaddeus Mosley, who found international fame in his 90s, is dead",
-      "explanation": "The headline states that Mosley found international fame in his 90s."
-    },
-    {
-      "question": "Which U.S. state is being affected by White South Africans according to the news?",
-      "type": "multiple_choice",
-      "options": [
-        "Louisiana",
-        "Mississippi",
-        "Alabama",
-        "Georgia"
-      ],
-      "correct_index": 1,
-      "source_headline": "How White South Africans Are Reshaping the Mississippi Delta",
-      "explanation": "The headline mentions the Mississippi Delta, which is in Mississippi."
-    },
-    {
-      "question": "What type of government stockpiles had the biggest release in history?",
-      "type": "multiple_choice",
-      "options": [
-        "Gold reserves",
-        "Emergency oil",
-        "Food supplies",
-        "Medical equipment"
-      ],
-      "correct_index": 1,
-      "source_headline": "The biggest release of emergency oil stockpiles in history was announced. Why crude may keep rising",
-      "explanation": "The headline specifically mentions emergency oil stockpiles having their biggest release in history."
-    },
-    {
-      "question": "How long ago was the unidentified body found on a New York road?",
-      "type": "multiple_choice",
-      "options": [
-        "46 years ago",
-        "56 years ago",
-        "66 years ago",
-        "36 years ago"
-      ],
-      "correct_index": 1,
-      "source_headline": "Headless, handless body found on New York road 56 years ago identified through DNA; killer remains unknown",
-      "explanation": "The headline states the body was found 56 years ago."
-    },
-    {
-      "question": "Which country is Ukraine worried about easing sanctions on?",
-      "type": "multiple_choice",
-      "options": [
-        "Iran",
         "China",
         "Russia",
+        "Iran",
         "North Korea"
       ],
       "correct_index": 2,
-      "source_headline": "Ukraine and allies fear easing Russian sanctions will prolong war",
-      "explanation": "The headline mentions Russian sanctions, indicating Russia is the country Ukraine is concerned about."
+      "source_headline": "Iran live updates: Trump threatens Iran's power plants if strait not opened in 2 days",
+      "explanation": "The headline specifically mentions that Trump is threatening Iran's power plants if they don't reopen a strait."
     },
     {
-      "question": "Which country's military is helping with flood relief in the Northern Territory?",
+      "question": "What happened at a wedding venue in New Hampshire?",
       "type": "multiple_choice",
       "options": [
-        "New Zealand",
-        "Australia",
-        "Canada",
-        "United Kingdom"
+        "A fire broke out",
+        "The floor collapsed",
+        "The roof leaked",
+        "The power went out"
       ],
       "correct_index": 1,
-      "source_headline": "Australian government deploys military to assist flood-hit Northern Territory",
-      "explanation": "The headline mentions the Australian government deploying military assistance."
+      "source_headline": "Floor collapse at New Hampshire wedding venue leaves multiple injured, investigation underway",
+      "explanation": "The headline clearly states that a floor collapse occurred at the New Hampshire wedding venue, injuring multiple people."
     },
     {
-      "question": "Which country is Cuba reportedly negotiating with according to recent news?",
+      "question": "How much money is Canada providing to Canada Post to prevent it from going bankrupt?",
       "type": "multiple_choice",
       "options": [
-        "Canada",
-        "Mexico",
-        "United States",
-        "Brazil"
+        "$520 Million",
+        "$620 Million",
+        "$720 Million",
+        "$820 Million"
       ],
       "correct_index": 2,
-      "source_headline": "Cuba confirms negotiations with US as country faces effects of oil blockade",
-      "explanation": "The headline mentions Cuba confirming negotiations with the US (United States)."
+      "source_headline": "Canada to Provide $720 Million to Canada Post to Avoid Insolvency at Mail Service",
+      "explanation": "The headline specifically states that Canada will provide $720 million to Canada Post to avoid insolvency."
     },
     {
-      "question": "What price per liter is petrol reaching according to the news from New Zealand?",
+      "question": "Which country conducted a drone attack that killed two people in Ukraine?",
       "type": "multiple_choice",
       "options": [
-        "$2 a liter",
-        "$3 a liter",
-        "$4 a liter",
-        "$5 a liter"
+        "China",
+        "Russia",
+        "Iran",
+        "Belarus"
       ],
       "correct_index": 1,
-      "source_headline": "Gull stations run out of fuel as petrol hits the $3 a litre mark",
-      "explanation": "The headline states that petrol is hitting the $3 a liter mark."
+      "source_headline": "Russian drone attack kills two in Ukraine ahead of talks in US, officials say",
+      "explanation": "The headline clearly identifies that it was a Russian drone attack that killed two people in Ukraine."
+    },
+    {
+      "question": "When does Taiwan expect to start receiving delayed fighter jets from the US?",
+      "type": "multiple_choice",
+      "options": [
+        "2024",
+        "2025",
+        "2026",
+        "2027"
+      ],
+      "correct_index": 2,
+      "source_headline": "Taiwan says delayed US F-16s to start arriving in 2026",
+      "explanation": "The headline states that Taiwan expects the delayed US F-16 fighter jets to start arriving in 2026."
+    },
+    {
+      "question": "Which famous K-pop group held a comeback concert in Seoul?",
+      "type": "multiple_choice",
+      "options": [
+        "BLACKPINK",
+        "BTS",
+        "TWICE",
+        "Red Velvet"
+      ],
+      "correct_index": 1,
+      "source_headline": "Pop megastars BTS electrify historic centre of Seoul with comeback concert",
+      "explanation": "The headline specifically mentions that BTS, described as pop megastars, held a comeback concert in Seoul's historic center."
+    },
+    {
+      "question": "Which country in Africa is experiencing conflict over land, cattle, and identity issues?",
+      "type": "multiple_choice",
+      "options": [
+        "Ghana",
+        "Nigeria",
+        "Kenya",
+        "South Africa"
+      ],
+      "correct_index": 1,
+      "source_headline": "'Peace is a gradual thing': How land, cattle and identity fuel a deadly Nigerian conflict",
+      "explanation": "The headline specifically mentions a Nigerian conflict that involves disputes over land, cattle, and identity."
+    },
+    {
+      "question": "Which South American country's leader recently replaced senior military commanders?",
+      "type": "multiple_choice",
+      "options": [
+        "Brazil",
+        "Argentina",
+        "Venezuela",
+        "Colombia"
+      ],
+      "correct_index": 2,
+      "source_headline": "Venezuelan leader replaces senior military commanders",
+      "explanation": "The headline clearly states that Venezuela's leader has replaced senior military commanders."
     }
   ],
-  "generated_at": "2026-03-15T01:58:33.165713+00:00",
-  "week_of": "2026-W10",
-  "valid_until": "2026-03-21",
+  "generated_at": "2026-03-22T01:52:11.928769+00:00",
+  "week_of": "2026-W11",
+  "valid_until": "2026-03-28",
   "headline_count": 30
 }
