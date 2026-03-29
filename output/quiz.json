@@ -1,138 +1,138 @@
 {
   "questions": [
     {
-      "question": "What problem are travelers experiencing at airports according to recent news?",
+      "question": "What are the 'No Kings' protests rallying against according to the news headlines?",
       "type": "multiple_choice",
       "options": [
-        "Flight delays due to weather",
-        "Long security lines",
-        "Baggage getting lost",
-        "High ticket prices"
-      ],
-      "correct_index": 1,
-      "source_headline": "Airport security lines are long. Here's what to know if you're flying",
-      "explanation": "The headline specifically mentions that airport security lines are long, which is causing problems for travelers."
-    },
-    {
-      "question": "How are some people using artificial intelligence (AI) to help with a personal problem?",
-      "type": "multiple_choice",
-      "options": [
-        "To find lost pets",
-        "To do homework",
-        "To order food",
-        "To play games"
+        "Donald Trump",
+        "High gas prices",
+        "School policies",
+        "New taxes"
       ],
       "correct_index": 0,
-      "source_headline": "These people used AI to help find their lost pets",
-      "explanation": "The headline clearly states that people are using AI technology to help locate their missing pets."
+      "source_headline": "No Kings protests across the US rally against Donald Trump",
+      "explanation": "The BBC headline specifically states that No Kings protests are rallying against Donald Trump."
     },
     {
-      "question": "Which country is President Trump making threats against regarding power plants?",
+      "question": "In which country are the 'No Kings' protests taking place?",
       "type": "multiple_choice",
       "options": [
-        "China",
-        "Russia",
-        "Iran",
-        "North Korea"
+        "Canada",
+        "United States",
+        "United Kingdom",
+        "Australia"
+      ],
+      "correct_index": 1,
+      "source_headline": "'No Kings' protests draw large crowds in cities, towns across US",
+      "explanation": "Multiple headlines indicate these protests are happening across the US (United States)."
+    },
+    {
+      "question": "What technology is being discussed in relation to possibly needing a constitution?",
+      "type": "multiple_choice",
+      "options": [
+        "Social media",
+        "A.I. (Artificial Intelligence)",
+        "Video games",
+        "Cell phones"
+      ],
+      "correct_index": 1,
+      "source_headline": "Does A.I. Need a Constitution?",
+      "explanation": "The New Yorker headline asks whether A.I. (Artificial Intelligence) needs a constitution."
+    },
+    {
+      "question": "Which group in the US government rejected a Senate deal, according to the headlines?",
+      "type": "multiple_choice",
+      "options": [
+        "Senate Democrats",
+        "House Republicans",
+        "Supreme Court",
+        "State governors"
+      ],
+      "correct_index": 1,
+      "source_headline": "House Republicans reject Senate deal, prolonging partial US government shutdown",
+      "explanation": "The BBC headline clearly states that House Republicans rejected the Senate deal."
+    },
+    {
+      "question": "How many migrants died off the Greek coast according to the news?",
+      "type": "multiple_choice",
+      "options": [
+        "Twelve",
+        "Eighteen",
+        "Twenty-two",
+        "Thirty"
       ],
       "correct_index": 2,
-      "source_headline": "Iran live updates: Trump threatens Iran's power plants if strait not opened in 2 days",
-      "explanation": "The headline specifically mentions that Trump is threatening Iran's power plants if they don't reopen a strait."
+      "source_headline": "Twenty-two migrants die off Greek coast after six days at sea",
+      "explanation": "The BBC Europe headline states that twenty-two migrants died off the Greek coast."
     },
     {
-      "question": "What happened at a wedding venue in New Hampshire?",
+      "question": "Which country was affected by storm Narelle, causing power outages?",
       "type": "multiple_choice",
       "options": [
-        "A fire broke out",
-        "The floor collapsed",
-        "The roof leaked",
-        "The power went out"
+        "New Zealand",
+        "Australia",
+        "Indonesia",
+        "Philippines"
       ],
       "correct_index": 1,
-      "source_headline": "Floor collapse at New Hampshire wedding venue leaves multiple injured, investigation underway",
-      "explanation": "The headline clearly states that a floor collapse occurred at the New Hampshire wedding venue, injuring multiple people."
+      "source_headline": "Australia LNG disruptions continue after storm Narelle, thousands without power",
+      "explanation": "The Straits Times headline mentions Australia being affected by storm Narelle with thousands without power."
     },
     {
-      "question": "How much money is Canada providing to Canada Post to prevent it from going bankrupt?",
+      "question": "What happened to Nepal's former Prime Minister according to the news?",
       "type": "multiple_choice",
       "options": [
-        "$520 Million",
-        "$620 Million",
-        "$720 Million",
-        "$820 Million"
-      ],
-      "correct_index": 2,
-      "source_headline": "Canada to Provide $720 Million to Canada Post to Avoid Insolvency at Mail Service",
-      "explanation": "The headline specifically states that Canada will provide $720 million to Canada Post to avoid insolvency."
-    },
-    {
-      "question": "Which country conducted a drone attack that killed two people in Ukraine?",
-      "type": "multiple_choice",
-      "options": [
-        "China",
-        "Russia",
-        "Iran",
-        "Belarus"
+        "He was elected again",
+        "He was arrested",
+        "He moved to another country",
+        "He started a new political party"
       ],
       "correct_index": 1,
-      "source_headline": "Russian drone attack kills two in Ukraine ahead of talks in US, officials say",
-      "explanation": "The headline clearly identifies that it was a Russian drone attack that killed two people in Ukraine."
+      "source_headline": "Nepal's ex-PM arrested over fatal protest crackdown",
+      "explanation": "The BBC Asia headline states that Nepal's former Prime Minister was arrested over a fatal protest crackdown."
     },
     {
-      "question": "When does Taiwan expect to start receiving delayed fighter jets from the US?",
+      "question": "Which country's peso is sliding according to the headlines?",
       "type": "multiple_choice",
       "options": [
-        "2024",
-        "2025",
-        "2026",
-        "2027"
-      ],
-      "correct_index": 2,
-      "source_headline": "Taiwan says delayed US F-16s to start arriving in 2026",
-      "explanation": "The headline states that Taiwan expects the delayed US F-16 fighter jets to start arriving in 2026."
-    },
-    {
-      "question": "Which famous K-pop group held a comeback concert in Seoul?",
-      "type": "multiple_choice",
-      "options": [
-        "BLACKPINK",
-        "BTS",
-        "TWICE",
-        "Red Velvet"
-      ],
-      "correct_index": 1,
-      "source_headline": "Pop megastars BTS electrify historic centre of Seoul with comeback concert",
-      "explanation": "The headline specifically mentions that BTS, described as pop megastars, held a comeback concert in Seoul's historic center."
-    },
-    {
-      "question": "Which country in Africa is experiencing conflict over land, cattle, and identity issues?",
-      "type": "multiple_choice",
-      "options": [
-        "Ghana",
-        "Nigeria",
-        "Kenya",
-        "South Africa"
-      ],
-      "correct_index": 1,
-      "source_headline": "'Peace is a gradual thing': How land, cattle and identity fuel a deadly Nigerian conflict",
-      "explanation": "The headline specifically mentions a Nigerian conflict that involves disputes over land, cattle, and identity."
-    },
-    {
-      "question": "Which South American country's leader recently replaced senior military commanders?",
-      "type": "multiple_choice",
-      "options": [
-        "Brazil",
         "Argentina",
-        "Venezuela",
-        "Colombia"
+        "Mexico",
+        "Colombia",
+        "Chile"
       ],
-      "correct_index": 2,
-      "source_headline": "Venezuelan leader replaces senior military commanders",
-      "explanation": "The headline clearly states that Venezuela's leader has replaced senior military commanders."
+      "correct_index": 1,
+      "source_headline": "Mexico's week in review: A surprise rate cut, a sliding peso and an oil spill that's becoming a political problem",
+      "explanation": "The Mexico News Daily headline mentions Mexico's sliding peso as part of their weekly review."
+    },
+    {
+      "question": "What were the two ships found days after disappearing carrying?",
+      "type": "multiple_choice",
+      "options": [
+        "Tourist passengers",
+        "Aid supplies",
+        "Commercial goods",
+        "Military equipment"
+      ],
+      "correct_index": 1,
+      "source_headline": "Two Cuba-bound aid ships found days after disappearing",
+      "explanation": "The BBC Latin America headline describes them as 'aid ships,' meaning they were carrying aid supplies to Cuba."
+    },
+    {
+      "question": "What unusual item is mentioned as costing $220 in wildlife trafficking?",
+      "type": "multiple_choice",
+      "options": [
+        "One butterfly",
+        "One ant",
+        "One small bird",
+        "One rare flower"
+      ],
+      "correct_index": 1,
+      "source_headline": "One ant for $220: the new frontier of wildlife trafficking",
+      "explanation": "The BBC Africa headline specifically mentions 'One ant for $220' in relation to wildlife trafficking."
     }
   ],
-  "generated_at": "2026-03-22T01:52:11.928769+00:00",
-  "week_of": "2026-W11",
-  "valid_until": "2026-03-28",
+  "generated_at": "2026-03-29T02:00:23.901891+00:00",
+  "week_of": "2026-W12",
+  "valid_until": "2026-04-04",
   "headline_count": 30
 }
