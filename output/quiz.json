@@ -4,12 +4,12 @@
       "question": "According to German researchers, how old is the shaman's grave they studied?",
       "type": "multiple_choice",
       "options": [
-        "9,000 years old",
-        "7,000 years old",
         "5,000 years old",
+        "7,000 years old",
+        "9,000 years old",
         "12,000 years old"
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "source_headline": "German researchers set right the story of a 9,000-year-old shaman's grave",
       "explanation": "The headline specifically states the grave is 9,000 years old"
     },
@@ -17,12 +17,12 @@
       "question": "Which country is involved in the search for a missing US crew member?",
       "type": "multiple_choice",
       "options": [
-        "Iran",
-        "Iraq",
         "Syria",
+        "Iraq",
+        "Iran",
         "Afghanistan"
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "source_headline": "Iran live updates: Search for missing US crew member intensifies",
       "explanation": "The headline mentions Iran in connection with the missing US crew member"
     },
@@ -30,12 +30,12 @@
       "question": "What did Russian forces attack in Ukraine that killed five people?",
       "type": "multiple_choice",
       "options": [
-        "A market",
         "A school",
+        "A train station",
         "A hospital",
-        "A train station"
+        "A market"
       ],
-      "correct_index": 0,
+      "correct_index": 3,
       "source_headline": "Russian attack on Ukraine market kills five",
       "explanation": "The headline clearly states that Russian forces attacked a market in Ukraine"
     },
@@ -43,12 +43,12 @@
       "question": "How much time did Trump give Iran to make a deal?",
       "type": "multiple_choice",
       "options": [
-        "48 hours",
-        "24 hours",
+        "One week",
         "72 hours",
-        "One week"
+        "48 hours",
+        "24 hours"
       ],
-      "correct_index": 0,
+      "correct_index": 2,
       "source_headline": "Trump gives Iran 48 hours to make a deal as search continues for missing US pilot",
       "explanation": "The headline states Trump gave Iran 48 hours to make a deal"
     },
@@ -56,12 +56,12 @@
       "question": "Which country's border with Belarus saw a 96% decrease in illegal immigration attempts?",
       "type": "multiple_choice",
       "options": [
+        "Ukraine",
         "Poland",
-        "Lithuania",
         "Latvia",
-        "Ukraine"
+        "Lithuania"
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "source_headline": "Poland's border with Belarus sees decrease in illegal immigration attempts by 96%",
       "explanation": "The headline specifically mentions Poland's border with Belarus"
     },
@@ -83,9 +83,9 @@
       "type": "multiple_choice",
       "options": [
         "China",
-        "Japan",
+        "Singapore",
         "South Korea",
-        "Singapore"
+        "Japan"
       ],
       "correct_index": 0,
       "source_headline": "How China is transforming Hong Kong into a strategic hub",
@@ -95,12 +95,12 @@
       "question": "How many prisoners is Cuba beginning to release?",
       "type": "multiple_choice",
       "options": [
-        "More than 2,000",
-        "More than 1,000",
         "More than 3,000",
-        "More than 500"
+        "More than 500",
+        "More than 1,000",
+        "More than 2,000"
       ],
-      "correct_index": 0,
+      "correct_index": 3,
       "source_headline": "Cuba begins releasing more than 2,000 prisoners as US pressure mounts",
       "explanation": "The headline states Cuba is releasing more than 2,000 prisoners"
     },
@@ -108,12 +108,12 @@
       "question": "In which US state is there a manhunt underway after a gunman wounded a police officer?",
       "type": "multiple_choice",
       "options": [
-        "New Hampshire",
-        "Vermont",
         "Maine",
-        "Massachusetts"
+        "New Hampshire",
+        "Massachusetts",
+        "Vermont"
       ],
-      "correct_index": 0,
+      "correct_index": 1,
       "source_headline": "Massive manhunt underway in New Hampshire town after gunman allegedly wounds police officer, fires on family",
       "explanation": "The headline specifically mentions a New Hampshire town"
     },
@@ -122,8 +122,8 @@
       "type": "multiple_choice",
       "options": [
         "X loans",
-        "Real estate",
         "Government bonds",
+        "Real estate",
         "Tech stocks"
       ],
       "correct_index": 0,

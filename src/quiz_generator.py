@@ -2,6 +2,7 @@
 import anthropic
 import json
 import logging
+import random
 from datetime import datetime, timezone, timedelta
 from typing import Optional
 
@@ -100,6 +101,12 @@ Return ONLY the JSON array, no other text."""
             if not isinstance(questions, list) or len(questions) < questions_count:
                 logger.error(f"Invalid response: expected {questions_count} questions")
                 return None
+
+            # Shuffle options so correct answer isn't always in the same position
+            for q in questions:
+                correct_answer = q['options'][q['correct_index']]
+                random.shuffle(q['options'])
+                q['correct_index'] = q['options'].index(correct_answer)
 
             logger.info(f"Successfully generated {len(questions)} quiz questions")
 
