@@ -1,138 +1,138 @@
 {
   "questions": [
     {
-      "question": "What are the 'No Kings' protests rallying against according to the news headlines?",
+      "question": "According to German researchers, how old is the shaman's grave they studied?",
       "type": "multiple_choice",
       "options": [
-        "Donald Trump",
-        "High gas prices",
-        "School policies",
-        "New taxes"
+        "9,000 years old",
+        "7,000 years old",
+        "5,000 years old",
+        "12,000 years old"
       ],
       "correct_index": 0,
-      "source_headline": "No Kings protests across the US rally against Donald Trump",
-      "explanation": "The BBC headline specifically states that No Kings protests are rallying against Donald Trump."
+      "source_headline": "German researchers set right the story of a 9,000-year-old shaman's grave",
+      "explanation": "The headline specifically states the grave is 9,000 years old"
     },
     {
-      "question": "In which country are the 'No Kings' protests taking place?",
+      "question": "Which country is involved in the search for a missing US crew member?",
       "type": "multiple_choice",
       "options": [
-        "Canada",
-        "United States",
-        "United Kingdom",
-        "Australia"
+        "Iran",
+        "Iraq",
+        "Syria",
+        "Afghanistan"
       ],
-      "correct_index": 1,
-      "source_headline": "'No Kings' protests draw large crowds in cities, towns across US",
-      "explanation": "Multiple headlines indicate these protests are happening across the US (United States)."
+      "correct_index": 0,
+      "source_headline": "Iran live updates: Search for missing US crew member intensifies",
+      "explanation": "The headline mentions Iran in connection with the missing US crew member"
     },
     {
-      "question": "What technology is being discussed in relation to possibly needing a constitution?",
+      "question": "What did Russian forces attack in Ukraine that killed five people?",
       "type": "multiple_choice",
       "options": [
-        "Social media",
-        "A.I. (Artificial Intelligence)",
-        "Video games",
-        "Cell phones"
+        "A market",
+        "A school",
+        "A hospital",
+        "A train station"
       ],
-      "correct_index": 1,
-      "source_headline": "Does A.I. Need a Constitution?",
-      "explanation": "The New Yorker headline asks whether A.I. (Artificial Intelligence) needs a constitution."
+      "correct_index": 0,
+      "source_headline": "Russian attack on Ukraine market kills five",
+      "explanation": "The headline clearly states that Russian forces attacked a market in Ukraine"
     },
     {
-      "question": "Which group in the US government rejected a Senate deal, according to the headlines?",
+      "question": "How much time did Trump give Iran to make a deal?",
       "type": "multiple_choice",
       "options": [
-        "Senate Democrats",
-        "House Republicans",
-        "Supreme Court",
-        "State governors"
+        "48 hours",
+        "24 hours",
+        "72 hours",
+        "One week"
       ],
-      "correct_index": 1,
-      "source_headline": "House Republicans reject Senate deal, prolonging partial US government shutdown",
-      "explanation": "The BBC headline clearly states that House Republicans rejected the Senate deal."
+      "correct_index": 0,
+      "source_headline": "Trump gives Iran 48 hours to make a deal as search continues for missing US pilot",
+      "explanation": "The headline states Trump gave Iran 48 hours to make a deal"
     },
     {
-      "question": "How many migrants died off the Greek coast according to the news?",
+      "question": "Which country's border with Belarus saw a 96% decrease in illegal immigration attempts?",
       "type": "multiple_choice",
       "options": [
-        "Twelve",
-        "Eighteen",
-        "Twenty-two",
-        "Thirty"
+        "Poland",
+        "Lithuania",
+        "Latvia",
+        "Ukraine"
       ],
-      "correct_index": 2,
-      "source_headline": "Twenty-two migrants die off Greek coast after six days at sea",
-      "explanation": "The BBC Europe headline states that twenty-two migrants died off the Greek coast."
+      "correct_index": 0,
+      "source_headline": "Poland's border with Belarus sees decrease in illegal immigration attempts by 96%",
+      "explanation": "The headline specifically mentions Poland's border with Belarus"
     },
     {
-      "question": "Which country was affected by storm Narelle, causing power outages?",
+      "question": "How much money is Canada providing to Canada Post to avoid insolvency?",
       "type": "multiple_choice",
       "options": [
-        "New Zealand",
-        "Australia",
-        "Indonesia",
-        "Philippines"
+        "$720 million",
+        "$520 million",
+        "$920 million",
+        "$620 million"
       ],
-      "correct_index": 1,
-      "source_headline": "Australia LNG disruptions continue after storm Narelle, thousands without power",
-      "explanation": "The Straits Times headline mentions Australia being affected by storm Narelle with thousands without power."
+      "correct_index": 0,
+      "source_headline": "Canada to Provide $720 Million to Canada Post to Avoid Insolvency at Mail Service",
+      "explanation": "The headline states Canada will provide $720 million to Canada Post"
     },
     {
-      "question": "What happened to Nepal's former Prime Minister according to the news?",
+      "question": "Which country is transforming Hong Kong into a strategic hub?",
       "type": "multiple_choice",
       "options": [
-        "He was elected again",
-        "He was arrested",
-        "He moved to another country",
-        "He started a new political party"
+        "China",
+        "Japan",
+        "South Korea",
+        "Singapore"
       ],
-      "correct_index": 1,
-      "source_headline": "Nepal's ex-PM arrested over fatal protest crackdown",
-      "explanation": "The BBC Asia headline states that Nepal's former Prime Minister was arrested over a fatal protest crackdown."
+      "correct_index": 0,
+      "source_headline": "How China is transforming Hong Kong into a strategic hub",
+      "explanation": "The headline clearly states that China is transforming Hong Kong"
     },
     {
-      "question": "Which country's peso is sliding according to the headlines?",
+      "question": "How many prisoners is Cuba beginning to release?",
       "type": "multiple_choice",
       "options": [
-        "Argentina",
-        "Mexico",
-        "Colombia",
-        "Chile"
+        "More than 2,000",
+        "More than 1,000",
+        "More than 3,000",
+        "More than 500"
       ],
-      "correct_index": 1,
-      "source_headline": "Mexico's week in review: A surprise rate cut, a sliding peso and an oil spill that's becoming a political problem",
-      "explanation": "The Mexico News Daily headline mentions Mexico's sliding peso as part of their weekly review."
+      "correct_index": 0,
+      "source_headline": "Cuba begins releasing more than 2,000 prisoners as US pressure mounts",
+      "explanation": "The headline states Cuba is releasing more than 2,000 prisoners"
     },
     {
-      "question": "What were the two ships found days after disappearing carrying?",
+      "question": "In which US state is there a manhunt underway after a gunman wounded a police officer?",
       "type": "multiple_choice",
       "options": [
-        "Tourist passengers",
-        "Aid supplies",
-        "Commercial goods",
-        "Military equipment"
+        "New Hampshire",
+        "Vermont",
+        "Maine",
+        "Massachusetts"
       ],
-      "correct_index": 1,
-      "source_headline": "Two Cuba-bound aid ships found days after disappearing",
-      "explanation": "The BBC Latin America headline describes them as 'aid ships,' meaning they were carrying aid supplies to Cuba."
+      "correct_index": 0,
+      "source_headline": "Massive manhunt underway in New Hampshire town after gunman allegedly wounds police officer, fires on family",
+      "explanation": "The headline specifically mentions a New Hampshire town"
     },
     {
-      "question": "What unusual item is mentioned as costing $220 in wildlife trafficking?",
+      "question": "What are Wall Street banks preparing to sell billions of dollars worth of?",
       "type": "multiple_choice",
       "options": [
-        "One butterfly",
-        "One ant",
-        "One small bird",
-        "One rare flower"
+        "X loans",
+        "Real estate",
+        "Government bonds",
+        "Tech stocks"
       ],
-      "correct_index": 1,
-      "source_headline": "One ant for $220: the new frontier of wildlife trafficking",
-      "explanation": "The BBC Africa headline specifically mentions 'One ant for $220' in relation to wildlife trafficking."
+      "correct_index": 0,
+      "source_headline": "Wall Street Banks Prepare to Sell Billions of Dollars of X Loans",
+      "explanation": "The headline states banks are preparing to sell X loans worth billions of dollars"
     }
   ],
-  "generated_at": "2026-03-29T02:00:23.901891+00:00",
-  "week_of": "2026-W12",
-  "valid_until": "2026-04-04",
+  "generated_at": "2026-04-05T02:03:10.638628+00:00",
+  "week_of": "2026-W13",
+  "valid_until": "2026-04-11",
   "headline_count": 30
 }
