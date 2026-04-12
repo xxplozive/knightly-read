@@ -1,138 +1,138 @@
 {
   "questions": [
     {
-      "question": "According to German researchers, how old is the shaman's grave they studied?",
+      "question": "What is the name of the moon mission that recently returned after 10 days?",
       "type": "multiple_choice",
       "options": [
-        "5,000 years old",
-        "7,000 years old",
-        "9,000 years old",
-        "12,000 years old"
-      ],
-      "correct_index": 2,
-      "source_headline": "German researchers set right the story of a 9,000-year-old shaman's grave",
-      "explanation": "The headline specifically states the grave is 9,000 years old"
-    },
-    {
-      "question": "Which country is involved in the search for a missing US crew member?",
-      "type": "multiple_choice",
-      "options": [
-        "Syria",
-        "Iraq",
-        "Iran",
-        "Afghanistan"
-      ],
-      "correct_index": 2,
-      "source_headline": "Iran live updates: Search for missing US crew member intensifies",
-      "explanation": "The headline mentions Iran in connection with the missing US crew member"
-    },
-    {
-      "question": "What did Russian forces attack in Ukraine that killed five people?",
-      "type": "multiple_choice",
-      "options": [
-        "A school",
-        "A train station",
-        "A hospital",
-        "A market"
-      ],
-      "correct_index": 3,
-      "source_headline": "Russian attack on Ukraine market kills five",
-      "explanation": "The headline clearly states that Russian forces attacked a market in Ukraine"
-    },
-    {
-      "question": "How much time did Trump give Iran to make a deal?",
-      "type": "multiple_choice",
-      "options": [
-        "One week",
-        "72 hours",
-        "48 hours",
-        "24 hours"
-      ],
-      "correct_index": 2,
-      "source_headline": "Trump gives Iran 48 hours to make a deal as search continues for missing US pilot",
-      "explanation": "The headline states Trump gave Iran 48 hours to make a deal"
-    },
-    {
-      "question": "Which country's border with Belarus saw a 96% decrease in illegal immigration attempts?",
-      "type": "multiple_choice",
-      "options": [
-        "Ukraine",
-        "Poland",
-        "Latvia",
-        "Lithuania"
+        "Apollo",
+        "Artemis",
+        "Gemini",
+        "Mercury"
       ],
       "correct_index": 1,
-      "source_headline": "Poland's border with Belarus sees decrease in illegal immigration attempts by 96%",
-      "explanation": "The headline specifically mentions Poland's border with Belarus"
+      "source_headline": "'Welcome home, Artemis': Crew celebrates historic 10-day moon mission",
+      "explanation": "The headline specifically mentions 'Artemis' as the name of the historic 10-day moon mission"
     },
     {
-      "question": "How much money is Canada providing to Canada Post to avoid insolvency?",
+      "question": "Which country is hosting peace talks between the U.S. and Iran?",
       "type": "multiple_choice",
       "options": [
-        "$720 million",
-        "$520 million",
-        "$920 million",
-        "$620 million"
+        "Qatar",
+        "Switzerland",
+        "Pakistan",
+        "Turkey"
+      ],
+      "correct_index": 2,
+      "source_headline": "U.S.-Iran peace summit in Pakistan concludes with no deal, talks to continue on Sunday",
+      "explanation": "The headline clearly states that the U.S.-Iran peace summit is taking place in Pakistan"
+    },
+    {
+      "question": "What is Trump planning to build in Washington D.C.?",
+      "type": "multiple_choice",
+      "options": [
+        "A new museum",
+        "A government building",
+        "A triumphal arch",
+        "A monument"
+      ],
+      "correct_index": 2,
+      "source_headline": "Trump touts newly released plans for D.C. triumphal arch",
+      "explanation": "The headline mentions that Trump has plans for a 'triumphal arch' in Washington D.C."
+    },
+    {
+      "question": "In which European city did a concert take place where anti-government feelings were expressed?",
+      "type": "multiple_choice",
+      "options": [
+        "Budapest",
+        "Warsaw",
+        "Prague",
+        "Vienna"
       ],
       "correct_index": 0,
-      "source_headline": "Canada to Provide $720 Million to Canada Post to Avoid Insolvency at Mail Service",
-      "explanation": "The headline states Canada will provide $720 million to Canada Post"
+      "source_headline": "At a concert in Budapest, anti-Orb\u00e1n sentiments take center stage ahead of election",
+      "explanation": "The headline specifically mentions that the concert with anti-Orb\u00e1n sentiments took place in Budapest"
     },
     {
-      "question": "Which country is transforming Hong Kong into a strategic hub?",
+      "question": "How many years has Orb\u00e1n been ruling Hungary according to the news?",
       "type": "multiple_choice",
       "options": [
-        "China",
-        "Singapore",
+        "16 years",
+        "18 years",
+        "12 years",
+        "14 years"
+      ],
+      "correct_index": 0,
+      "source_headline": "Hungarians decide whether to end 16 years of Orb\u00e1n rule and elect rival",
+      "explanation": "The headline states that Hungarians are deciding whether to end '16 years of Orb\u00e1n rule'"
+    },
+    {
+      "question": "What type of artist was Pearl Fryar, who recently died at age 86?",
+      "type": "multiple_choice",
+      "options": [
+        "Topiary artist",
+        "Musician",
+        "Painter",
+        "Sculptor"
+      ],
+      "correct_index": 0,
+      "source_headline": "Pearl Fryar dies at 86. The self-taught topiary artist spread a message of love.",
+      "explanation": "The headline identifies Pearl Fryar as 'the self-taught topiary artist'"
+    },
+    {
+      "question": "Which country is mentioned in connection with tourists enjoying sauna culture?",
+      "type": "multiple_choice",
+      "options": [
         "South Korea",
+        "China",
+        "Thailand",
         "Japan"
       ],
       "correct_index": 0,
-      "source_headline": "How China is transforming Hong Kong into a strategic hub",
-      "explanation": "The headline clearly states that China is transforming Hong Kong"
+      "source_headline": "Getting steamy: Tourists flock to 'jjimjilbang' as they embrace S. Korea's sauna and scrub culture",
+      "explanation": "The headline mentions 'S. Korea's sauna and scrub culture' and 'jjimjilbang' which is Korean"
     },
     {
-      "question": "How many prisoners is Cuba beginning to release?",
+      "question": "In which city were over 500 people arrested during a Pro-Palestine rally?",
       "type": "multiple_choice",
       "options": [
-        "More than 3,000",
-        "More than 500",
-        "More than 1,000",
-        "More than 2,000"
+        "Berlin",
+        "Paris",
+        "London",
+        "New York"
       ],
-      "correct_index": 3,
-      "source_headline": "Cuba begins releasing more than 2,000 prisoners as US pressure mounts",
-      "explanation": "The headline states Cuba is releasing more than 2,000 prisoners"
+      "correct_index": 2,
+      "source_headline": "Pro-Palestine rally: Over 500 arrested in London for protesting",
+      "explanation": "The headline clearly states that over 500 were arrested 'in London' during the Pro-Palestine rally"
     },
     {
-      "question": "In which US state is there a manhunt underway after a gunman wounded a police officer?",
+      "question": "What percentage of votes did Djibouti's president win in his recent election?",
       "type": "multiple_choice",
       "options": [
-        "Maine",
-        "New Hampshire",
-        "Massachusetts",
-        "Vermont"
+        "85.2%",
+        "97.8%",
+        "92.4%",
+        "99.1%"
       ],
       "correct_index": 1,
-      "source_headline": "Massive manhunt underway in New Hampshire town after gunman allegedly wounds police officer, fires on family",
-      "explanation": "The headline specifically mentions a New Hampshire town"
+      "source_headline": "Djibouti's president wins unprecedented sixth term with 97.8% of vote",
+      "explanation": "The headline specifically states that Djibouti's president won 'with 97.8% of vote'"
     },
     {
-      "question": "What are Wall Street banks preparing to sell billions of dollars worth of?",
+      "question": "Which South American country is mentioned in relation to concerns about glaciers?",
       "type": "multiple_choice",
       "options": [
-        "X loans",
-        "Government bonds",
-        "Real estate",
-        "Tech stocks"
+        "Bolivia",
+        "Peru",
+        "Chile",
+        "Argentina"
       ],
-      "correct_index": 0,
-      "source_headline": "Wall Street Banks Prepare to Sell Billions of Dollars of X Loans",
-      "explanation": "The headline states banks are preparing to sell X loans worth billions of dollars"
+      "correct_index": 3,
+      "source_headline": "'Every drop of water counts': Fear for the future of Argentina's glaciers",
+      "explanation": "The headline specifically mentions 'Argentina's glaciers' as the subject of environmental concern"
     }
   ],
-  "generated_at": "2026-04-05T02:03:10.638628+00:00",
-  "week_of": "2026-W13",
-  "valid_until": "2026-04-11",
+  "generated_at": "2026-04-12T02:06:44.513137+00:00",
+  "week_of": "2026-W14",
+  "valid_until": "2026-04-18",
   "headline_count": 30
 }
