@@ -1203,6 +1203,7 @@
                     <div id="leaderboard-rows-only"></div>
                 </div>
                 <button id="quiz-back-to-start" class="quiz-start-btn">Take the Quiz</button>
+                <button id="quiz-lb-share" class="modal-cancel">Share</button>
                 <button class="modal-cancel" id="quiz-lb-close">Close</button>
             </div>
         </div>
@@ -1600,6 +1601,29 @@
                     const btn = document.getElementById('quiz-share');
                     btn.textContent = 'Copied!';
                     setTimeout(() => { btn.textContent = 'Share Result'; }, 2000);
+                } catch (e) {
+                    console.log('Clipboard failed:', e.message);
+                }
+            }
+        });
+
+        // Share from leaderboard screen
+        document.getElementById('quiz-lb-share').addEventListener('click', async () => {
+            const shareText = `Check out the Knightly Read weekly news quiz leaderboard — do you have what it takes? 📰`;
+            const shareUrl = 'https://knightlyread.com';
+
+            if (navigator.share) {
+                try {
+                    await navigator.share({ title: 'Knightly Read Quiz', text: shareText, url: shareUrl });
+                } catch (e) {
+                    if (e.name !== 'AbortError') console.log('Share failed:', e.message);
+                }
+            } else {
+                try {
+                    await navigator.clipboard.writeText(`${shareText}\n${shareUrl}`);
+                    const btn = document.getElementById('quiz-lb-share');
+                    btn.textContent = 'Copied!';
+                    setTimeout(() => { btn.textContent = 'Share'; }, 2000);
                 } catch (e) {
                     console.log('Clipboard failed:', e.message);
                 }
