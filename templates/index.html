@@ -1189,6 +1189,7 @@
                     <div id="leaderboard-rows"></div>
                 </div>
                 <button id="quiz-retry" class="quiz-start-btn">Try Again</button>
+                <button id="quiz-share" class="modal-cancel">Share Result</button>
                 <button class="modal-cancel" id="quiz-close">Close</button>
             </div>
 
@@ -1579,6 +1580,30 @@
 
         document.getElementById('quiz-back-to-start').addEventListener('click', () => {
             showScreen(quizStart);
+        });
+
+        // Share quiz result
+        document.getElementById('quiz-share').addEventListener('click', async () => {
+            const finalScore = document.getElementById('final-score').textContent;
+            const shareText = `I scored ${finalScore}/100 on the Knightly Read weekly news quiz! Think you can beat me? 📰`;
+            const shareUrl = 'https://knightlyread.com';
+
+            if (navigator.share) {
+                try {
+                    await navigator.share({ title: 'Knightly Read Quiz', text: shareText, url: shareUrl });
+                } catch (e) {
+                    if (e.name !== 'AbortError') console.log('Share failed:', e.message);
+                }
+            } else {
+                try {
+                    await navigator.clipboard.writeText(`${shareText}\n${shareUrl}`);
+                    const btn = document.getElementById('quiz-share');
+                    btn.textContent = 'Copied!';
+                    setTimeout(() => { btn.textContent = 'Share Result'; }, 2000);
+                } catch (e) {
+                    console.log('Clipboard failed:', e.message);
+                }
+            }
         });
 
         // Retry quiz
