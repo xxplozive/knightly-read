@@ -1593,7 +1593,7 @@
         // Share quiz result
         document.getElementById('quiz-share').addEventListener('click', async () => {
             const finalScore = document.getElementById('final-score').textContent;
-            const shareText = `I scored ${finalScore}/100 on the Knightly Read weekly news quiz! Think you can beat me? 📰`;
+            const shareText = `I scored ${finalScore}/100 on this week's news quiz. Can you beat me? 📰`;
             const shareUrl = 'https://knightlyread.com/#quiz';
 
             if (navigator.share) {
@@ -1616,7 +1616,7 @@
 
         // Share from leaderboard screen
         document.getElementById('quiz-lb-share').addEventListener('click', async () => {
-            const shareText = `Check out the Knightly Read weekly news quiz leaderboard — do you have what it takes? 📰`;
+            const shareText = `Think you know the news? Take the Knightly Read quiz! 📰`;
             const shareUrl = 'https://knightlyread.com/#quiz';
 
             if (navigator.share) {
