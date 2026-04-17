@@ -1482,6 +1482,13 @@
                     document.getElementById('quiz-date').textContent = `Quiz from ${formatted}`;
                 }
                 checkForNewQuiz();
+                // Auto-open if linked directly via #quiz
+                if (window.location.hash === '#quiz') {
+                    const savedNickname = localStorage.getItem('quizNickname') || '';
+                    document.getElementById('quiz-nickname').value = savedNickname;
+                    showScreen(quizStart);
+                    quizModal.classList.add('active');
+                }
             })
             .catch(err => {
                 console.log('Quiz not available:', err.message);
@@ -1587,7 +1594,7 @@
         document.getElementById('quiz-share').addEventListener('click', async () => {
             const finalScore = document.getElementById('final-score').textContent;
             const shareText = `I scored ${finalScore}/100 on the Knightly Read weekly news quiz! Think you can beat me? 📰`;
-            const shareUrl = 'https://knightlyread.com';
+            const shareUrl = 'https://knightlyread.com/#quiz';
 
             if (navigator.share) {
                 try {
@@ -1610,7 +1617,7 @@
         // Share from leaderboard screen
         document.getElementById('quiz-lb-share').addEventListener('click', async () => {
             const shareText = `Check out the Knightly Read weekly news quiz leaderboard — do you have what it takes? 📰`;
-            const shareUrl = 'https://knightlyread.com';
+            const shareUrl = 'https://knightlyread.com/#quiz';
 
             if (navigator.share) {
                 try {
