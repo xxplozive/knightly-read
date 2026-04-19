@@ -1189,7 +1189,10 @@
                     <div id="leaderboard-rows"></div>
                 </div>
                 <button id="quiz-retry" class="quiz-start-btn">Try Again</button>
-                <button id="quiz-share" class="modal-cancel">Share Result</button>
+                <div style="display:flex;gap:8px;justify-content:center">
+                    <button id="quiz-share" class="modal-cancel">Share Result</button>
+                    <button id="quiz-copy-link" class="modal-cancel">Copy Link</button>
+                </div>
                 <button class="modal-cancel" id="quiz-close">Close</button>
             </div>
 
@@ -1203,7 +1206,10 @@
                     <div id="leaderboard-rows-only"></div>
                 </div>
                 <button id="quiz-back-to-start" class="quiz-start-btn">Take the Quiz</button>
-                <button id="quiz-lb-share" class="modal-cancel">Share</button>
+                <div style="display:flex;gap:8px;justify-content:center">
+                    <button id="quiz-lb-share" class="modal-cancel">Share</button>
+                    <button id="quiz-lb-copy-link" class="modal-cancel">Copy Link</button>
+                </div>
                 <button class="modal-cancel" id="quiz-lb-close">Close</button>
             </div>
         </div>
@@ -1590,51 +1596,63 @@
             showScreen(quizStart);
         });
 
+        async function copyToClipboard(text, btn, originalLabel) {
+            try {
+                await navigator.clipboard.writeText(text);
+                btn.textContent = 'Copied!';
+                setTimeout(() => { btn.textContent = originalLabel; }, 2000);
+            } catch (e) {
+                console.log('Clipboard failed:', e.message);
+            }
+        }
+
         // Share quiz result
         document.getElementById('quiz-share').addEventListener('click', async () => {
             const finalScore = document.getElementById('final-score').textContent;
             const shareText = `I scored ${finalScore}/100 on this week's news quiz. Can you beat me? 📰`;
             const shareUrl = 'https://knightlyread.com/#quiz';
+            // URL embedded in text so iMessage shows the full message, not just the link
+            const shareMessage = `${shareText}\n${shareUrl}`;
 
             if (navigator.share) {
                 try {
-                    await navigator.share({ title: 'Knightly Read Quiz', text: shareText, url: shareUrl });
+                    await navigator.share({ title: 'Knightly Read Quiz', text: shareMessage });
                 } catch (e) {
                     if (e.name !== 'AbortError') console.log('Share failed:', e.message);
                 }
             } else {
-                try {
-                    await navigator.clipboard.writeText(`${shareText}\n${shareUrl}`);
-                    const btn = document.getElementById('quiz-share');
-                    btn.textContent = 'Copied!';
-                    setTimeout(() => { btn.textContent = 'Share Result'; }, 2000);
-                } catch (e) {
-                    console.log('Clipboard failed:', e.message);
-                }
+                await copyToClipboard(shareMessage, document.getElementById('quiz-share'), 'Share Result');
             }
+        });
+
+        document.getElementById('quiz-copy-link').addEventListener('click', async () => {
+            const finalScore = document.getElementById('final-score').textContent;
+            const shareText = `I scored ${finalScore}/100 on this week's news quiz. Can you beat me? 📰`;
+            const shareUrl = 'https://knightlyread.com/#quiz';
+            await copyToClipboard(`${shareText}\n${shareUrl}`, document.getElementById('quiz-copy-link'), 'Copy Link');
         });
 
         // Share from leaderboard screen
         document.getElementById('quiz-lb-share').addEventListener('click', async () => {
             const shareText = `Think you know the news? Take the Knightly Read quiz! 📰`;
             const shareUrl = 'https://knightlyread.com/#quiz';
+            const shareMessage = `${shareText}\n${shareUrl}`;
 
             if (navigator.share) {
                 try {
-                    await navigator.share({ title: 'Knightly Read Quiz', text: shareText, url: shareUrl });
+                    await navigator.share({ title: 'Knightly Read Quiz', text: shareMessage });
                 } catch (e) {
                     if (e.name !== 'AbortError') console.log('Share failed:', e.message);
                 }
             } else {
-                try {
-                    await navigator.clipboard.writeText(`${shareText}\n${shareUrl}`);
-                    const btn = document.getElementById('quiz-lb-share');
-                    btn.textContent = 'Copied!';
-                    setTimeout(() => { btn.textContent = 'Share'; }, 2000);
-                } catch (e) {
-                    console.log('Clipboard failed:', e.message);
-                }
+                await copyToClipboard(shareMessage, document.getElementById('quiz-lb-share'), 'Share');
             }
+        });
+
+        document.getElementById('quiz-lb-copy-link').addEventListener('click', async () => {
+            const shareText = `Think you know the news? Take the Knightly Read quiz! 📰`;
+            const shareUrl = 'https://knightlyread.com/#quiz';
+            await copyToClipboard(`${shareText}\n${shareUrl}`, document.getElementById('quiz-lb-copy-link'), 'Copy Link');
         });
 
         // Retry quiz
