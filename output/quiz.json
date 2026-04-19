@@ -1,138 +1,138 @@
 {
   "questions": [
     {
-      "question": "What is the name of the moon mission that recently returned after 10 days?",
+      "question": "Which country launched ballistic missiles toward the sea according to recent news?",
       "type": "multiple_choice",
       "options": [
-        "Apollo",
-        "Artemis",
-        "Gemini",
-        "Mercury"
-      ],
-      "correct_index": 1,
-      "source_headline": "'Welcome home, Artemis': Crew celebrates historic 10-day moon mission",
-      "explanation": "The headline specifically mentions 'Artemis' as the name of the historic 10-day moon mission"
-    },
-    {
-      "question": "Which country is hosting peace talks between the U.S. and Iran?",
-      "type": "multiple_choice",
-      "options": [
-        "Qatar",
-        "Switzerland",
-        "Pakistan",
-        "Turkey"
-      ],
-      "correct_index": 2,
-      "source_headline": "U.S.-Iran peace summit in Pakistan concludes with no deal, talks to continue on Sunday",
-      "explanation": "The headline clearly states that the U.S.-Iran peace summit is taking place in Pakistan"
-    },
-    {
-      "question": "What is Trump planning to build in Washington D.C.?",
-      "type": "multiple_choice",
-      "options": [
-        "A new museum",
-        "A government building",
-        "A triumphal arch",
-        "A monument"
-      ],
-      "correct_index": 2,
-      "source_headline": "Trump touts newly released plans for D.C. triumphal arch",
-      "explanation": "The headline mentions that Trump has plans for a 'triumphal arch' in Washington D.C."
-    },
-    {
-      "question": "In which European city did a concert take place where anti-government feelings were expressed?",
-      "type": "multiple_choice",
-      "options": [
-        "Budapest",
-        "Warsaw",
-        "Prague",
-        "Vienna"
-      ],
-      "correct_index": 0,
-      "source_headline": "At a concert in Budapest, anti-Orb\u00e1n sentiments take center stage ahead of election",
-      "explanation": "The headline specifically mentions that the concert with anti-Orb\u00e1n sentiments took place in Budapest"
-    },
-    {
-      "question": "How many years has Orb\u00e1n been ruling Hungary according to the news?",
-      "type": "multiple_choice",
-      "options": [
-        "16 years",
-        "18 years",
-        "12 years",
-        "14 years"
-      ],
-      "correct_index": 0,
-      "source_headline": "Hungarians decide whether to end 16 years of Orb\u00e1n rule and elect rival",
-      "explanation": "The headline states that Hungarians are deciding whether to end '16 years of Orb\u00e1n rule'"
-    },
-    {
-      "question": "What type of artist was Pearl Fryar, who recently died at age 86?",
-      "type": "multiple_choice",
-      "options": [
-        "Topiary artist",
-        "Musician",
-        "Painter",
-        "Sculptor"
-      ],
-      "correct_index": 0,
-      "source_headline": "Pearl Fryar dies at 86. The self-taught topiary artist spread a message of love.",
-      "explanation": "The headline identifies Pearl Fryar as 'the self-taught topiary artist'"
-    },
-    {
-      "question": "Which country is mentioned in connection with tourists enjoying sauna culture?",
-      "type": "multiple_choice",
-      "options": [
+        "North Korea",
         "South Korea",
-        "China",
-        "Thailand",
-        "Japan"
+        "Japan",
+        "China"
       ],
       "correct_index": 0,
-      "source_headline": "Getting steamy: Tourists flock to 'jjimjilbang' as they embrace S. Korea's sauna and scrub culture",
-      "explanation": "The headline mentions 'S. Korea's sauna and scrub culture' and 'jjimjilbang' which is Korean"
+      "source_headline": "North Korea launches ballistic missiles toward sea",
+      "explanation": "The headline specifically states that North Korea launched ballistic missiles toward the sea."
     },
     {
-      "question": "In which city were over 500 people arrested during a Pro-Palestine rally?",
+      "question": "What important waterway is Iran controlling according to recent news?",
       "type": "multiple_choice",
       "options": [
-        "Berlin",
-        "Paris",
-        "London",
-        "New York"
-      ],
-      "correct_index": 2,
-      "source_headline": "Pro-Palestine rally: Over 500 arrested in London for protesting",
-      "explanation": "The headline clearly states that over 500 were arrested 'in London' during the Pro-Palestine rally"
-    },
-    {
-      "question": "What percentage of votes did Djibouti's president win in his recent election?",
-      "type": "multiple_choice",
-      "options": [
-        "85.2%",
-        "97.8%",
-        "92.4%",
-        "99.1%"
-      ],
-      "correct_index": 1,
-      "source_headline": "Djibouti's president wins unprecedented sixth term with 97.8% of vote",
-      "explanation": "The headline specifically states that Djibouti's president won 'with 97.8% of vote'"
-    },
-    {
-      "question": "Which South American country is mentioned in relation to concerns about glaciers?",
-      "type": "multiple_choice",
-      "options": [
-        "Bolivia",
-        "Peru",
-        "Chile",
-        "Argentina"
+        "Panama Canal",
+        "Bering Strait",
+        "Suez Canal",
+        "Strait of Hormuz"
       ],
       "correct_index": 3,
-      "source_headline": "'Every drop of water counts': Fear for the future of Argentina's glaciers",
-      "explanation": "The headline specifically mentions 'Argentina's glaciers' as the subject of environmental concern"
+      "source_headline": "Iran live updates: Tehran reviewing US proposal as it reasserts control over strait",
+      "explanation": "The headlines mention Iran's control over the Strait of Hormuz, an important shipping route."
+    },
+    {
+      "question": "Where did a tragic shooting occur on a basketball court according to recent news?",
+      "type": "multiple_choice",
+      "options": [
+        "Brooklyn",
+        "Manhattan",
+        "Bronx",
+        "Queens"
+      ],
+      "correct_index": 3,
+      "source_headline": "NYC teen shot dead on Queens basketball court as bystanders filmed; police searching for gunman",
+      "explanation": "The headline specifically mentions the shooting happened on a Queens basketball court."
+    },
+    {
+      "question": "What unusual item did the 'Lego bandit' use to replace minifigures?",
+      "type": "multiple_choice",
+      "options": [
+        "Beans",
+        "Cereal",
+        "Pasta",
+        "Rice"
+      ],
+      "correct_index": 2,
+      "source_headline": "'Lego bandit' accused in bizarre $34K scheme replacing minifigures with pasta",
+      "explanation": "The headline states the bandit replaced Lego minifigures with pasta in this unusual scheme."
+    },
+    {
+      "question": "In which city did a gunman take hostages and kill at least six people?",
+      "type": "multiple_choice",
+      "options": [
+        "Kyiv",
+        "Prague",
+        "Moscow",
+        "Warsaw"
+      ],
+      "correct_index": 0,
+      "source_headline": "At least six killed in Kyiv as gunman opens fire and takes hostages",
+      "explanation": "The headline clearly states that this tragic event occurred in Kyiv, the capital of Ukraine."
+    },
+    {
+      "question": "Which country is experiencing darkness due to a war in the Persian Gulf?",
+      "type": "multiple_choice",
+      "options": [
+        "Iran",
+        "Pakistan",
+        "Afghanistan",
+        "India"
+      ],
+      "correct_index": 1,
+      "source_headline": "A war in the Persian Gulf is plunging Pakistan into darkness",
+      "explanation": "The headline specifically mentions that Pakistan is being plunged into darkness due to the Persian Gulf conflict."
+    },
+    {
+      "question": "Which country has raised fuel prices because of the Iran war?",
+      "type": "multiple_choice",
+      "options": [
+        "Bangladesh",
+        "Thailand",
+        "Myanmar",
+        "Vietnam"
+      ],
+      "correct_index": 0,
+      "source_headline": "Bangladesh raises fuel prices as Iran war drives up costs",
+      "explanation": "The headline states that Bangladesh has raised fuel prices due to increased costs from the Iran war."
+    },
+    {
+      "question": "Bob Hall, who recently died, was known as the father of what sport?",
+      "type": "multiple_choice",
+      "options": [
+        "Wheelchair basketball",
+        "Wheelchair tennis",
+        "Wheelchair swimming",
+        "Wheelchair racing"
+      ],
+      "correct_index": 3,
+      "source_headline": "Bob Hall has died. The father of wheelchair racing made Boston Marathon history.",
+      "explanation": "The headline identifies Bob Hall as the father of wheelchair racing who made Boston Marathon history."
+    },
+    {
+      "question": "Which African country had a star's song criticizing the government that millions listened to?",
+      "type": "multiple_choice",
+      "options": [
+        "Nigeria",
+        "Ethiopia",
+        "Ghana",
+        "Kenya"
+      ],
+      "correct_index": 1,
+      "source_headline": "Millions listen to Ethiopian star's song taking swipe at government",
+      "explanation": "The headline specifically mentions an Ethiopian star whose song criticizing the government gained millions of listeners."
+    },
+    {
+      "question": "In which New Zealand city did police launch a homicide investigation after three deaths?",
+      "type": "multiple_choice",
+      "options": [
+        "Christchurch",
+        "Hastings",
+        "Wellington",
+        "Auckland"
+      ],
+      "correct_index": 1,
+      "source_headline": "Police launch homicide investigation after three people killed in Hastings",
+      "explanation": "The headline clearly states that the homicide investigation is taking place in Hastings after three people were killed."
     }
   ],
-  "generated_at": "2026-04-12T02:06:44.513137+00:00",
-  "week_of": "2026-W14",
-  "valid_until": "2026-04-18",
+  "generated_at": "2026-04-19T02:11:05.143090+00:00",
+  "week_of": "2026-W15",
+  "valid_until": "2026-04-25",
   "headline_count": 30
 }
