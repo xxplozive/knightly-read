@@ -1,138 +1,138 @@
 {
   "questions": [
     {
-      "question": "Which country launched ballistic missiles toward the sea according to recent news?",
+      "question": "Where was Trump rushed from after a shooting incident?",
       "type": "multiple_choice",
       "options": [
-        "North Korea",
-        "South Korea",
+        "Golf course",
+        "White House Correspondents' Dinner",
+        "Trump Tower",
+        "Campaign rally"
+      ],
+      "correct_index": 1,
+      "source_headline": "Trump rushed from White House Correspondents' Dinner after shooting incident",
+      "explanation": "The headline states Trump was rushed from the White House Correspondents' Dinner after a shooting incident."
+    },
+    {
+      "question": "What age was Lionel Rosenblatt when he died?",
+      "type": "multiple_choice",
+      "options": [
+        "82",
+        "78",
+        "80",
+        "84"
+      ],
+      "correct_index": 0,
+      "source_headline": "Lionel Rosenblatt is dead at 82. He defied his bosses to help hundreds flee Vietnam.",
+      "explanation": "The headline clearly states that Lionel Rosenblatt died at age 82."
+    },
+    {
+      "question": "Which two countries were mentioned in relation to Trump canceling a US envoys' trip?",
+      "type": "multiple_choice",
+      "options": [
+        "Pakistan and Iran",
+        "Syria and Lebanon",
+        "India and China",
+        "Iraq and Afghanistan"
+      ],
+      "correct_index": 0,
+      "source_headline": "Trump cancels US envoys' trip to Pakistan for talks on Iran war",
+      "explanation": "The headline mentions Trump canceled a trip to Pakistan for talks on Iran war."
+    },
+    {
+      "question": "Who is the new CEO mentioned in the NASCAR headline?",
+      "type": "multiple_choice",
+      "options": [
+        "Steve Johnson",
+        "Steve Anderson",
+        "Mike O'Donnell",
+        "Steve O'Donnell"
+      ],
+      "correct_index": 3,
+      "source_headline": "New CEO Steve O'Donnell vows to unite NASCAR and return the fun",
+      "explanation": "The headline identifies Steve O'Donnell as the new NASCAR CEO."
+    },
+    {
+      "question": "What unusual problem are Idaho lawmakers dealing with?",
+      "type": "multiple_choice",
+      "options": [
+        "Water shortage",
+        "Rat apocalypse",
+        "Bird flu",
+        "Insect invasion"
+      ],
+      "correct_index": 1,
+      "source_headline": "Idaho lawmakers, deadlocked over 'rat apocalypse,' blame city transplants",
+      "explanation": "The headline specifically mentions Idaho lawmakers are deadlocked over a 'rat apocalypse.'"
+    },
+    {
+      "question": "How much money is Canada providing to Canada Post?",
+      "type": "multiple_choice",
+      "options": [
+        "$820 million",
+        "$720 million",
+        "$520 million",
+        "$620 million"
+      ],
+      "correct_index": 1,
+      "source_headline": "Canada to Provide $720 Million to Canada Post to Avoid Insolvency at Mail Service",
+      "explanation": "The headline states Canada will provide $720 million to Canada Post."
+    },
+    {
+      "question": "Which country is mentioned in relation to South Koreans traveling more?",
+      "type": "multiple_choice",
+      "options": [
+        "China",
         "Japan",
-        "China"
+        "Vietnam",
+        "Thailand"
       ],
       "correct_index": 0,
-      "source_headline": "North Korea launches ballistic missiles toward sea",
-      "explanation": "The headline specifically states that North Korea launched ballistic missiles toward the sea."
+      "source_headline": "What's fuelling the surge in South Koreans travelling to China?",
+      "explanation": "The headline asks about South Koreans traveling to China."
     },
     {
-      "question": "What important waterway is Iran controlling according to recent news?",
+      "question": "What problem are Jakarta residents demanding be fixed?",
       "type": "multiple_choice",
       "options": [
-        "Panama Canal",
-        "Bering Strait",
-        "Suez Canal",
-        "Strait of Hormuz"
-      ],
-      "correct_index": 3,
-      "source_headline": "Iran live updates: Tehran reviewing US proposal as it reasserts control over strait",
-      "explanation": "The headlines mention Iran's control over the Strait of Hormuz, an important shipping route."
-    },
-    {
-      "question": "Where did a tragic shooting occur on a basketball court according to recent news?",
-      "type": "multiple_choice",
-      "options": [
-        "Brooklyn",
-        "Manhattan",
-        "Bronx",
-        "Queens"
-      ],
-      "correct_index": 3,
-      "source_headline": "NYC teen shot dead on Queens basketball court as bystanders filmed; police searching for gunman",
-      "explanation": "The headline specifically mentions the shooting happened on a Queens basketball court."
-    },
-    {
-      "question": "What unusual item did the 'Lego bandit' use to replace minifigures?",
-      "type": "multiple_choice",
-      "options": [
-        "Beans",
-        "Cereal",
-        "Pasta",
-        "Rice"
-      ],
-      "correct_index": 2,
-      "source_headline": "'Lego bandit' accused in bizarre $34K scheme replacing minifigures with pasta",
-      "explanation": "The headline states the bandit replaced Lego minifigures with pasta in this unusual scheme."
-    },
-    {
-      "question": "In which city did a gunman take hostages and kill at least six people?",
-      "type": "multiple_choice",
-      "options": [
-        "Kyiv",
-        "Prague",
-        "Moscow",
-        "Warsaw"
+        "Stable electricity",
+        "Public transportation",
+        "Water supply",
+        "Internet service"
       ],
       "correct_index": 0,
-      "source_headline": "At least six killed in Kyiv as gunman opens fire and takes hostages",
-      "explanation": "The headline clearly states that this tragic event occurred in Kyiv, the capital of Ukraine."
+      "source_headline": "Jakarta residents demand stable electricity after repeated outages",
+      "explanation": "The headline states Jakarta residents are demanding stable electricity after repeated outages."
     },
     {
-      "question": "Which country is experiencing darkness due to a war in the Persian Gulf?",
+      "question": "According to Mexico, what was the problem with the US agents who died?",
       "type": "multiple_choice",
       "options": [
-        "Iran",
-        "Pakistan",
-        "Afghanistan",
-        "India"
-      ],
-      "correct_index": 1,
-      "source_headline": "A war in the Persian Gulf is plunging Pakistan into darkness",
-      "explanation": "The headline specifically mentions that Pakistan is being plunged into darkness due to the Persian Gulf conflict."
-    },
-    {
-      "question": "Which country has raised fuel prices because of the Iran war?",
-      "type": "multiple_choice",
-      "options": [
-        "Bangladesh",
-        "Thailand",
-        "Myanmar",
-        "Vietnam"
-      ],
-      "correct_index": 0,
-      "source_headline": "Bangladesh raises fuel prices as Iran war drives up costs",
-      "explanation": "The headline states that Bangladesh has raised fuel prices due to increased costs from the Iran war."
-    },
-    {
-      "question": "Bob Hall, who recently died, was known as the father of what sport?",
-      "type": "multiple_choice",
-      "options": [
-        "Wheelchair basketball",
-        "Wheelchair tennis",
-        "Wheelchair swimming",
-        "Wheelchair racing"
+        "They were in the wrong location",
+        "They had expired visas",
+        "They used illegal equipment",
+        "They had no permission to operate there"
       ],
       "correct_index": 3,
-      "source_headline": "Bob Hall has died. The father of wheelchair racing made Boston Marathon history.",
-      "explanation": "The headline identifies Bob Hall as the father of wheelchair racing who made Boston Marathon history."
+      "source_headline": "Mexico says US agents killed in crash weren't permitted to operate there",
+      "explanation": "The headline states Mexico says the US agents weren't permitted to operate there."
     },
     {
-      "question": "Which African country had a star's song criticizing the government that millions listened to?",
+      "question": "What mountain region is mentioned in relation to a flood warning system?",
       "type": "multiple_choice",
       "options": [
-        "Nigeria",
-        "Ethiopia",
-        "Ghana",
-        "Kenya"
+        "Alps",
+        "Himalaya/Everest",
+        "Rocky Mountains",
+        "Andes"
       ],
       "correct_index": 1,
-      "source_headline": "Millions listen to Ethiopian star's song taking swipe at government",
-      "explanation": "The headline specifically mentions an Ethiopian star whose song criticizing the government gained millions of listeners."
-    },
-    {
-      "question": "In which New Zealand city did police launch a homicide investigation after three deaths?",
-      "type": "multiple_choice",
-      "options": [
-        "Christchurch",
-        "Hastings",
-        "Wellington",
-        "Auckland"
-      ],
-      "correct_index": 1,
-      "source_headline": "Police launch homicide investigation after three people killed in Hastings",
-      "explanation": "The headline clearly states that the homicide investigation is taking place in Hastings after three people were killed."
+      "source_headline": "Thousands at risk after multi-million dollar Everest flood warning system left to rust",
+      "explanation": "The headline mentions an Everest flood warning system that was left to rust."
     }
   ],
-  "generated_at": "2026-04-19T02:11:05.143090+00:00",
-  "week_of": "2026-W15",
-  "valid_until": "2026-04-25",
+  "generated_at": "2026-04-26T02:13:59.179942+00:00",
+  "week_of": "2026-W16",
+  "valid_until": "2026-05-02",
   "headline_count": 30
 }
