@@ -1,138 +1,138 @@
 {
   "questions": [
     {
-      "question": "Where was Trump rushed from after a shooting incident?",
+      "question": "According to the news, which country says the U.S. troop withdrawal was expected?",
       "type": "multiple_choice",
       "options": [
-        "Golf course",
-        "White House Correspondents' Dinner",
-        "Trump Tower",
-        "Campaign rally"
+        "Spain",
+        "Germany",
+        "Italy",
+        "France"
       ],
       "correct_index": 1,
-      "source_headline": "Trump rushed from White House Correspondents' Dinner after shooting incident",
-      "explanation": "The headline states Trump was rushed from the White House Correspondents' Dinner after a shooting incident."
+      "source_headline": "Germany says U.S. troop withdrawal 'anticipated', Spain and Italy could be next",
+      "explanation": "Germany is the country that said the U.S. troop withdrawal was anticipated or expected."
     },
     {
-      "question": "What age was Lionel Rosenblatt when he died?",
+      "question": "What airline is mentioned as shutting down in recent news?",
       "type": "multiple_choice",
       "options": [
-        "82",
-        "78",
-        "80",
-        "84"
+        "Spirit Airlines",
+        "Delta Airlines",
+        "American Airlines",
+        "United Airlines"
       ],
       "correct_index": 0,
-      "source_headline": "Lionel Rosenblatt is dead at 82. He defied his bosses to help hundreds flee Vietnam.",
-      "explanation": "The headline clearly states that Lionel Rosenblatt died at age 82."
+      "source_headline": "Spirit Airlines shuts down after failing to reach a bailout deal, ending discount travel era",
+      "explanation": "Spirit Airlines is the discount airline that shut down after failing to reach a bailout deal."
     },
     {
-      "question": "Which two countries were mentioned in relation to Trump canceling a US envoys' trip?",
+      "question": "Which volcano in the Philippines recently erupted, causing thousands to evacuate?",
       "type": "multiple_choice",
       "options": [
-        "Pakistan and Iran",
-        "Syria and Lebanon",
-        "India and China",
-        "Iraq and Afghanistan"
+        "Mayon Volcano",
+        "Mount Pinatubo",
+        "Mount Apo",
+        "Taal Volcano"
       ],
       "correct_index": 0,
-      "source_headline": "Trump cancels US envoys' trip to Pakistan for talks on Iran war",
-      "explanation": "The headline mentions Trump canceled a trip to Pakistan for talks on Iran war."
+      "source_headline": "Philippines says thousands evacuated as Mayon Volcano erupts",
+      "explanation": "Mayon Volcano is the volcano that erupted in the Philippines, causing thousands of people to evacuate."
     },
     {
-      "question": "Who is the new CEO mentioned in the NASCAR headline?",
+      "question": "According to news reports, what did Chinese courts rule about companies firing workers?",
       "type": "multiple_choice",
       "options": [
-        "Steve Johnson",
-        "Steve Anderson",
-        "Mike O'Donnell",
-        "Steve O'Donnell"
+        "Companies must give 30 days notice",
+        "Companies can only fire workers on weekends",
+        "Companies can't lay off workers due to AI",
+        "Companies can fire workers for any reason"
       ],
-      "correct_index": 3,
-      "source_headline": "New CEO Steve O'Donnell vows to unite NASCAR and return the fun",
-      "explanation": "The headline identifies Steve O'Donnell as the new NASCAR CEO."
+      "correct_index": 2,
+      "source_headline": "Chinese court rules firms can't lay off workers on AI grounds",
+      "explanation": "Chinese courts ruled that companies cannot lay off workers just because of artificial intelligence or AI reasons."
     },
     {
-      "question": "What unusual problem are Idaho lawmakers dealing with?",
+      "question": "Which former leader of Myanmar was moved to house arrest according to military reports?",
       "type": "multiple_choice",
       "options": [
-        "Water shortage",
-        "Rat apocalypse",
-        "Bird flu",
-        "Insect invasion"
+        "Win Myint",
+        "Min Aung Hlaing",
+        "Aung San Suu Kyi",
+        "Thein Sein"
+      ],
+      "correct_index": 2,
+      "source_headline": "Myanmar ex-leader Aung San Suu Kyi moved to house arrest, military says",
+      "explanation": "Aung San Suu Kyi, the former leader of Myanmar, was moved to house arrest according to military reports."
+    },
+    {
+      "question": "How many people were stabbed in a high school altercation over a vape pen?",
+      "type": "multiple_choice",
+      "options": [
+        "3 people",
+        "4 people",
+        "5 people",
+        "6 people"
+      ],
+      "correct_index": 2,
+      "source_headline": "Student charged after 5 stabbed at high school in violent altercation over vape pen",
+      "explanation": "Five people were stabbed in the high school incident that started over a vape pen."
+    },
+    {
+      "question": "Which country is attracting more Chinese investment in its property sector as a safe haven?",
+      "type": "multiple_choice",
+      "options": [
+        "Singapore",
+        "South Korea",
+        "Hong Kong",
+        "Japan"
+      ],
+      "correct_index": 0,
+      "source_headline": "Singapore's safe-haven status draws more Chinese capital into property sector",
+      "explanation": "Singapore is the country attracting more Chinese capital into its property sector due to its safe-haven status."
+    },
+    {
+      "question": "An oil tanker was hijacked off the coast of which country?",
+      "type": "multiple_choice",
+      "options": [
+        "Iran",
+        "Yemen",
+        "Somalia",
+        "Saudi Arabia"
       ],
       "correct_index": 1,
-      "source_headline": "Idaho lawmakers, deadlocked over 'rat apocalypse,' blame city transplants",
-      "explanation": "The headline specifically mentions Idaho lawmakers are deadlocked over a 'rat apocalypse.'"
+      "source_headline": "Oil tanker hijacked off coast of Yemen and taken towards Somalia",
+      "explanation": "The oil tanker was hijacked off the coast of Yemen, though it was then taken towards Somalia."
     },
     {
-      "question": "How much money is Canada providing to Canada Post?",
+      "question": "How long will a comet be gone after it disappears from New Zealand skies?",
       "type": "multiple_choice",
       "options": [
-        "$820 million",
-        "$720 million",
-        "$520 million",
-        "$620 million"
+        "1,700 years",
+        "170,000 years",
+        "70,000 years",
+        "17,000 years"
       ],
       "correct_index": 1,
-      "source_headline": "Canada to Provide $720 Million to Canada Post to Avoid Insolvency at Mail Service",
-      "explanation": "The headline states Canada will provide $720 million to Canada Post."
+      "source_headline": "Comet visible in NZ skies for the next week, then gone for 170,000 years",
+      "explanation": "The comet will be gone for 170,000 years after it disappears from New Zealand skies."
     },
     {
-      "question": "Which country is mentioned in relation to South Koreans traveling more?",
+      "question": "What type of advanced technology is raising concerns among Russian forces on the battlefield?",
       "type": "multiple_choice",
       "options": [
-        "China",
-        "Japan",
-        "Vietnam",
-        "Thailand"
-      ],
-      "correct_index": 0,
-      "source_headline": "What's fuelling the surge in South Koreans travelling to China?",
-      "explanation": "The headline asks about South Koreans traveling to China."
-    },
-    {
-      "question": "What problem are Jakarta residents demanding be fixed?",
-      "type": "multiple_choice",
-      "options": [
-        "Stable electricity",
-        "Public transportation",
-        "Water supply",
-        "Internet service"
-      ],
-      "correct_index": 0,
-      "source_headline": "Jakarta residents demand stable electricity after repeated outages",
-      "explanation": "The headline states Jakarta residents are demanding stable electricity after repeated outages."
-    },
-    {
-      "question": "According to Mexico, what was the problem with the US agents who died?",
-      "type": "multiple_choice",
-      "options": [
-        "They were in the wrong location",
-        "They had expired visas",
-        "They used illegal equipment",
-        "They had no permission to operate there"
-      ],
-      "correct_index": 3,
-      "source_headline": "Mexico says US agents killed in crash weren't permitted to operate there",
-      "explanation": "The headline states Mexico says the US agents weren't permitted to operate there."
-    },
-    {
-      "question": "What mountain region is mentioned in relation to a flood warning system?",
-      "type": "multiple_choice",
-      "options": [
-        "Alps",
-        "Himalaya/Everest",
-        "Rocky Mountains",
-        "Andes"
+        "Ukrainian tanks",
+        "Ukrainian drones",
+        "Ukrainian satellites",
+        "Ukrainian missiles"
       ],
       "correct_index": 1,
-      "source_headline": "Thousands at risk after multi-million dollar Everest flood warning system left to rust",
-      "explanation": "The headline mentions an Everest flood warning system that was left to rust."
+      "source_headline": "Ukraine battlefield: Advanced Ukrainian drones raise concerns among Russian forces",
+      "explanation": "Advanced Ukrainian drones are the technology raising concerns among Russian forces on the battlefield."
     }
   ],
-  "generated_at": "2026-04-26T02:13:59.179942+00:00",
-  "week_of": "2026-W16",
-  "valid_until": "2026-05-02",
+  "generated_at": "2026-05-03T02:30:02.898616+00:00",
+  "week_of": "2026-W17",
+  "valid_until": "2026-05-09",
   "headline_count": 30
 }
