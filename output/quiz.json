@@ -1,138 +1,138 @@
 {
   "questions": [
     {
-      "question": "According to the news, which country says the U.S. troop withdrawal was expected?",
+      "question": "Where is the Venice Biennale taking place, which is experiencing protests and boycotts?",
       "type": "multiple_choice",
       "options": [
         "Spain",
-        "Germany",
         "Italy",
-        "France"
+        "France",
+        "Greece"
       ],
       "correct_index": 1,
-      "source_headline": "Germany says U.S. troop withdrawal 'anticipated', Spain and Italy could be next",
-      "explanation": "Germany is the country that said the U.S. troop withdrawal was anticipated or expected."
+      "source_headline": "Protests and boycotts rock prestigious Venice Biennale",
+      "explanation": "Venice is a famous city in Italy known for its art exhibitions and cultural events."
     },
     {
-      "question": "What airline is mentioned as shutting down in recent news?",
+      "question": "Which airline was involved in the accident at Denver airport?",
       "type": "multiple_choice",
       "options": [
-        "Spirit Airlines",
         "Delta Airlines",
-        "American Airlines",
-        "United Airlines"
+        "Frontier Airlines",
+        "United Airlines",
+        "Southwest Airlines"
+      ],
+      "correct_index": 1,
+      "source_headline": "'We just hit somebody' - Frontier Airlines plane kills runway trespasser at Denver airport",
+      "explanation": "The headline specifically mentions Frontier Airlines as the airline involved in the incident."
+    },
+    {
+      "question": "Which UK political leader says he plans to remain in office despite election losses?",
+      "type": "multiple_choice",
+      "options": [
+        "PM Cameron",
+        "PM Starmer",
+        "PM Sunak",
+        "PM Johnson"
+      ],
+      "correct_index": 1,
+      "source_headline": "UK PM Starmer says he plans to remain in office despite crushing local elections defeat",
+      "explanation": "The headline clearly identifies PM Starmer as the UK leader making this statement."
+    },
+    {
+      "question": "How much money did a Minnesota nonprofit allegedly steal for personal use?",
+      "type": "multiple_choice",
+      "options": [
+        "$8.7 million",
+        "$2.3 million",
+        "$6.5 million",
+        "$4.1 million"
+      ],
+      "correct_index": 2,
+      "source_headline": "Minnesota nonprofit accused of siphoning $6.5M to fund Vegas trips, luxury cars, private liquor store",
+      "explanation": "The headline states the nonprofit is accused of siphoning $6.5 million for personal expenses."
+    },
+    {
+      "question": "Which country is seeing its biggest military recruitment surge in 30 years?",
+      "type": "multiple_choice",
+      "options": [
+        "Canada",
+        "United States",
+        "United Kingdom",
+        "Australia"
       ],
       "correct_index": 0,
-      "source_headline": "Spirit Airlines shuts down after failing to reach a bailout deal, ending discount travel era",
-      "explanation": "Spirit Airlines is the discount airline that shut down after failing to reach a bailout deal."
+      "source_headline": "Why Canada is seeing its biggest military recruitment surge in 30 years",
+      "explanation": "The headline specifically mentions Canada as the country experiencing this recruitment surge."
     },
     {
-      "question": "Which volcano in the Philippines recently erupted, causing thousands to evacuate?",
+      "question": "Which world leader says the Ukraine conflict is 'coming to an end'?",
       "type": "multiple_choice",
       "options": [
-        "Mayon Volcano",
-        "Mount Pinatubo",
-        "Mount Apo",
-        "Taal Volcano"
+        "Zelensky",
+        "Macron",
+        "Biden",
+        "Putin"
       ],
-      "correct_index": 0,
-      "source_headline": "Philippines says thousands evacuated as Mayon Volcano erupts",
-      "explanation": "Mayon Volcano is the volcano that erupted in the Philippines, causing thousands of people to evacuate."
+      "correct_index": 3,
+      "source_headline": "Putin says he thinks Ukraine conflict 'coming to an end'",
+      "explanation": "The headline identifies Putin as the leader making this statement about the Ukraine conflict."
     },
     {
-      "question": "According to news reports, what did Chinese courts rule about companies firing workers?",
+      "question": "In which country did a volcano recently erupt, killing three people?",
       "type": "multiple_choice",
       "options": [
-        "Companies must give 30 days notice",
-        "Companies can only fire workers on weekends",
-        "Companies can't lay off workers due to AI",
-        "Companies can fire workers for any reason"
-      ],
-      "correct_index": 2,
-      "source_headline": "Chinese court rules firms can't lay off workers on AI grounds",
-      "explanation": "Chinese courts ruled that companies cannot lay off workers just because of artificial intelligence or AI reasons."
-    },
-    {
-      "question": "Which former leader of Myanmar was moved to house arrest according to military reports?",
-      "type": "multiple_choice",
-      "options": [
-        "Win Myint",
-        "Min Aung Hlaing",
-        "Aung San Suu Kyi",
-        "Thein Sein"
-      ],
-      "correct_index": 2,
-      "source_headline": "Myanmar ex-leader Aung San Suu Kyi moved to house arrest, military says",
-      "explanation": "Aung San Suu Kyi, the former leader of Myanmar, was moved to house arrest according to military reports."
-    },
-    {
-      "question": "How many people were stabbed in a high school altercation over a vape pen?",
-      "type": "multiple_choice",
-      "options": [
-        "3 people",
-        "4 people",
-        "5 people",
-        "6 people"
-      ],
-      "correct_index": 2,
-      "source_headline": "Student charged after 5 stabbed at high school in violent altercation over vape pen",
-      "explanation": "Five people were stabbed in the high school incident that started over a vape pen."
-    },
-    {
-      "question": "Which country is attracting more Chinese investment in its property sector as a safe haven?",
-      "type": "multiple_choice",
-      "options": [
-        "Singapore",
-        "South Korea",
-        "Hong Kong",
+        "Malaysia",
+        "Indonesia",
+        "Philippines",
         "Japan"
       ],
+      "correct_index": 1,
+      "source_headline": "Three dead after volcano erupts on Indonesian island",
+      "explanation": "The headline specifies that the deadly volcano eruption occurred on an Indonesian island."
+    },
+    {
+      "question": "How old is the chess prodigy Faustino Oro who became a Grandmaster?",
+      "type": "multiple_choice",
+      "options": [
+        "12 years old",
+        "10 years old",
+        "11 years old",
+        "13 years old"
+      ],
       "correct_index": 0,
-      "source_headline": "Singapore's safe-haven status draws more Chinese capital into property sector",
-      "explanation": "Singapore is the country attracting more Chinese capital into its property sector due to its safe-haven status."
+      "source_headline": "Argentine prodigy Faustino Oro joins chess elite as Grandmaster aged just 12",
+      "explanation": "The headline states that Faustino Oro became a Grandmaster at the age of 12."
     },
     {
-      "question": "An oil tanker was hijacked off the coast of which country?",
+      "question": "Which country is Faustino Oro, the young chess Grandmaster, from?",
       "type": "multiple_choice",
       "options": [
-        "Iran",
-        "Yemen",
-        "Somalia",
-        "Saudi Arabia"
+        "Chile",
+        "Brazil",
+        "Argentina",
+        "Uruguay"
       ],
-      "correct_index": 1,
-      "source_headline": "Oil tanker hijacked off coast of Yemen and taken towards Somalia",
-      "explanation": "The oil tanker was hijacked off the coast of Yemen, though it was then taken towards Somalia."
+      "correct_index": 2,
+      "source_headline": "Argentine prodigy Faustino Oro joins chess elite as Grandmaster aged just 12",
+      "explanation": "The headline identifies Faustino Oro as an Argentine prodigy, meaning he is from Argentina."
     },
     {
-      "question": "How long will a comet be gone after it disappears from New Zealand skies?",
+      "question": "Which country is providing $720 million to its postal service to prevent bankruptcy?",
       "type": "multiple_choice",
       "options": [
-        "1,700 years",
-        "170,000 years",
-        "70,000 years",
-        "17,000 years"
+        "Canada",
+        "United Kingdom",
+        "United States",
+        "Australia"
       ],
-      "correct_index": 1,
-      "source_headline": "Comet visible in NZ skies for the next week, then gone for 170,000 years",
-      "explanation": "The comet will be gone for 170,000 years after it disappears from New Zealand skies."
-    },
-    {
-      "question": "What type of advanced technology is raising concerns among Russian forces on the battlefield?",
-      "type": "multiple_choice",
-      "options": [
-        "Ukrainian tanks",
-        "Ukrainian drones",
-        "Ukrainian satellites",
-        "Ukrainian missiles"
-      ],
-      "correct_index": 1,
-      "source_headline": "Ukraine battlefield: Advanced Ukrainian drones raise concerns among Russian forces",
-      "explanation": "Advanced Ukrainian drones are the technology raising concerns among Russian forces on the battlefield."
+      "correct_index": 0,
+      "source_headline": "Canada to Provide $720 Million to Canada Post to Avoid Insolvency at Mail Service",
+      "explanation": "The headline states that Canada is providing the funding to Canada Post to prevent insolvency."
     }
   ],
-  "generated_at": "2026-05-03T02:30:02.898616+00:00",
-  "week_of": "2026-W17",
-  "valid_until": "2026-05-09",
+  "generated_at": "2026-05-10T02:33:05.230043+00:00",
+  "week_of": "2026-W18",
+  "valid_until": "2026-05-16",
   "headline_count": 30
 }
