@@ -1,138 +1,138 @@
 {
   "questions": [
     {
-      "question": "Where is the Venice Biennale taking place, which is experiencing protests and boycotts?",
+      "question": "Which horse won the Preakness horse race?",
       "type": "multiple_choice",
       "options": [
-        "Spain",
-        "Italy",
-        "France",
-        "Greece"
-      ],
-      "correct_index": 1,
-      "source_headline": "Protests and boycotts rock prestigious Venice Biennale",
-      "explanation": "Venice is a famous city in Italy known for its art exhibitions and cultural events."
-    },
-    {
-      "question": "Which airline was involved in the accident at Denver airport?",
-      "type": "multiple_choice",
-      "options": [
-        "Delta Airlines",
-        "Frontier Airlines",
-        "United Airlines",
-        "Southwest Airlines"
-      ],
-      "correct_index": 1,
-      "source_headline": "'We just hit somebody' - Frontier Airlines plane kills runway trespasser at Denver airport",
-      "explanation": "The headline specifically mentions Frontier Airlines as the airline involved in the incident."
-    },
-    {
-      "question": "Which UK political leader says he plans to remain in office despite election losses?",
-      "type": "multiple_choice",
-      "options": [
-        "PM Cameron",
-        "PM Starmer",
-        "PM Sunak",
-        "PM Johnson"
-      ],
-      "correct_index": 1,
-      "source_headline": "UK PM Starmer says he plans to remain in office despite crushing local elections defeat",
-      "explanation": "The headline clearly identifies PM Starmer as the UK leader making this statement."
-    },
-    {
-      "question": "How much money did a Minnesota nonprofit allegedly steal for personal use?",
-      "type": "multiple_choice",
-      "options": [
-        "$8.7 million",
-        "$2.3 million",
-        "$6.5 million",
-        "$4.1 million"
-      ],
-      "correct_index": 2,
-      "source_headline": "Minnesota nonprofit accused of siphoning $6.5M to fund Vegas trips, luxury cars, private liquor store",
-      "explanation": "The headline states the nonprofit is accused of siphoning $6.5 million for personal expenses."
-    },
-    {
-      "question": "Which country is seeing its biggest military recruitment surge in 30 years?",
-      "type": "multiple_choice",
-      "options": [
-        "Canada",
-        "United States",
-        "United Kingdom",
-        "Australia"
-      ],
-      "correct_index": 0,
-      "source_headline": "Why Canada is seeing its biggest military recruitment surge in 30 years",
-      "explanation": "The headline specifically mentions Canada as the country experiencing this recruitment surge."
-    },
-    {
-      "question": "Which world leader says the Ukraine conflict is 'coming to an end'?",
-      "type": "multiple_choice",
-      "options": [
-        "Zelensky",
-        "Macron",
-        "Biden",
-        "Putin"
+        "Thunder Strike",
+        "Iron Honor",
+        "Royal Victory",
+        "Napoleon Solo"
       ],
       "correct_index": 3,
-      "source_headline": "Putin says he thinks Ukraine conflict 'coming to an end'",
-      "explanation": "The headline identifies Putin as the leader making this statement about the Ukraine conflict."
+      "source_headline": "Napoleon Solo holds off Iron Honor to win the Preakness",
+      "explanation": "Napoleon Solo was the horse that won by holding off Iron Honor in the Preakness race."
     },
     {
-      "question": "In which country did a volcano recently erupt, killing three people?",
+      "question": "What major problem is happening in Cuba according to the news?",
       "type": "multiple_choice",
       "options": [
-        "Malaysia",
-        "Indonesia",
-        "Philippines",
-        "Japan"
+        "Hurricane damage",
+        "Grid collapse",
+        "Food shortage",
+        "Tourism decline"
       ],
       "correct_index": 1,
-      "source_headline": "Three dead after volcano erupts on Indonesian island",
-      "explanation": "The headline specifies that the deadly volcano eruption occurred on an Indonesian island."
+      "source_headline": "Cuba grid collapse: The situation is growing more dire, experts say",
+      "explanation": "The headline specifically mentions Cuba's grid collapse as the problem that experts say is getting worse."
     },
     {
-      "question": "How old is the chess prodigy Faustino Oro who became a Grandmaster?",
+      "question": "F\u00e9licien Kabuga was accused of financing what terrible event in Rwanda?",
       "type": "multiple_choice",
       "options": [
-        "12 years old",
-        "10 years old",
-        "11 years old",
-        "13 years old"
-      ],
-      "correct_index": 0,
-      "source_headline": "Argentine prodigy Faustino Oro joins chess elite as Grandmaster aged just 12",
-      "explanation": "The headline states that Faustino Oro became a Grandmaster at the age of 12."
-    },
-    {
-      "question": "Which country is Faustino Oro, the young chess Grandmaster, from?",
-      "type": "multiple_choice",
-      "options": [
-        "Chile",
-        "Brazil",
-        "Argentina",
-        "Uruguay"
+        "Civil war",
+        "Political coup",
+        "Genocide",
+        "Terrorist attack"
       ],
       "correct_index": 2,
-      "source_headline": "Argentine prodigy Faustino Oro joins chess elite as Grandmaster aged just 12",
-      "explanation": "The headline identifies Faustino Oro as an Argentine prodigy, meaning he is from Argentina."
+      "source_headline": "F\u00e9licien Kabuga, Rwandan accused of financing genocide, has died",
+      "explanation": "The headline clearly states that Kabuga was accused of financing genocide in Rwanda."
     },
     {
-      "question": "Which country is providing $720 million to its postal service to prevent bankruptcy?",
+      "question": "A Canadian person tested positive for which disease after being on a cruise ship?",
       "type": "multiple_choice",
       "options": [
-        "Canada",
-        "United Kingdom",
-        "United States",
-        "Australia"
+        "Flu",
+        "Hantavirus",
+        "COVID-19",
+        "Measles"
+      ],
+      "correct_index": 1,
+      "source_headline": "Canadian from hantavirus-hit cruise ship tests positive",
+      "explanation": "The headline mentions the cruise ship was hit by hantavirus and a Canadian tested positive."
+    },
+    {
+      "question": "What island became the main topic in talks between Trump and Xi?",
+      "type": "multiple_choice",
+      "options": [
+        "Hawaii",
+        "Japan",
+        "Taiwan",
+        "Philippines"
+      ],
+      "correct_index": 2,
+      "source_headline": "Why Taiwan became the defining issue in the Trump-Xi talks",
+      "explanation": "The headline identifies Taiwan as the defining issue in the Trump-Xi talks."
+    },
+    {
+      "question": "The governor of which U.S. state asked the Navy to help with a sunken fishing boat?",
+      "type": "multiple_choice",
+      "options": [
+        "California",
+        "Massachusetts",
+        "Florida",
+        "Maine"
+      ],
+      "correct_index": 1,
+      "source_headline": "Massachusetts governor asks US Navy to help retrieve bodies, evidence from sunken fishing vessel",
+      "explanation": "The headline specifically mentions the Massachusetts governor making this request."
+    },
+    {
+      "question": "Which country won its first Eurovision contest?",
+      "type": "multiple_choice",
+      "options": [
+        "Bulgaria",
+        "Serbia",
+        "Romania",
+        "Croatia"
       ],
       "correct_index": 0,
-      "source_headline": "Canada to Provide $720 Million to Canada Post to Avoid Insolvency at Mail Service",
-      "explanation": "The headline states that Canada is providing the funding to Canada Post to prevent insolvency."
+      "source_headline": "Bulgarian banger 'Bangaranga' bags country its 1st Eurovision win",
+      "explanation": "The headline states that Bulgaria won its first Eurovision victory with the song 'Bangaranga'."
+    },
+    {
+      "question": "In which European country did a man drive a car into pedestrians, injuring eight people?",
+      "type": "multiple_choice",
+      "options": [
+        "Italy",
+        "Spain",
+        "France",
+        "Germany"
+      ],
+      "correct_index": 0,
+      "source_headline": "Man drives car into pedestrians in Italy, injuring eight",
+      "explanation": "The headline clearly states this incident happened in Italy."
+    },
+    {
+      "question": "FIFA had positive talks with which country before the World Cup?",
+      "type": "multiple_choice",
+      "options": [
+        "Iraq",
+        "India",
+        "Israel",
+        "Iran"
+      ],
+      "correct_index": 3,
+      "source_headline": "FIFA says held positive talks with Iran ahead of World Cup",
+      "explanation": "The headline mentions FIFA had positive talks specifically with Iran ahead of the World Cup."
+    },
+    {
+      "question": "In which African country were more than 50 schoolchildren kidnapped?",
+      "type": "multiple_choice",
+      "options": [
+        "Nigeria",
+        "Kenya",
+        "Mali",
+        "Ghana"
+      ],
+      "correct_index": 0,
+      "source_headline": "Toddlers among more than 50 schoolchildren kidnapped in Nigeria",
+      "explanation": "The headline specifically identifies Nigeria as the country where this kidnapping occurred."
     }
   ],
-  "generated_at": "2026-05-10T02:33:05.230043+00:00",
-  "week_of": "2026-W18",
-  "valid_until": "2026-05-16",
+  "generated_at": "2026-05-17T02:40:14.413319+00:00",
+  "week_of": "2026-W19",
+  "valid_until": "2026-05-23",
   "headline_count": 30
 }
