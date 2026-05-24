@@ -1,138 +1,138 @@
 {
   "questions": [
     {
-      "question": "Which horse won the Preakness horse race?",
+      "question": "According to recent news, what happened at a White House checkpoint?",
       "type": "multiple_choice",
       "options": [
-        "Thunder Strike",
-        "Iron Honor",
-        "Royal Victory",
-        "Napoleon Solo"
-      ],
-      "correct_index": 3,
-      "source_headline": "Napoleon Solo holds off Iron Honor to win the Preakness",
-      "explanation": "Napoleon Solo was the horse that won by holding off Iron Honor in the Preakness race."
-    },
-    {
-      "question": "What major problem is happening in Cuba according to the news?",
-      "type": "multiple_choice",
-      "options": [
-        "Hurricane damage",
-        "Grid collapse",
-        "Food shortage",
-        "Tourism decline"
-      ],
-      "correct_index": 1,
-      "source_headline": "Cuba grid collapse: The situation is growing more dire, experts say",
-      "explanation": "The headline specifically mentions Cuba's grid collapse as the problem that experts say is getting worse."
-    },
-    {
-      "question": "F\u00e9licien Kabuga was accused of financing what terrible event in Rwanda?",
-      "type": "multiple_choice",
-      "options": [
-        "Civil war",
-        "Political coup",
-        "Genocide",
-        "Terrorist attack"
-      ],
-      "correct_index": 2,
-      "source_headline": "F\u00e9licien Kabuga, Rwandan accused of financing genocide, has died",
-      "explanation": "The headline clearly states that Kabuga was accused of financing genocide in Rwanda."
-    },
-    {
-      "question": "A Canadian person tested positive for which disease after being on a cruise ship?",
-      "type": "multiple_choice",
-      "options": [
-        "Flu",
-        "Hantavirus",
-        "COVID-19",
-        "Measles"
-      ],
-      "correct_index": 1,
-      "source_headline": "Canadian from hantavirus-hit cruise ship tests positive",
-      "explanation": "The headline mentions the cruise ship was hit by hantavirus and a Canadian tested positive."
-    },
-    {
-      "question": "What island became the main topic in talks between Trump and Xi?",
-      "type": "multiple_choice",
-      "options": [
-        "Hawaii",
-        "Japan",
-        "Taiwan",
-        "Philippines"
-      ],
-      "correct_index": 2,
-      "source_headline": "Why Taiwan became the defining issue in the Trump-Xi talks",
-      "explanation": "The headline identifies Taiwan as the defining issue in the Trump-Xi talks."
-    },
-    {
-      "question": "The governor of which U.S. state asked the Navy to help with a sunken fishing boat?",
-      "type": "multiple_choice",
-      "options": [
-        "California",
-        "Massachusetts",
-        "Florida",
-        "Maine"
-      ],
-      "correct_index": 1,
-      "source_headline": "Massachusetts governor asks US Navy to help retrieve bodies, evidence from sunken fishing vessel",
-      "explanation": "The headline specifically mentions the Massachusetts governor making this request."
-    },
-    {
-      "question": "Which country won its first Eurovision contest?",
-      "type": "multiple_choice",
-      "options": [
-        "Bulgaria",
-        "Serbia",
-        "Romania",
-        "Croatia"
+        "Secret Service shot a suspect",
+        "A peaceful protest occurred",
+        "A new security system was installed",
+        "The checkpoint was permanently closed"
       ],
       "correct_index": 0,
-      "source_headline": "Bulgarian banger 'Bangaranga' bags country its 1st Eurovision win",
-      "explanation": "The headline states that Bulgaria won its first Eurovision victory with the song 'Bangaranga'."
+      "source_headline": "Secret Service fatally shoots suspect outside White House checkpoint, bystander wounded",
+      "explanation": "The Secret Service fatally shot a suspect outside a White House checkpoint, and a bystander was also wounded."
     },
     {
-      "question": "In which European country did a man drive a car into pedestrians, injuring eight people?",
+      "question": "What major sporting event did someone help create the groundwork for?",
       "type": "multiple_choice",
       "options": [
-        "Italy",
-        "Spain",
+        "The Olympics",
+        "The World Cup",
+        "The Special Olympics",
+        "The Super Bowl"
+      ],
+      "correct_index": 2,
+      "source_headline": "Studying sports and disability, he laid the groundwork for the Special Olympics",
+      "explanation": "The person studied sports and disability and helped lay the groundwork for the Special Olympics."
+    },
+    {
+      "question": "Which country's director won the top prize at the Cannes Film Festival?",
+      "type": "multiple_choice",
+      "options": [
+        "Romania",
         "France",
+        "Italy",
         "Germany"
       ],
       "correct_index": 0,
-      "source_headline": "Man drives car into pedestrians in Italy, injuring eight",
-      "explanation": "The headline clearly states this incident happened in Italy."
+      "source_headline": "Romanian director Cristian Mungiu's 'Fjord' wins top prize at Cannes",
+      "explanation": "Romanian director Cristian Mungiu won the top prize at Cannes for his film 'Fjord'."
     },
     {
-      "question": "FIFA had positive talks with which country before the World Cup?",
+      "question": "What unusual medical procedure did an owl receive?",
       "type": "multiple_choice",
       "options": [
-        "Iraq",
-        "India",
-        "Israel",
-        "Iran"
+        "A wing surgery",
+        "A feather transplant",
+        "An eye operation",
+        "A beak repair"
       ],
-      "correct_index": 3,
-      "source_headline": "FIFA says held positive talks with Iran ahead of World Cup",
-      "explanation": "The headline mentions FIFA had positive talks specifically with Iran ahead of the World Cup."
+      "correct_index": 1,
+      "source_headline": "An owl trapped in concrete got a painstaking feather transplant \u2014 then flew off",
+      "explanation": "The owl that was trapped in concrete received a feather transplant and then was able to fly away."
     },
     {
-      "question": "In which African country were more than 50 schoolchildren kidnapped?",
+      "question": "How much money is Canada providing to Canada Post?",
       "type": "multiple_choice",
       "options": [
-        "Nigeria",
-        "Kenya",
-        "Mali",
-        "Ghana"
+        "$720 million",
+        "$620 million",
+        "$820 million",
+        "$520 million"
       ],
       "correct_index": 0,
-      "source_headline": "Toddlers among more than 50 schoolchildren kidnapped in Nigeria",
-      "explanation": "The headline specifically identifies Nigeria as the country where this kidnapping occurred."
+      "source_headline": "Canada to Provide $720 Million to Canada Post to Avoid Insolvency at Mail Service",
+      "explanation": "Canada is providing $720 million to Canada Post to help avoid insolvency at the mail service."
+    },
+    {
+      "question": "In which country did a building collapse, trapping workers?",
+      "type": "multiple_choice",
+      "options": [
+        "Thailand",
+        "Indonesia",
+        "Philippines",
+        "Vietnam"
+      ],
+      "correct_index": 2,
+      "source_headline": "Under-construction building collapses in Philippines, trapping workers",
+      "explanation": "An under-construction building collapsed in the Philippines, trapping workers inside."
+    },
+    {
+      "question": "Which country detected Chinese military aircraft near its territory?",
+      "type": "multiple_choice",
+      "options": [
+        "Taiwan",
+        "Vietnam",
+        "Japan",
+        "South Korea"
+      ],
+      "correct_index": 0,
+      "source_headline": "Taiwan detects Chinese military aircraft, naval vessels near island for second straight day",
+      "explanation": "Taiwan detected Chinese military aircraft and naval vessels near the island for the second straight day."
+    },
+    {
+      "question": "Which disease is causing concern in eastern Democratic Republic of Congo?",
+      "type": "multiple_choice",
+      "options": [
+        "Cholera",
+        "Ebola",
+        "Yellow Fever",
+        "Malaria"
+      ],
+      "correct_index": 1,
+      "source_headline": "Congo-Kinshasa: Ebola Risk 'Very High' in Eastern DR Congo As UN Intensifies Response",
+      "explanation": "The Ebola risk is described as 'very high' in eastern Democratic Republic of Congo, prompting an intensified UN response."
+    },
+    {
+      "question": "Which South American country is pushing a copper mining revolution?",
+      "type": "multiple_choice",
+      "options": [
+        "Chile",
+        "Bolivia",
+        "Argentina",
+        "Peru"
+      ],
+      "correct_index": 2,
+      "source_headline": "High in the Andes, Milei pushes Argentina's copper revolution",
+      "explanation": "President Milei is pushing Argentina's copper revolution high in the Andes mountains."
+    },
+    {
+      "question": "Which country is experiencing fuel shortages and blackouts due to US pressure?",
+      "type": "multiple_choice",
+      "options": [
+        "Haiti",
+        "Nicaragua",
+        "Cuba",
+        "Venezuela"
+      ],
+      "correct_index": 2,
+      "source_headline": "Cubans grapple with fuel shortages and blackouts as US steps up pressure",
+      "explanation": "Cubans are dealing with fuel shortages and blackouts as the United States increases pressure on the country."
     }
   ],
-  "generated_at": "2026-05-17T02:40:14.413319+00:00",
-  "week_of": "2026-W19",
-  "valid_until": "2026-05-23",
+  "generated_at": "2026-05-24T02:47:52.215100+00:00",
+  "week_of": "2026-W20",
+  "valid_until": "2026-05-30",
   "headline_count": 30
 }
