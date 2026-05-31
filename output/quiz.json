@@ -1,138 +1,138 @@
 {
   "questions": [
     {
-      "question": "According to recent news, what happened at a White House checkpoint?",
+      "question": "What are immigrant detainees suing about at a Texas facility?",
       "type": "multiple_choice",
       "options": [
-        "Secret Service shot a suspect",
-        "A peaceful protest occurred",
-        "A new security system was installed",
-        "The checkpoint was permanently closed"
+        "Lack of phone access",
+        "Poor food quality",
+        "Long waiting times",
+        "Horrific conditions"
       ],
-      "correct_index": 0,
-      "source_headline": "Secret Service fatally shoots suspect outside White House checkpoint, bystander wounded",
-      "explanation": "The Secret Service fatally shot a suspect outside a White House checkpoint, and a bystander was also wounded."
+      "correct_index": 3,
+      "source_headline": "Immigrant detainees sue over 'horrific' conditions at Texas ICE facility",
+      "explanation": "The headline specifically mentions that detainees are suing over 'horrific' conditions at the facility."
     },
     {
-      "question": "What major sporting event did someone help create the groundwork for?",
+      "question": "What milestone celebration is Trump scheduled to headline?",
       "type": "multiple_choice",
       "options": [
-        "The Olympics",
-        "The World Cup",
-        "The Special Olympics",
-        "The Super Bowl"
+        "300th celebration",
+        "250th celebration",
+        "100th celebration",
+        "200th celebration"
+      ],
+      "correct_index": 1,
+      "source_headline": "Trump to headline 250th celebration on National Mall after several artists back out",
+      "explanation": "The headline clearly states that Trump will headline the 250th celebration on the National Mall."
+    },
+    {
+      "question": "What state has a UFO watchtower mentioned in the news?",
+      "type": "multiple_choice",
+      "options": [
+        "Nevada",
+        "California",
+        "Colorado",
+        "New Mexico"
       ],
       "correct_index": 2,
-      "source_headline": "Studying sports and disability, he laid the groundwork for the Special Olympics",
-      "explanation": "The person studied sports and disability and helped lay the groundwork for the Special Olympics."
+      "source_headline": "A Colorado UFO watchtower has been waiting for the government to catch up",
+      "explanation": "The headline specifically mentions a Colorado UFO watchtower."
     },
     {
-      "question": "Which country's director won the top prize at the Cannes Film Festival?",
+      "question": "Which three countries are working together to develop underwater drone technology?",
       "type": "multiple_choice",
       "options": [
-        "Romania",
+        "US, France and Australia",
+        "US, UK and Australia",
+        "UK, Australia and Japan",
+        "US, UK and Canada"
+      ],
+      "correct_index": 1,
+      "source_headline": "US, UK and Australia to develop underwater drone technology",
+      "explanation": "The headline clearly states that the US, UK and Australia are developing underwater drone technology together."
+    },
+    {
+      "question": "Which country is mentioned in relation to the Shangri-La Dialogue?",
+      "type": "multiple_choice",
+      "options": [
+        "South Korea",
+        "India",
+        "Japan",
+        "China"
+      ],
+      "correct_index": 3,
+      "source_headline": "China is 'losing a chance' by not being at the Shangri-La Dialogue: German defense chief",
+      "explanation": "The headline mentions China in connection with not attending the Shangri-La Dialogue."
+    },
+    {
+      "question": "What animal tested positive for rabies in California?",
+      "type": "multiple_choice",
+      "options": [
+        "A bat",
+        "A dog",
+        "A squirrel",
+        "A raccoon"
+      ],
+      "correct_index": 0,
+      "source_headline": "California neighborhood on alert after bat found near sidewalk tests positive for rabies virus",
+      "explanation": "The headline specifically mentions that a bat tested positive for the rabies virus."
+    },
+    {
+      "question": "How much money did Canada provide to Canada Post?",
+      "type": "multiple_choice",
+      "options": [
+        "$620 million",
+        "$520 million",
+        "$820 million",
+        "$720 million"
+      ],
+      "correct_index": 3,
+      "source_headline": "Canada to Provide $720 Million to Canada Post to Avoid Insolvency at Mail Service",
+      "explanation": "The headline states that Canada will provide $720 million to Canada Post."
+    },
+    {
+      "question": "In which country were hundreds arrested after Champions League celebrations?",
+      "type": "multiple_choice",
+      "options": [
+        "Spain",
         "France",
         "Italy",
         "Germany"
       ],
-      "correct_index": 0,
-      "source_headline": "Romanian director Cristian Mungiu's 'Fjord' wins top prize at Cannes",
-      "explanation": "Romanian director Cristian Mungiu won the top prize at Cannes for his film 'Fjord'."
-    },
-    {
-      "question": "What unusual medical procedure did an owl receive?",
-      "type": "multiple_choice",
-      "options": [
-        "A wing surgery",
-        "A feather transplant",
-        "An eye operation",
-        "A beak repair"
-      ],
       "correct_index": 1,
-      "source_headline": "An owl trapped in concrete got a painstaking feather transplant \u2014 then flew off",
-      "explanation": "The owl that was trapped in concrete received a feather transplant and then was able to fly away."
+      "source_headline": "Hundreds arrested in France after wild Champions League celebrations",
+      "explanation": "The headline clearly states that the arrests happened in France after Champions League celebrations."
     },
     {
-      "question": "How much money is Canada providing to Canada Post?",
+      "question": "Which disease is spreading in the Democratic Republic of Congo according to the news?",
       "type": "multiple_choice",
       "options": [
-        "$720 million",
-        "$620 million",
-        "$820 million",
-        "$520 million"
-      ],
-      "correct_index": 0,
-      "source_headline": "Canada to Provide $720 Million to Canada Post to Avoid Insolvency at Mail Service",
-      "explanation": "Canada is providing $720 million to Canada Post to help avoid insolvency at the mail service."
-    },
-    {
-      "question": "In which country did a building collapse, trapping workers?",
-      "type": "multiple_choice",
-      "options": [
-        "Thailand",
-        "Indonesia",
-        "Philippines",
-        "Vietnam"
-      ],
-      "correct_index": 2,
-      "source_headline": "Under-construction building collapses in Philippines, trapping workers",
-      "explanation": "An under-construction building collapsed in the Philippines, trapping workers inside."
-    },
-    {
-      "question": "Which country detected Chinese military aircraft near its territory?",
-      "type": "multiple_choice",
-      "options": [
-        "Taiwan",
-        "Vietnam",
-        "Japan",
-        "South Korea"
-      ],
-      "correct_index": 0,
-      "source_headline": "Taiwan detects Chinese military aircraft, naval vessels near island for second straight day",
-      "explanation": "Taiwan detected Chinese military aircraft and naval vessels near the island for the second straight day."
-    },
-    {
-      "question": "Which disease is causing concern in eastern Democratic Republic of Congo?",
-      "type": "multiple_choice",
-      "options": [
-        "Cholera",
+        "Malaria",
+        "Yellow fever",
         "Ebola",
-        "Yellow Fever",
-        "Malaria"
+        "Dengue fever"
+      ],
+      "correct_index": 2,
+      "source_headline": "Ebola spread in DR Congo 'deeply alarming', MSF warns",
+      "explanation": "The headline specifically mentions that Ebola is spreading in the Democratic Republic of Congo."
+    },
+    {
+      "question": "In which country are thousands protesting against Fujimori's presidential run?",
+      "type": "multiple_choice",
+      "options": [
+        "Bolivia",
+        "Peru",
+        "Ecuador",
+        "Colombia"
       ],
       "correct_index": 1,
-      "source_headline": "Congo-Kinshasa: Ebola Risk 'Very High' in Eastern DR Congo As UN Intensifies Response",
-      "explanation": "The Ebola risk is described as 'very high' in eastern Democratic Republic of Congo, prompting an intensified UN response."
-    },
-    {
-      "question": "Which South American country is pushing a copper mining revolution?",
-      "type": "multiple_choice",
-      "options": [
-        "Chile",
-        "Bolivia",
-        "Argentina",
-        "Peru"
-      ],
-      "correct_index": 2,
-      "source_headline": "High in the Andes, Milei pushes Argentina's copper revolution",
-      "explanation": "President Milei is pushing Argentina's copper revolution high in the Andes mountains."
-    },
-    {
-      "question": "Which country is experiencing fuel shortages and blackouts due to US pressure?",
-      "type": "multiple_choice",
-      "options": [
-        "Haiti",
-        "Nicaragua",
-        "Cuba",
-        "Venezuela"
-      ],
-      "correct_index": 2,
-      "source_headline": "Cubans grapple with fuel shortages and blackouts as US steps up pressure",
-      "explanation": "Cubans are dealing with fuel shortages and blackouts as the United States increases pressure on the country."
+      "source_headline": "Thousands in Peru protest Fujimori presidential run",
+      "explanation": "The headline clearly states that the protests against Fujimori's presidential run are happening in Peru."
     }
   ],
-  "generated_at": "2026-05-24T02:47:52.215100+00:00",
-  "week_of": "2026-W20",
-  "valid_until": "2026-05-30",
+  "generated_at": "2026-05-31T04:16:41.389746+00:00",
+  "week_of": "2026-W21",
+  "valid_until": "2026-06-06",
   "headline_count": 30
 }
